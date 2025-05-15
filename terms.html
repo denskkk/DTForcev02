@@ -95,17 +95,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#about" class="block py-2 border-b border-gray-600">Про компанію</a>
       <a href="blog.html" class="block py-2 border-b border-gray-600">Блог</a>
 
-      <div class="py-2 border-b border-gray-600">
-        <span class="font-semibold">Послуги:</span>
-        <div class="ml-4 space-y-1 mt-1">
-          <a href="pld.html" class="block">• Ремонт PLD секції</a>
-          <a href="cr.html" class="block">• Ремонт форсунок CR</a>
-          <a href="nasos-forsunki.html" class="block">• Ремонт насос форсунок</a>
-          <a href="turbo.html" class="block">• Ремонт турбін</a>
-          <a href="tnvd.html" class="block">• Ремонт ПНВТ</a>
-          <a href="chiptuning.html" class="block">• Чип-тюнінг</a>
-        </div>
+    <!-- Fix for mobile services menu and missing internal links -->
+
+    <div class="py-2 border-b border-gray-600">
+      <button id="mobileServicesBtn" class="flex items-center justify-between w-full hover:text-red-400">
+        Послуги
+        <svg id="mobileServicesArrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div id="mobileServicesList" class="hidden pl-4 mt-2 space-y-2">
+        <a href="nasos-forsunki.html" class="block py-1 hover:text-red-400">Ремонт насос-форсунок</a>
+        <a href="pld.html" class="block py-1 hover:text-red-400">Ремонт насос-секцій</a>
+        <a href="cr.html" class="block py-1 hover:text-red-400">Ремонт Common Rail</a>
+        <a href="tnvd.html" class="block py-1 hover:text-red-400">Ремонт ТНВД</a>
+        <a href="turbo.html" class="block py-1 hover:text-red-400">Ремонт турбін</a>
       </div>
+    </div>
       <a href="contact.html" class="block py-2 border-b border-gray-600">Контакти</a>
       <button class="mt-2 hover:text-red-400" aria-label="Змінити мову">UA</button>
     </div>
@@ -309,6 +315,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         scrollToTopBtn.classList.add("hidden");
       }
     });
+
+      const mobileServicesBtn = document.getElementById("mobileServicesBtn");
+  const mobileServicesList = document.getElementById("mobileServicesList");
+  const mobileServicesArrow = document.getElementById("mobileServicesArrow");
+
+  if (mobileServicesBtn) {
+    mobileServicesBtn.addEventListener("click", () => {
+      mobileServicesList.classList.toggle("hidden");
+      
+      // Rotate arrow when menu is open
+      if (!mobileServicesList.classList.contains("hidden")) {
+        mobileServicesArrow.classList.add("rotate-180");
+      } else {
+        mobileServicesArrow.classList.remove("rotate-180");
+      }
+    });
+  }
 
     scrollToTopBtn.addEventListener("click", () => {
       window.scrollTo({
