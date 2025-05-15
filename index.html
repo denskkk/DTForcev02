@@ -8,14 +8,14 @@
   <meta name="keywords" content="ремонт ТНВД, ремонт форсунок, ремонт турбін, дизель сервіс, діагностика дизельних систем, Common Rail, PLD, BOSCH, DELPHI, DTForce, Одеса">
   <meta property="og:title" content="DTForce – Професійний ремонт ТНВД, форсунок, турбін вантажного транспорту">
   <meta property="og:description" content="Спеціалізований сервіс з ремонту та діагностики дизельних паливних систем з гарантією до 12 місяців. Обслуговуємо всю Україну.">
-  <meta property="og:image" content="https://denskkk.github.io/DTForcev02/images/banner.png">
-  <meta property="og:url" content="https://denskkk.github.io/DTForcev02/">
+  <meta property="og:image" content="https://dtforce.in.ua/images/banner.png">
+  <meta property="og:url" content="https://dtforce.in.ua/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DTForce – Професійний ремонт ТНВД, форсунок, турбін">
   <meta name="twitter:description" content="Спеціалізований сервіс з ремонту та діагностики дизельних паливних систем з гарантією до 12 місяців">
-  <meta name="twitter:image" content="https://denskkk.github.io/DTForcev02/images/banner.png">
-  <link rel="canonical" href="https://denskkk.github.io/DTForcev02/">
+  <meta name="twitter:image" content="https://dtforce.in.ua/images/banner.png">
+  <link rel="canonical" href="https://dtforce.in.ua/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -55,6 +55,14 @@
       transition: all 0.3s ease;
     }
   </style>
+    <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TL6K8QJ9');</script>
+  <!-- End Google Tag Manager -->
+
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQ2PMHYNXT"></script>
    <script>
      window.dataLayer = window.dataLayer || [];
@@ -100,6 +108,10 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body class="font-sans text-gray-800 bg-gray-50">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6K8QJ9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
   <!-- Хедер -->
   <header class="bg-dtforce shadow-md sticky top-0 z-50 border-t-2 border-red-600">
@@ -247,10 +259,10 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-10">
         <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800">
-          <span class="text-red-600">Підбір</span> дизельних запчастин для вашого авто
+          <span class="text-red-600">Ремонт</span> вашої паливної системи
         </h2>
         <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-          Оберіть марку, модель та рік вашого автомобіля, і ми підберемо потрібні запчастини або запропонуємо оптимальний варіант ремонту
+          Оберіть марку, модель і рік випуску вашого авто — і система покаже, які форсунки встановлені, їхню вартість, а також підбере оптимальні варіанти ремонту.
         </p>
       </div>
 
@@ -811,7 +823,7 @@
         <h3 class="text-lg font-semibold mb-4">Контакти</h3>
         <ul class="space-y-2 text-gray-300 text-sm">
           <li>📍 м. Одеса, вул. Новікова, 3</li>
-          <li>📞 <a href="tel:+380671916336" data-calltracking="+380671916336" class="hover:text-red-400">+380671916336</a></li>
+          <li>📞 <a href="tel:+380671916336" class="hover:text-red-400">+380671916336</a></li>
           <li>📧 <a href="mailto:dtforce@example.com" class="hover:text-red-400">dtforce@example.com</a></li>
         </ul>
     
@@ -898,6 +910,26 @@
       }
     }
 
+    // Add this code inside your existing script tag, before the final script closing tag
+
+  // Mobile services dropdown
+  const mobileServicesBtn = document.getElementById("mobileServicesBtn");
+  const mobileServicesList = document.getElementById("mobileServicesList");
+  const mobileServicesArrow = document.getElementById("mobileServicesArrow");
+
+  if (mobileServicesBtn) {
+    mobileServicesBtn.addEventListener("click", () => {
+      mobileServicesList.classList.toggle("hidden");
+      
+      // Rotate arrow when menu is open
+      if (!mobileServicesList.classList.contains("hidden")) {
+        mobileServicesArrow.classList.add("rotate-180");
+      } else {
+        mobileServicesArrow.classList.remove("rotate-180");
+      }
+    });
+  }
+
     // Кнопка прокрутки вверх
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
     
@@ -934,18 +966,10 @@
       },
     });
 
-    // Годы для выбора
-    const yearSelect = document.getElementById("year");
-    for (let y = new Date().getFullYear(); y >= 1990; y--) {
-      const option = document.createElement("option");
-      option.value = y;
-      option.textContent = y;
-      yearSelect.appendChild(option);
-    }
-
     // Модели автомобилей
     const modelSelect = document.getElementById("model");
     const brandSelect = document.getElementById("brand");
+    const yearSelect = document.getElementById("year");
     const redirectBtn = document.getElementById("searchBtn");
 
     const modelsByBrand = {
@@ -958,9 +982,160 @@
       VOLVO: ["F", "FH", "FL", "FM"]
     };
 
+    // Function to populate year options based on brand and model selection
+    function populateYears(brand, model) {
+      yearSelect.innerHTML = '<option value="">Оберіть рік</option>';
+      
+      // Define year ranges for specific brand-model combinations
+      let startYear, endYear, additionalRanges = [];
+      
+      // DAF models
+      if (brand === "DAF") {
+        if (model === "105") {
+          startYear = 2006;
+          endYear = 2017;
+        } else if (model === "85") {
+          startYear = 1990;
+          endYear = 1999;
+        } else if (model === "95") {
+          startYear = 2000;
+          endYear = 2007;
+        }
+      }
+      
+      // IVECO models
+      else if (brand === "IVECO") {
+        if (model === "CURSOR") {
+          startYear = 1990;
+          endYear = 2002;
+        } else if (model === "EUROTECH") {
+          startYear = 2002;
+          endYear = 2016;
+        } else if (model === "STRALIS") {
+          startYear = 1990;
+          endYear = 2000;
+        }
+      }
+      
+      // MAN models
+      else if (brand === "MAN") {
+        startYear = 2000;
+        endYear = 2017;
+        additionalRanges.push({ start: 1990, end: 2002 });
+      }
+      
+      // Mercedes-Benz models
+      else if (brand === "MB") {
+        if (["ACTROS", "ATEGO", "AXOR", "VARIO"].includes(model)) {
+          startYear = 1998;
+          endYear = 2017;
+        }
+      }
+      
+      // RENAULT models
+      else if (brand === "RENAULT") {
+        if (model === "MAGNUM") {
+          addSpecificYearRanges(yearSelect, [
+            { start: 1990, end: 2000 },
+            { start: 2000, end: 2005 },
+            { start: 2004, end: 2006 }
+          ]);
+          return; // Skip standard year generation
+        } else if (model === "MAGNUM DXI") {
+          startYear = 2006;
+          endYear = 2016;
+        } else if (model === "PREMIUM") {
+          startYear = 1996;
+          endYear = 2001;
+        } else if (model === "PREMIUM DCI") {
+          startYear = 2001;
+          endYear = 2006;
+        } else if (model === "PREMIUM DXI") {
+          startYear = 2006;
+          endYear = 2016;
+        }
+      }
+      
+      // SCANIA models
+      else if (brand === "SCANIA") {
+        addSpecificYearRanges(yearSelect, [
+          { start: 1996, end: 2009 },
+          { start: 1990, end: 2000 }
+        ]);
+        return; // Skip standard year generation
+      }
+      
+      // VOLVO models
+      else if (brand === "VOLVO") {
+        if (model === "F") {
+          startYear = 1990;
+          endYear = 1993;
+        } else if (model === "FH") {
+          addSpecificYearRanges(yearSelect, [
+            { start: 1993, end: 2001 },
+            { start: 2001, end: 2006 },
+            { start: 2006, end: 2016 }
+          ]);
+          return; // Skip standard year generation
+        } else if (model === "FL") {
+          addSpecificYearRanges(yearSelect, [
+            { start: 2001, end: 2017 },
+            { start: 1990, end: 2001 }
+          ]);
+          return; // Skip standard year generation
+        } else if (model === "FM") {
+          addSpecificYearRanges(yearSelect, [
+            { start: 1993, end: 2001 },
+            { start: 2001, end: 2006 },
+            { start: 2006, end: 2016 }
+          ]);
+          return; // Skip standard year generation
+        }
+      }
+      
+      // Add standard year range if defined
+      if (startYear && endYear) {
+        for (let y = endYear; y >= startYear; y--) {
+          const option = document.createElement("option");
+          option.value = y;
+          option.textContent = y;
+          yearSelect.appendChild(option);
+        }
+      }
+      
+      // Add additional ranges if any
+      additionalRanges.forEach(range => {
+        for (let y = range.end; y >= range.start; y--) {
+          const option = document.createElement("option");
+          option.value = y;
+          option.textContent = y;
+          yearSelect.appendChild(option);
+        }
+      });
+    }
+
+    // Helper function to add specific year ranges
+    function addSpecificYearRanges(selectElement, ranges) {
+      ranges.forEach(range => {
+        const groupLabel = document.createElement("optgroup");
+        groupLabel.label = `${range.start}-${range.end}`;
+        
+        for (let y = range.end; y >= range.start; y--) {
+          const option = document.createElement("option");
+          option.value = y;
+          option.textContent = y;
+          groupLabel.appendChild(option);
+        }
+        
+        selectElement.appendChild(groupLabel);
+      });
+    }
+
     brandSelect.addEventListener("change", function () {
       const selected = this.value;
-      modelSelect.innerHTML = '<option value="">Модель</option>';
+      modelSelect.innerHTML = '<option value="">Оберіть модель</option>';
+      yearSelect.innerHTML = '<option value="">Спочатку оберіть модель</option>';
+      
       if (modelsByBrand[selected]) {
         modelsByBrand[selected].forEach(model => {
           const option = document.createElement("option");
@@ -968,6 +1143,17 @@
           option.textContent = model;
           modelSelect.appendChild(option);
         });
+      }
+    });
+    
+    modelSelect.addEventListener("change", function() {
+      const brand = brandSelect.value;
+      const model = this.value;
+      
+      if (brand && model) {
+        populateYears(brand, model);
+      } else {
+        yearSelect.innerHTML = '<option value="">Спочатку оберіть модель</option>';
       }
     });
 
