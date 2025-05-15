@@ -3,39 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ремонт PLD секції – DTForce</title>
+  <title>Ремонт PLD секції Bosch і Delphi | Ремонт насос-секцій вантажівок - DTForce</title>
+  <meta name="description" content="Професійний ремонт PLD секцій і насос-секцій для вантажних авто DAF, MAN, Volvo. Використовуємо оригінальні розпилювачі та плунжерні пари. Гарантія до 12 місяців. ☎ +38 (050) 123-45-67" />
+  <meta name="keywords" content="ремонт PLD секції, насос-секція, DELPHI, BOSCH, DAF 105, MAN TGA, розпилювач Delphi, розпилювач Bosch, плунжерна пара" />
+  <link rel="canonical" href="https://denskkk.github.io/DTForcev02/pld.html" />
+  
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Ремонт PLD секції Bosch і Delphi | DTForce" />
+  <meta property="og:description" content="Якісний ремонт насос-секцій для вантажівок DAF, MAN, Volvo, Renault. Діагностика на стенді, заміна розпилювачів і плунжерних пар. Гарантія, якість." />
+  <meta property="og:url" content="https://denskkk.github.io/DTForcev02/pld.html" />
+  <meta property="og:image" content="https://denskkk.github.io/DTForcev02/images/banner-pld.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="uk_UA" />
+  
+  <!-- Twitter Card tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ремонт PLD секції Bosch і Delphi | DTForce" />
+  <meta name="twitter:description" content="Ремонт насос-секцій для вантажівок. Безкоштовна діагностика, гарантія." />
+  <meta name="twitter:image" content="https://denskkk.github.io/DTForcev02/images/banner-pld.png" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  
+  <!-- Stylesheets -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
   <style>
     .bg-dtforce { background-color: #2e3845; }
+    
+    @keyframes scroll { 
+      0% { transform: translateX(0%); } 
+      100% { transform: translateX(-50%); } 
+    }
+    
+    .animate-scroll { 
+      animation: scroll 30s linear infinite; 
+    }
+    
+    /* Better accessibility */
+    a:focus, button:focus {
+      outline: 2px solid #f87171;
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-     <!-- Хедер -->
-  <header class="bg-dtforce border-top-red shadow-md sticky top-0 z-50">
+  <!-- Хедер -->
+  <header class="bg-dtforce border-top-red shadow-md sticky top-0 z-50 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
 
       <!-- Логотип -->
-      <a href="index.html" class="flex items-center text-xl font-bold text-white">
-        <img src="images/logo.png" alt="DTForce" class="h-12 mr-3">
-        <div class="text-left leading-tight">
-         
-        </div>
+      <a href="index.html" class="flex items-center text-xl font-bold text-white" title="DTForce - Головна">
+        <img src="images/logo.png" alt="DTForce логотип" class="h-12 mr-3" width="120" height="48">
+        <div class="text-left leading-tight"></div>
       </a>
 
       <!-- Навигация -->
       <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
         <a href="index.html" class="hover:text-red-400">Головна</a>
         <a href="#about" class="hover:text-red-400">Про компанію</a>
-        <a href="blog.html">Блог</a>
-
+        <a href="blog.html" class="hover:text-red-400">Блог</a>
 
         <!-- Dropdown -->
         <div class="relative group">
           <button class="hover:text-red-400 focus:outline-none"><a href="poslugi.html">Послуги</a></button>
           <div class="absolute left-0 mt-2 w-72 bg-white text-gray-900 border rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-10">
-            <a href="pld.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт PLD секції</a>
+            <a href="pld.html" class="block px-4 py-2 hover:bg-gray-100 bg-gray-100 font-medium">Ремонт PLD секції</a>
             <a href="cr.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт форсунок CR</a>
             <a href="nasos-forsunki.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт насос форсунок</a>
             <a href="turbo.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт турбін</a>
@@ -45,11 +80,11 @@
         </div>
 
         <a href="contact.html" class="hover:text-red-400">Контакти</a>
-        <button class="hover:text-red-400">UA</button>
+        <button class="hover:text-red-400" aria-label="Змінити мову">UA</button>
       </nav>
 
       <!-- Мобильное меню (бургер) -->
-      <button id="menuToggle" class="md:hidden text-white hover:text-red-400 focus:outline-none">
+      <button id="menuToggle" class="md:hidden text-white hover:text-red-400 focus:outline-none" aria-expanded="false" aria-controls="mobileMenu" aria-label="Відкрити меню">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16" />
@@ -59,14 +94,14 @@
 
     <!-- Мобильное меню -->
     <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-dtforce text-white">
-      <a href="/" class="block py-2 border-b border-gray-600">Головна</a>
+      <a href="index.html" class="block py-2 border-b border-gray-600">Головна</a>
       <a href="#about" class="block py-2 border-b border-gray-600">Про компанію</a>
-      <a href="blog.html">Блог</a><!-- New Blog Link -->
+      <a href="blog.html" class="block py-2 border-b border-gray-600">Блог</a>
 
       <div class="py-2 border-b border-gray-600">
         <span class="font-semibold">Послуги:</span>
         <div class="ml-4 space-y-1 mt-1">
-          <a href="pld.html" class="block">• Ремонт PLD секції</a>
+          <a href="pld.html" class="block text-red-300 font-medium">• Ремонт PLD секції</a>
           <a href="cr.html" class="block">• Ремонт форсунок CR</a>
           <a href="nasos-forsunki.html" class="block">• Ремонт насос форсунок</a>
           <a href="turbo.html" class="block">• Ремонт турбін</a>
@@ -75,78 +110,119 @@
         </div>
       </div>
       <a href="contact.html" class="block py-2 border-b border-gray-600">Контакти</a>
-      <button class="mt-2 hover:text-red-400">UA</button>
+      <button class="mt-2 hover:text-red-400" aria-label="Змінити мову">UA</button>
     </div>
   </header>
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-2">
+    <div class="max-w-7xl mx-auto px-4">
+      <nav class="text-sm" aria-label="Breadcrumb">
+        <ol class="flex text-gray-600">
+          <li><a href="index.html" class="hover:text-red-600">Головна</a></li>
+          <li class="mx-2">/</li>
+          <li><a href="poslugi.html" class="hover:text-red-600">Послуги</a></li>
+          <li class="mx-2">/</li>
+          <li aria-current="page" class="text-gray-900">Ремонт PLD секції</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
 
   <!-- Основний блок -->
   <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-      <img src="images/banner-pld.png" alt="Ремонт PLD секції" class="rounded-xl shadow-lg">
+      <img 
+        src="images/banner-pld.png" 
+        alt="Ремонт PLD секції для вантажних авто" 
+        class="rounded-xl shadow-lg" 
+        width="600" 
+        height="400"
+      >
       <div>
-        <h1 class="text-3xl font-bold text-gray-900 mb-4">Ремонт PLD секції</h1>
+        <h1 class="text-3xl font-bold text-gray-900 mb-4">Ремонт PLD секції для вантажних авто</h1>
         <p class="text-lg mb-6">DTForce пропонує якісний ремонт PLD секцій, включаючи насос-секції DELPHI та BOSCH, для вантажівок DAF, MAN, Volvo, Renault, Scania. Використовуємо нові розпилювачі, шайби, плунжери та оригінальні деталі.</p>
-        <a href="tel:+380501234567" class="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition">Зателефонувати</a>
+        <div class="flex flex-wrap gap-4">
+          <a href="tel:+380501234567" class="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition font-medium">📞 Зателефонувати</a>
+          <a href="#price" class="inline-block border-2 border-red-600 text-red-600 px-6 py-3 rounded-full hover:bg-red-600 hover:text-white transition font-medium">💰 Дізнатися ціни</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Добавляем описание для секции BOSCH рядом с DELPHI -->
-<section class="py-12 bg-gray-50">
+  <section id="price" class="py-12 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Типи PLD секцій та ціни на ремонт</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
   
         <!-- DELPHI секция -->
-        <div>
-            <img src="images/dafpld.png" alt="BOSCH секція" class="rounded-xl shadow mb-6">
-            <h2 class="text-2xl font-semibold mb-4">НАСОС-СЕКЦІЯ DELPHI (DAF 105)</h2>
-            <p>Зняття/установка — вiд 500 грн<br>
-            Перевiрка (на стендi) — 450 грн<br>
-            Ремонт — вiд 4500 грн</p>
-    
-            <h3 class="text-xl font-semibold mt-6">Поширенi моделі BOSCH</h3>
-            <ul class="list-disc list-inside mb-4">
-              <li>DELPHI 28232242 – аналоги: R9044Z013A, 28337917</li>
-              <li>DELPHI 28232251 – аналоги: 28500769, 28239295</li>
-              <li>DELPHI 28239295 – аналоги: 1790102 (DAF), 1708217, 1689661</li>
-            </ul>
-    
-            <h3 class="text-xl font-semibold">Розпилювачі:</h3>
-            <ul class="list-disc list-inside mb-4">
-              <li>EJBR01901Z</li>
-              <li>EJBR02101Z</li>
-            </ul>
-    
-            <h3 class="text-xl font-semibold">Сумісність:</h3>
-            <ul class="list-disc list-inside">
-              <li>DAF XF 105 (2006–2013)</li>
-              <li>DAF CF 85 (двигуни Paccar MX)</li>
-              <li>Інші моделі DAF із системами Common Rail DELPHI</li>
-            </ul>
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <img 
+            src="images/dafpld.png" 
+            alt="DELPHI насос-секція для DAF 105" 
+            class="rounded-xl shadow mb-6" 
+            width="500" 
+            height="300"
+          >
+          <h3 class="text-2xl font-semibold mb-4">НАСОС-СЕКЦІЯ DELPHI (DAF 105)</h3>
+          <div class="mb-6 text-lg">
+            <p class="mb-2"><span class="font-medium">Зняття/установка</span> — вiд 500 грн</p>
+            <p class="mb-2"><span class="font-medium">Перевiрка (на стендi)</span> — 450 грн</p>
+            <p class="mb-2"><span class="font-medium">Ремонт</span> — вiд 4500 грн</p>
           </div>
+    
+          <h4 class="text-xl font-semibold mt-6">Поширенi моделі DELPHI</h4>
+          <ul class="list-disc list-inside mb-4">
+            <li>DELPHI 28232242 – аналоги: R9044Z013A, 28337917</li>
+            <li>DELPHI 28232251 – аналоги: 28500769, 28239295</li>
+            <li>DELPHI 28239295 – аналоги: 1790102 (DAF), 1708217, 1689661</li>
+          </ul>
+    
+          <h4 class="text-xl font-semibold">Розпилювачі:</h4>
+          <ul class="list-disc list-inside mb-4">
+            <li>EJBR01901Z</li>
+            <li>EJBR02101Z</li>
+          </ul>
+    
+          <h4 class="text-xl font-semibold">Сумісність:</h4>
+          <ul class="list-disc list-inside">
+            <li>DAF XF 105 (2006–2013)</li>
+            <li>DAF CF 85 (двигуни Paccar MX)</li>
+            <li>Інші моделі DAF із системами Common Rail DELPHI</li>
+          </ul>
+        </div>
   
         <!-- BOSCH секция -->
-        <div>
-          <img src="images/boshpld.png" alt="BOSCH секція" class="rounded-xl shadow mb-6">
-          <h2 class="text-2xl font-semibold mb-4">НАСОС-СЕКЦІЯ BOSCH</h2>
-          <p>Зняття/установка — вiд 500 грн<br>
-          Перевiрка (на стендi) — 450 грн<br>
-          Ремонт — вiд 4500 грн</p>
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <img 
+            src="images/boshpld.png" 
+            alt="BOSCH насос-секція для MAN TGA" 
+            class="rounded-xl shadow mb-6" 
+            width="500" 
+            height="300"
+          >
+          <h3 class="text-2xl font-semibold mb-4">НАСОС-СЕКЦІЯ BOSCH</h3>
+          <div class="mb-6 text-lg">
+            <p class="mb-2"><span class="font-medium">Зняття/установка</span> — вiд 500 грн</p>
+            <p class="mb-2"><span class="font-medium">Перевiрка (на стендi)</span> — 450 грн</p>
+            <p class="mb-2"><span class="font-medium">Ремонт</span> — вiд 4500 грн</p>
+          </div>
   
-          <h3 class="text-xl font-semibold mt-6">Поширенi моделі BOSCH</h3>
+          <h4 class="text-xl font-semibold mt-6">Поширенi моделі BOSCH</h4>
           <ul class="list-disc list-inside mb-4">
             <li>BOSCH 0414720317 – аналоги: 0414720316, 0414720318</li>
             <li>BOSCH 0414720404 – аналоги: 0414720403, 0414720405</li>
             <li>BOSCH 0414702017 – аналоги: 0414702015, 0414702016</li>
           </ul>
   
-          <h3 class="text-xl font-semibold">Розпилювачі:</h3>
+          <h4 class="text-xl font-semibold">Розпилювачі:</h4>
           <ul class="list-disc list-inside mb-4">
             <li>DLLA145P1695</li>
             <li>DLLA157P852</li>
           </ul>
   
-          <h3 class="text-xl font-semibold">Сумісність:</h3>
+          <h4 class="text-xl font-semibold">Сумісність:</h4>
           <ul class="list-disc list-inside">
             <li>MAN TGA, TGS, TGX</li>
             <li>Mercedes Actros MP2/MP3</li>
@@ -159,7 +235,7 @@
   </section>
   
   <!-- Часті питання -->
-<section class="py-16 bg-white">
+  <section class="py-16 bg-white">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-10">Часті запитання і рішення</h2>
   
@@ -186,51 +262,64 @@
   </section>
 
   <!-- Технічне SEO-описання -->
-  <section class="py-16">
+  <section class="py-16 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-4">Насос-секції DELPHI для DAF XF 105</h2>
-      <p class="mb-4">Насос-секції DELPHI використовуються в дизельних системах Common Rail на вантажівках DAF серії XF 105 з двигунами Paccar MX (MX 300, MX 340, MX 375, MX 410, MX 460).</p>
+      <h2 class="text-3xl font-bold mb-4">Насос-секції PLD: технічний опис</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-3">DELPHI для DAF XF 105</h3>
+          <p class="mb-4">Насос-секції DELPHI використовуються в дизельних системах Common Rail на вантажівках DAF серії XF 105 з двигунами Paccar MX (MX 300, MX 340, MX 375, MX 410, MX 460).</p>
 
-      <h3 class="text-xl font-semibold mt-6"> Основні моделі:</h3>
-      <ul class="list-disc list-inside mb-4">
-        <li>E1 / E3 / E4 (уточнюється за каталожним номером)</li>
-        <li>DELPHI 28232242, 28232251, 28239295</li>
-      </ul>
+          <h4 class="text-lg font-semibold mt-4">Основні моделі:</h4>
+          <ul class="list-disc list-inside mb-4">
+            <li>E1 / E3 / E4 (уточнюється за каталожним номером)</li>
+            <li>DELPHI 28232242, 28232251, 28239295</li>
+          </ul>
 
-      <h3 class="text-xl font-semibold"> Аналоги:</h3>
-      <ul class="list-disc list-inside mb-4">
-        <li>DELPHI R9044Z013A, 28337917, 28500769</li>
-        <li>DAF: 1790102, 1708217, 1689661</li>
-      </ul>
+          <h4 class="text-lg font-semibold">Аналоги:</h4>
+          <ul class="list-disc list-inside mb-4">
+            <li>DELPHI R9044Z013A, 28337917, 28500769</li>
+            <li>DAF: 1790102, 1708217, 1689661</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-semibold mb-3">BOSCH для MAN та Mercedes</h3>
+          <p class="mb-4">Насос-секції BOSCH застосовуються на вантажівках MAN TGA, Mercedes Actros та IVECO Stralis. Основні компоненти системи включають: корпус, плунжерну пару, пристрій регулювання, електромагнітний клапан та розпилювач.</p>
 
-      <h3 class="text-xl font-semibold"> Типи розпилювачів:</h3>
-      <ul class="list-disc list-inside mb-4">
-        <li>DELPHI EJBR01901Z, EJBR02101Z</li>
-        <li>DLLA145P1545 (залежно від модифікації)</li>
-      </ul>
+          <h4 class="text-lg font-semibold mt-4">Типи розпилювачів:</h4>
+          <ul class="list-disc list-inside mb-4">
+            <li>DELPHI EJBR01901Z, EJBR02101Z</li>
+            <li>BOSCH DLLA145P1695, DLLA157P852</li>
+          </ul>
 
-      <h3 class="text-xl font-semibold"> Сумісність:</h3>
-      <ul class="list-disc list-inside">
-        <li>DAF XF 105 (2006–2013)</li>
-        <li>DAF CF 85 (двигуни Paccar MX)</li>
-      </ul>
+          <h4 class="text-lg font-semibold">Сумісність:</h4>
+          <ul class="list-disc list-inside mb-4">
+            <li>MAN TGA, TGS, TGX (Euro 3, Euro 4, Euro 5)</li>
+            <li>Mercedes Actros MP2/MP3</li>
+            <li>IVECO Stralis (Euro 4, Euro 5)</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
-<!-- Індивідуальна консультація -->
-<section class="bg-dtforce text-white py-16">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Потрібна індивідуальна консультація?</h2>
-    <p class="text-lg sm:text-xl mb-6">Наш спеціаліст відповість на всі питання щодо ремонту pld-секції та інших послуг.</p>
-    <a href="tel:+380501234567" class="inline-block bg-red-600 hover:bg-red-700 transition px-8 py-4 rounded-full text-lg font-semibold">
-      📞 Зв'язатися зі спеціалістом
-    </a>
-    <p class="mt-4 text-sm text-gray-300">Працюємо щодня з 09:00 до 18:00</p>
-  </div>
-</section>
 
+  <!-- Індивідуальна консультація -->
+  <section class="bg-dtforce text-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Потрібна індивідуальна консультація?</h2>
+      <p class="text-lg sm:text-xl mb-6">Наш спеціаліст відповість на всі питання щодо ремонту pld-секції та інших послуг.</p>
+      <a href="tel:+380501234567" class="inline-block bg-red-600 hover:bg-red-700 transition px-8 py-4 rounded-full text-lg font-semibold">
+        📞 Зв'язатися зі спеціалістом
+      </a>
+      <p class="mt-4 text-sm text-gray-300">Працюємо щодня з 09:00 до 18:00</p>
+    </div>
+  </section>
+
+  <!-- Поради з експлуатації -->
   <section class="py-12 bg-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold mb-4">ЯК ПОДОВЖИТИ ТЕРМІН ЕКСПЛУАТАЦІЇ НАСОС-СЕКЦІЇ PLD (UPS)</h2>
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-4">ЯК ПОДОВЖИТИ ТЕРМІН ЕКСПЛУАТАЦІЇ НАСОС-СЕКЦІЇ PLD (UPS)</h2>
       <p class="mb-4">Поради від фахівців: використовуйте якісне пальне, регулярно змінюйте фільтри, слідкуйте за тиском у системі.</p>
   
       <div id="moreArticle" class="hidden transition-all duration-300 ease-in-out mt-4 text-left text-gray-700">
@@ -238,188 +327,177 @@
         <p class="mt-2">Також рекомендуємо раз на рік проводити профілактику форсунок з ультразвуковою чисткою та регулюванням розпилу.</p>
       </div>
   
-      <button onclick="toggleMore()" class="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition mt-4" id="toggleBtn">Детальніше</button>
+      <button onclick="toggleMore()" class="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition mt-4" id="toggleBtn" aria-expanded="false">Детальніше</button>
     </div>
   </section>
   
-
-  <!-- Чому обирають нас + відгуки -->
+  <!-- Чому обирають нас -->
   <section class="py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">Чому обирають DTForce</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-        <div class="p-6 bg-white rounded-xl shadow">
+        <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
           <i class="fas fa-tools text-3xl text-red-600 mb-4"></i>
           <h3 class="text-xl font-semibold mb-2">Сучасне обладнання</h3>
-          <p>Діагностика та ремонт на професійному стенді Bosch/Delphi.</p>
+          <p>Діагностика та ремонт на професійному стенді Bosch/Delphi. Точне налаштування та тестування.</p>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow">
+        <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
           <i class="fas fa-shield-alt text-3xl text-red-600 mb-4"></i>
           <h3 class="text-xl font-semibold mb-2">Гарантія якості</h3>
-          <p>Гарантія до 12 місяців на всі види робіт.</p>
+          <p>Гарантія до 12 місяців на всі види робіт. Використовуємо лише якісні комплектуючі.</p>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow">
+        <div class="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition">
           <i class="fas fa-user-cog text-3xl text-red-600 mb-4"></i>
           <h3 class="text-xl font-semibold mb-2">Досвідчені майстри</h3>
-          <p>Понад 10 років досвіду у сфері ремонту дизельного обладнання.</p>
+          <p>Понад 10 років досвіду у сфері ремонту дизельного обладнання. Експерти з PLD секцій.</p>
         </div>
       </div>
     </div>
   </section>
 
- <!-- Секция с марками авто -->
- <section class="bg-gray-50 py-20">
+  <!-- Секция с марками авто -->
+  <section class="bg-gray-50 py-16">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-10">
-        Виконуємо ремонт ПНВТ, Форсунок, Турбін для марок автомобілів
+        Виконуємо ремонт PLD секцій для всіх марок вантажних авто
       </h2>
   
       <!-- Логотипы брендов с автопрокруткой -->
       <div class="overflow-hidden">
         <div class="flex animate-scroll whitespace-nowrap gap-12 items-center">
-  
-          <img src="brands/man.png" alt="MAN" class="h-12 w-auto inline-block" />
-          <img src="brands/daf.png" alt="DAF" class="h-12 w-auto inline-block" />
-          <img src="brands/volvo.png" alt="Volvo" class="h-12 w-auto inline-block" />
-          <img src="brands/renault.png" alt="Renault" class="h-12 w-auto inline-block" />
-          <img src="brands/iveco.png" alt="IVECO" class="h-12 w-auto inline-block" />
-          <img src="brands/mercedes.png" alt="Mercedes-Benz" class="h-12 w-auto inline-block" />
-          <img src="brands/scania.png" alt="Scania" class="h-12 w-auto inline-block" />
-          <img src="brands/isuzu.png" alt="Isuzu" class="h-12 w-auto inline-block" />
+          <img src="brands/man.png" alt="MAN вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/daf.png" alt="DAF вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/volvo.png" alt="Volvo вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/renault.png" alt="Renault вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/iveco.png" alt="IVECO вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/mercedes.png" alt="Mercedes-Benz вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/scania.png" alt="Scania вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/isuzu.png" alt="Isuzu вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
   
           <!-- Повтор логотипов для бесконечного эффекта -->
-          <img src="brands/man.png" alt="MAN" class="h-12 w-auto inline-block" />
-          <img src="brands/daf.png" alt="DAF" class="h-12 w-auto inline-block" />
-          <img src="brands/volvo.png" alt="Volvo" class="h-12 w-auto inline-block" />
-          <img src="brands/renault.png" alt="Renault" class="h-12 w-auto inline-block" />
+          <img src="brands/man.png" alt="MAN вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/daf.png" alt="DAF вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/volvo.png" alt="Volvo вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/renault.png" alt="Renault вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
         </div>
       </div>
     </div>
   </section>
-<!-- SwiperJS CDN -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<section class="bg-gray-100 py-16">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Відгуки клієнтів</h2>
+  <!-- Отзывы -->
+  <section class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Відгуки клієнтів</h2>
 
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
 
-        <!-- Slide 1 -->
-        <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
-          <p class="text-lg text-gray-700 mb-4">
-            Недавно отдав свой <strong>MAN</strong> в <strong>В гараж</strong> на ремонт. Ремонтировали <strong>ТНВД Bosch VP44</strong>, <strong>турбину</strong> и <strong>форсунки</strong>. Сделали все быстро и качественно. После ремонта расход топлива уменьшился, а дымность исчезла. Машина стала работать мощнее и стабильнее. <strong>Рекомендую</strong> этот сервис.
-          </p>
-          <div class="flex items-center mt-4">
-            <div class="flex text-yellow-400 mr-3">
-              ★★★★★
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
+            <p class="text-lg text-gray-700 mb-4">
+              Недавно отдав свой <strong>MAN</strong> на ремонт. Ремонтировали <strong>PLD секції</strong>, <strong>турбину</strong> и <strong>форсунки</strong>. Сделали все быстро и качественно. После ремонта расход топлива уменьшился, а дымность исчезла. Машина стала работать мощнее и стабильнее. <strong>Рекомендую</strong> этот сервис.
+            </p>
+            <div class="flex items-center mt-4">
+              <div class="flex text-yellow-400 mr-3">
+                <span aria-hidden="true">★★★★★</span>
+                <span class="sr-only">5 з 5 зірок</span>
+              </div>
+              <span class="text-gray-600 text-sm">– Володимир, MAN TGA</span>
             </div>
-            <span class="text-gray-600 text-sm">– Володимир, MAN TGA</span>
           </div>
-        </div>
 
-        <!-- Slide 2 -->
-        <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
-          <p class="text-lg text-gray-700 mb-4">
-            Робив <strong>форсунки Delphi</strong> на <strong>Renault Premium</strong>. Дуже задоволений: мотор став працювати рівно, без стуків. При запуску більше немає диму, а тяга покращилась. Обслуговування привітне, є гарантія.
-          </p>
-          <div class="flex items-center mt-4">
-            <div class="flex text-yellow-400 mr-3">
-              ★★★★★
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
+            <p class="text-lg text-gray-700 mb-4">
+              Робив <strong>PLD секції Delphi</strong> на <strong>DAF XF 105</strong>. Дуже задоволений: мотор став працювати рівно, без стуків. При запуску більше немає диму, а тяга покращилась. Обслуговування привітне, є гарантія.
+            </p>
+            <div class="flex items-center mt-4">
+              <div class="flex text-yellow-400 mr-3">
+                <span aria-hidden="true">★★★★★</span>
+                <span class="sr-only">5 з 5 зірок</span>
+              </div>
+              <span class="text-gray-600 text-sm">– Сергій, DAF XF 105</span>
             </div>
-            <span class="text-gray-600 text-sm">– Сергій, Renault Premium</span>
           </div>
-        </div>
 
-        <!-- Slide 3 -->
-        <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
-          <p class="text-lg text-gray-700 mb-4">
-            Здавав <strong>Volvo FH12</strong> на ремонт <strong>турбіни</strong> і чистку <strong>форсунок CR</strong>. Робота на вищому рівні. Все зробили швидко. Майстри пояснили, що саме було несправне. Після ремонту поїхав у рейс — машина тягне як нова.
-          </p>
-          <div class="flex items-center mt-4">
-            <div class="flex text-yellow-400 mr-3">
-              ★★★★★
+          <!-- Slide 3 -->
+          <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
+            <p class="text-lg text-gray-700 mb-4">
+              Здавав <strong>Mercedes Actros</strong> на ремонт <strong>насос-секцій Bosch</strong> і чистку форсунок. Робота на вищому рівні. Все зробили швидко. Майстри пояснили, що саме було несправне. Після ремонту поїхав у рейс — машина тягне як нова.
+            </p>
+            <div class="flex items-center mt-4">
+              <div class="flex text-yellow-400 mr-3">
+                <span aria-hidden="true">★★★★★</span>
+                <span class="sr-only">5 з 5 зірок</span>
+              </div>
+              <span class="text-gray-600 text-sm">– Ігор, Mercedes Actros</span>
             </div>
-            <span class="text-gray-600 text-sm">– Ігор, Volvo FH12</span>
           </div>
-        </div>
 
-        <!-- Slide 4 -->
-        <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
-          <p class="text-lg text-gray-700 mb-4">
-            Міняв <strong>плунжерну пару</strong> в <strong>Bosch ПНВТ</strong>. Довго шукав де зробити – і тут все чітко. Швидка діагностика, якісні комплектуючі. Навіть дали поради по обслуговуванню дизеля. Обов’язково звернусь ще.
-          </p>
-          <div class="flex items-center mt-4">
-            <div class="flex text-yellow-400 mr-3">
-              ★★★★★
+          <!-- Slide 4 -->
+          <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
+            <p class="text-lg text-gray-700 mb-4">
+              Міняв <strong>розпилювачі</strong> в <strong>PLD секціях Bosch</strong>. Довго шукав де зробити – і тут все чітко. Швидка діагностика, якісні комплектуючі. Навіть дали поради по обслуговуванню дизеля. Обов'язково звернусь ще.
+            </p>
+            <div class="flex items-center mt-4">
+              <div class="flex text-yellow-400 mr-3">
+                <span aria-hidden="true">★★★★★</span>
+                <span class="sr-only">5 з 5 зірок</span>
+              </div>
+              <span class="text-gray-600 text-sm">– Микола, MAN TGX</span>
             </div>
-            <span class="text-gray-600 text-sm">– Микола, Mercedes Atego</span>
           </div>
-        </div>
 
-        <!-- Slide 5 -->
-        <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
-          <p class="text-lg text-gray-700 mb-4">
-            Чистив <strong>розпилювачі</strong> і замінював <strong>шайби</strong> в <strong>Common Rail</strong> на <strong>DAF XF</strong>. Якість сервісу на 5 з плюсом. Все чітко, вчасно, без зайвого тягнення. Дали гарантію і навіть відео з діагностики.
-          </p>
-          <div class="flex items-center mt-4">
-            <div class="flex text-yellow-400 mr-3">
-              ★★★★★
-            </div>
-            <span class="text-gray-600 text-sm">– Олександр, DAF XF</span>
-          </div>
         </div>
-
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Swiper init -->
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 7000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: 1,
-    spaceBetween: 30,
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-    },
-  });
-</script>
+  <!-- Call to action -->
+  <section class="bg-red-600 text-white py-12">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Потрібна консультація або ремонт PLD секцій?</h2>
+      <p class="text-xl mb-8">Зателефонуйте нам або залиште заявку, і ми зв'яжемося з вами</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:+380501234567" class="bg-white text-red-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition">
+          📞 Зателефонувати
+        </a>
+        <a href="contact.html" class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-red-600 transition">
+          ✉️ Залишити заявку
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- Карта -->
-  <section class="py-12">
+  <section id="contacts" class="py-12">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-center mb-4">Наш сервіс на мапі</h2>
+      <h2 class="text-2xl font-bold text-center mb-6">Наш сервіс на мапі</h2>
       <div class="w-full h-80 rounded-lg overflow-hidden shadow-lg">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Розташування DTForce на мапі"
+          aria-label="Карта розташування дизель сервісу DTForce"
+        ></iframe>
       </div>
     </div>
   </section>
-<!-- Footer -->
-<footer class="bg-[#2e3845] text-white pt-16 pb-10">
+
+  <!-- Footer -->
+  <footer class="bg-[#2e3845] text-white pt-16 pb-10">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
   
       <!-- Блок 1: Лого -->
       <div>
-        <a href="/" class="flex items-center text-2xl font-bold mb-4">
-          <img src="images/logo.png" alt="DTForce" class="h-10 mr-2">
-         
+        <a href="index.html" class="flex items-center text-2xl font-bold mb-4">
+          <img src="images/logo.png" alt="DTForce" class="h-10 mr-2" width="100" height="40">
         </a>
         <p class="text-gray-300 text-sm leading-relaxed">
           Діагностика та ремонт ТНВД, форсунок, турбін. Працюємо по всій Україні.
@@ -430,9 +508,9 @@
       <div>
         <h3 class="text-lg font-semibold mb-4">Меню</h3>
         <ul class="space-y-2 text-gray-300 text-sm">
-          <li><a href="/" class="hover:text-red-400">Головна</a></li>
+          <li><a href="index.html" class="hover:text-red-400">Головна</a></li>
           <li><a href="#about" class="hover:text-red-400">Про компанію</a></li>
-          <li><a href="#services" class="hover:text-red-400">Послуги</a></li>
+          <li><a href="poslugi.html" class="hover:text-red-400">Послуги</a></li>
           <li><a href="#contacts" class="hover:text-red-400">Контакти</a></li>
         </ul>
       </div>
@@ -440,123 +518,124 @@
       <!-- Блок 3: Контакти -->
       <div>
         <h3 class="text-lg font-semibold mb-4">Контакти</h3>
-        <ul class="space-y-2 text-gray-300 text-sm">
-          <li>📍 м. Одеса, вул. Новікова, 3</li>
-          <li>📞 <a href="tel:+380XXXXXXXXX" class="hover:text-red-400">+38 (050) 123-45-67</a></li>
-          <li>📧 <a href="mailto:dtforce@example.com" class="hover:text-red-400">dtforce@example.com</a></li>
-        </ul>
-        <a href="tel:+380XXXXXXXXX" class="mt-6 inline-block bg-red-600 hover:bg-red-700 transition text-white px-6 py-3 rounded-full font-semibold text-sm">
+        <address class="not-italic">
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li>📍 м. Одеса, вул. Новікова, 3</li>
+            <li>📞 <a href="tel:+380501234567" class="hover:text-red-400">+38 (050) 123-45-67</a></li>
+            <li>📧 <a href="mailto:info@dtforce.ua" class="hover:text-red-400">info@dtforce.ua</a></li>
+          </ul>
+        </address>
+        <a href="tel:+380501234567" class="mt-6 inline-block bg-red-600 hover:bg-red-700 transition text-white px-6 py-3 rounded-full font-semibold text-sm">
           📞 Записатися на ремонт
         </a>
       </div>
-  
     </div>
   
-    <!-- Карта -->
-    <div class="mt-12">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
-        class="w-full h-64 border-0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-  
-    <!-- Подвал -->
+    <!-- Copyright -->
     <div class="mt-10 text-center text-sm text-gray-400">
-      © 2024 DTForce. Всі права захищені.
+      <p>© 2024 DTForce. Всі права захищені.</p>
+      <div class="mt-2">
+        <a href="privacy.html" class="hover:text-red-400 mr-4">Політика конфіденційності</a>
+        <a href="terms.html" class="hover:text-red-400">Умови використання</a>
+      </div>
     </div>
   </footer>
-  <style>
-    @keyframes scroll {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-50%); }
-    }
-  
-    .animate-scroll {
-      animation: scroll 30s linear infinite;
-    }
-  </style>
+
+  <!-- Scroll to top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-20 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition hidden z-50" aria-label="Прокрутити вгору">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Mobile bottom menu -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-red-600 text-white border-t border-gray-200">
+    <div class="flex justify-around items-center text-sm font-semibold py-2">
+
+      <!-- Дзвінок -->
+      <a href="tel:+380501234567" class="flex flex-col items-center hover:text-yellow-300" aria-label="Зателефонувати">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 5a2 2 0 012-2h1.586a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V8a1 1 0 01-.293.707l-1.586 1.586a16 16 0 006.586 6.586l1.586-1.586A1 1 0 0116 14h1.879a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />
+        </svg>
+        Дзвінок
+      </a>
+
+      <!-- Послуги -->
+      <a href="poslugi.html" class="flex flex-col items-center hover:text-yellow-300" aria-label="Послуги">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        Послуги
+      </a>
+
+      <!-- Карта -->
+      <a href="https://maps.app.goo.gl/NcXgjJG5iKZ6oLbW9" target="_blank" class="flex flex-col items-center hover:text-yellow-300" aria-label="Карта">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 20l-5.447-2.724A2 2 0 013 15.382V5.618a2 2 0 011.553-1.894L9 2m0 0l6 3m0 0l5.447 2.724A2 2 0 0121 8.618v9.764a2 2 0 01-1.553 1.894L15 22m0 0V9m0 13l-6-3" />
+        </svg>
+        Карта
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+    // Mobile menu toggle
     const toggle = document.getElementById("menuToggle");
     const menu = document.getElementById("mobileMenu");
+    
     toggle.addEventListener("click", () => {
       menu.classList.toggle("hidden");
+      const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", !isExpanded);
     });
 
-
+    // Toggle more functionality
     function toggleMore() {
       const block = document.getElementById("moreArticle");
       const btn = document.getElementById("toggleBtn");
-  
+    
       block.classList.toggle("hidden");
+      const isExpanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", !isExpanded);
       btn.innerText = block.classList.contains("hidden") ? "Детальніше" : "Приховати";
     }
 
-    
-  </script>
-  <!-- Добавьте этот код в нужное место вашего HTML -->
-<button id="scrollToTopBtn" class="fixed bottom-20 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition hidden z-50">
-  <!-- Иконка стрелки вверх -->
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-  </svg>
-</button>
+    // Scroll to top functionality
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-<script>
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-  // Показать кнопку при прокрутке вниз
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollToTopBtn.classList.remove("hidden");
-    } else {
-      scrollToTopBtn.classList.add("hidden");
-    }
-  });
-
-  // Прокрутка наверх при нажатии на кнопку
-  scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.remove("hidden");
+      } else {
+        scrollToTopBtn.classList.add("hidden");
+      }
     });
-  });
-</script>
-<!-- Нижнє мобільне меню -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-red-600 text-white border-t border-gray-200">
-  <div class="flex justify-around items-center text-sm font-semibold py-2">
 
-    <!-- Дзвінок -->
-    <a href="tel:+380XXXXXXXXX" class="flex flex-col items-center hover:text-yellow-300">
-      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M3 5a2 2 0 012-2h1.586a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V8a1 1 0 01-.293.707l-1.586 1.586a16 16 0 006.586 6.586l1.586-1.586A1 1 0 0116 14h1.879a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />
-      </svg>
-      Дзвінок
-    </a>
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
 
-    <!-- Послуги -->
-    <a href="#services" class="flex flex-col items-center hover:text-yellow-300">
-      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      Послуги
-    </a>
-
-    <!-- Карта -->
-    <a href="https://maps.app.goo.gl/NcXgjJG5iKZ6oLbW9" target="_blank" class="flex flex-col items-center hover:text-yellow-300">
-      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M9 20l-5.447-2.724A2 2 0 013 15.382V5.618a2 2 0 011.553-1.894L9 2m0 0l6 3m0 0l5.447 2.724A2 2 0 0121 8.618v9.764a2 2 0 01-1.553 1.894L15 22m0 0V9m0 13l-6-3" />
-      </svg>
-      Карта
-    </a>
-
-  </div>
-</div>
-
-
+    // Swiper initialization
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 30,
+      breakpoints: {
+        768: { slidesPerView: 2 }
+      }
+    });
+  </script>
 </body>
 </html>

@@ -3,43 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ремонт форсунок CR – DTForce</title>
+  <title>Ремонт насос-форсунок Delphi і Bosch | Професійний сервіс - DTForce</title>
+  <meta name="description" content="Професійний ремонт насос-форсунок Delphi і Bosch для вантажних авто DAF, Volvo, Renault. Встановлюємо нові розпилювачі та плунжери. Гарантія до 12 місяців. Перевірка на стенді. ☎ +38 (050) 123-45-67" />
+  <meta name="keywords" content="насос-форсунка, ремонт, Delphi, Bosch, DAF, Volvo, Renault, розпилювачі, плунжери, DELPHI A0 A1 A3, DELPHI E1, DELPHI E3" />
+  <link rel="canonical" href="https://denskkk.github.io/DTForcev02/nasos-forsunki.html" />
+  
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Ремонт насос-форсунок Delphi і Bosch для вантажних авто | DTForce" />
+  <meta property="og:description" content="Якісний ремонт насос-форсунок для вантажівок DAF, Volvo, Renault. Діагностика на стенді, заміна розпилювачів, гарантія на всі роботи." />
+  <meta property="og:url" content="https://denskkk.github.io/DTForcev02/nasos-forsunki.html" />
+  <meta property="og:image" content="https://denskkk.github.io/DTForcev02/images/banner-nasos-forsunki.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="uk_UA" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  
+  <!-- Stylesheets -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
   <style>
     .bg-dtforce { background-color: #2e3845; }
-    @keyframes scroll { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
-    .animate-scroll { animation: scroll 30s linear infinite; }
+    
+    @keyframes scroll { 
+      0% { transform: translateX(0%); } 
+      100% { transform: translateX(-50%); } 
+    }
+    
+    .animate-scroll { 
+      animation: scroll 30s linear infinite; 
+    }
+    
+    /* Better accessibility */
+    a:focus, button:focus {
+      outline: 2px solid #f87171;
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-    <!-- Хедер -->
-  <header class="bg-dtforce border-top-red shadow-md sticky top-0 z-50">
+  <!-- Header -->
+  <header class="bg-dtforce border-top-red shadow-md sticky top-0 z-50 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-
-      <!-- Логотип -->
-      <a href="index.html" class="flex items-center text-xl font-bold text-white">
-        <img src="images/logo.png" alt="DTForce" class="h-12 mr-3">
-        <div class="text-left leading-tight">
-         
-        </div>
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center text-xl font-bold" title="DTForce - Головна">
+        <img src="images/logo.png" alt="Логотип DTForce" class="h-12 mr-3" width="120" height="48">
+        <div class="text-left leading-tight"></div>
       </a>
 
-      <!-- Навигация -->
+      <!-- Navigation -->
       <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
         <a href="index.html" class="hover:text-red-400">Головна</a>
         <a href="#about" class="hover:text-red-400">Про компанію</a>
-        <a href="blog.html">Блог</a>
+        <a href="blog.html" class="hover:text-red-400">Блог</a>
 
-
-        <!-- Dropdown -->
+        <!-- Services Dropdown -->
         <div class="relative group">
           <button class="hover:text-red-400 focus:outline-none"><a href="poslugi.html">Послуги</a></button>
           <div class="absolute left-0 mt-2 w-72 bg-white text-gray-900 border rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-10">
             <a href="pld.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт PLD секції</a>
             <a href="cr.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт форсунок CR</a>
-            <a href="nasos-forsunki.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт насос форсунок</a>
+            <a href="nasos-forsunki.html" class="block px-4 py-2 hover:bg-gray-100 bg-gray-100 font-medium">Ремонт насос форсунок</a>
             <a href="turbo.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт турбін</a>
             <a href="tnvd.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт ПНВТ</a>
             <a href="chiptuning.html" class="block px-4 py-2 hover:bg-gray-100">Чип-тюнінг (ADBLUE, EGR, DPF OFF)</a>
@@ -47,400 +73,637 @@
         </div>
 
         <a href="contact.html" class="hover:text-red-400">Контакти</a>
-        <button class="hover:text-red-400">UA</button>
+        <button class="hover:text-red-400" aria-label="Змінити мову">UA</button>
       </nav>
 
-      <!-- Мобильное меню (бургер) -->
-      <button id="menuToggle" class="md:hidden text-white hover:text-red-400 focus:outline-none">
+      <!-- Mobile menu button -->
+      <button id="menuToggle" class="md:hidden text-white hover:text-red-400 focus:outline-none" aria-expanded="false" aria-controls="mobileMenu" aria-label="Відкрити меню">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
 
-    <!-- Мобильное меню -->
+    <!-- Mobile menu -->
     <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-dtforce text-white">
-      <a href="/" class="block py-2 border-b border-gray-600">Головна</a>
+      <a href="index.html" class="block py-2 border-b border-gray-600">Головна</a>
       <a href="#about" class="block py-2 border-b border-gray-600">Про компанію</a>
-      <a href="blog.html">Блог</a><!-- New Blog Link -->
+      <a href="blog.html" class="block py-2 border-b border-gray-600">Блог</a>
 
       <div class="py-2 border-b border-gray-600">
         <span class="font-semibold">Послуги:</span>
         <div class="ml-4 space-y-1 mt-1">
           <a href="pld.html" class="block">• Ремонт PLD секції</a>
           <a href="cr.html" class="block">• Ремонт форсунок CR</a>
-          <a href="nasos-forsunki.html" class="block">• Ремонт насос форсунок</a>
+          <a href="nasos-forsunki.html" class="block text-red-300 font-medium">• Ремонт насос форсунок</a>
           <a href="turbo.html" class="block">• Ремонт турбін</a>
           <a href="tnvd.html" class="block">• Ремонт ПНВТ</a>
           <a href="chiptuning.html" class="block">• Чип-тюнінг</a>
         </div>
       </div>
       <a href="contact.html" class="block py-2 border-b border-gray-600">Контакти</a>
-      <button class="mt-2 hover:text-red-400">UA</button>
+      <button class="mt-2 hover:text-red-400" aria-label="Змінити мову">UA</button>
     </div>
   </header>
 
-    <!-- Основний блок -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-          <img src="images/banner-nasos-forsunki.png" alt="Ремонт насос-форсунок" class="rounded-xl shadow-lg" />
-          <div>
-            <h1 class="text-3xl font-bold text-gray-900 mb-4">Ремонт насос-форсунок</h1>
-            <p class="text-lg mb-6">DTForce виконує повний ремонт насос-форсунок DELPHI та BOSCH. Встановлюємо нові розпилювачі, шайби, ущільнення. Тестування виконується на професійному стенді з видачею протоколу.</p>
-            <a href="tel:+380501234567" class="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition">Зателефонувати</a>
-          </div>
-        </div>
-      </section>
-    
-      <!-- Основні типи насос-форсунок -->
-      <section class="py-12 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
-    
-          <div class="text-center">
-            <img src="images/delphi-a0-a1-a3.png" class="mx-auto rounded-xl shadow mb-4" alt="DELPHI A0 A1 A3" />
-            <h3 class="text-xl font-semibold">Насос-форсунки DELPHI A0, A1, A3</h3>
-            <p class="mt-2 text-sm text-gray-600">Зняття/установка — від 500 грн<br>Перевірка — 450 грн<br>Ремонт — від 4200 грн</p>
-            <p class="mt-4 text-sm text-gray-700">Моделі: A0, A1, A3<br>Сумісність: DAF 85, DAF 95, Renault Magnum<br>Розпилювачі: DLLA150P1011, DLLA145P870</p>
-          </div>
-    
-          <div class="text-center">
-            <img src="images/delphi-e1.png" class="mx-auto rounded-xl shadow mb-4" alt="DELPHI E1" />
-            <h3 class="text-xl font-semibold">Насос-форсунки DELPHI E1</h3>
-            <p class="mt-2 text-sm text-gray-600">Зняття/установка — від 550 грн<br>Перевірка — 500 грн<br>Ремонт — від 4500 грн</p>
-            <p class="mt-4 text-sm text-gray-700">Модель: E1<br>Сумісність: Renault Premium, Volvo FL, Iveco EuroTech<br>Розпилювачі: DLLA150P1275, DLLA152P1092</p>
-          </div>
-    
-          <div class="text-center">
-            <img src="images/delphi-e1.png" class="mx-auto rounded-xl shadow mb-4" alt="DELPHI E3" />
-            <h3 class="text-xl font-semibold">Насос-форсунки DELPHI E3</h3>
-            <p class="mt-2 text-sm text-gray-600">Зняття/установка — від 600 грн<br>Перевірка — 550 грн<br>Ремонт — від 4800 грн</p>
-            <p class="mt-4 text-sm text-gray-700">Модель: E3<br>Сумісність: Renault Kerax, Volvo FM, Iveco EuroStar<br>Розпилювачі: DLLA155P1413, DLLA150P1062</p>
-          </div>
-    
-          <div class="text-center">
-            <img src="images/bosh-nasos.png" class="mx-auto rounded-xl shadow mb-4" alt="BOSCH DELPHI A0 A1 A3" />
-            <h3 class="text-xl font-semibold">BOSCH / DELPHI A0, A1, A3 (VOLVO FH/FM)</h3>
-            <p class="mt-2 text-sm text-gray-600">Зняття/установка — від 550 грн<br>Перевірка — 500 грн<br>Ремонт — від 4700 грн</p>
-            <p class="mt-4 text-sm text-gray-700">Сумісність: Volvo FH, FM (1993–2001)<br>Розпилювачі: DLLA150P978, DLLA145P1005</p>
-          </div>
-    
-        </div>
-      </section>
-
-  <!-- Чому обирають нас + відгуки -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Чому обирають DTForce</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-        <div class="p-6 bg-white rounded-xl shadow">
-          <i class="fas fa-tools text-3xl text-red-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Сучасне обладнання</h3>
-          <p>Діагностика та ремонт на професійному стенді Bosch/Delphi.</p>
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow">
-          <i class="fas fa-shield-alt text-3xl text-red-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Гарантія якості</h3>
-          <p>Гарантія до 12 місяців на всі види робіт.</p>
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow">
-          <i class="fas fa-user-cog text-3xl text-red-600 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Досвідчені майстри</h3>
-          <p>Понад 10 років досвіду у сфері ремонту дизельного обладнання.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
- <!-- Секция с марками авто -->
- <section class="bg-gray-50 py-20">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-10">
-        Виконуємо ремонт ПНВТ, Форсунок, Турбін для марок автомобілів
-      </h2>
-  
-      <!-- Логотипы брендов с автопрокруткой -->
-      <div class="overflow-hidden">
-        <div class="flex animate-scroll whitespace-nowrap gap-12 items-center">
-  
-          <img src="brands/man.png" alt="MAN" class="h-12 w-auto inline-block" />
-          <img src="brands/daf.png" alt="DAF" class="h-12 w-auto inline-block" />
-          <img src="brands/volvo.png" alt="Volvo" class="h-12 w-auto inline-block" />
-          <img src="brands/renault.png" alt="Renault" class="h-12 w-auto inline-block" />
-          <img src="brands/iveco.png" alt="IVECO" class="h-12 w-auto inline-block" />
-          <img src="brands/mercedes.png" alt="Mercedes-Benz" class="h-12 w-auto inline-block" />
-          <img src="brands/scania.png" alt="Scania" class="h-12 w-auto inline-block" />
-          <img src="brands/isuzu.png" alt="Isuzu" class="h-12 w-auto inline-block" />
-  
-          <!-- Повтор логотипов для бесконечного эффекта -->
-          <img src="brands/man.png" alt="MAN" class="h-12 w-auto inline-block" />
-          <img src="brands/daf.png" alt="DAF" class="h-12 w-auto inline-block" />
-          <img src="brands/volvo.png" alt="Volvo" class="h-12 w-auto inline-block" />
-          <img src="brands/renault.png" alt="Renault" class="h-12 w-auto inline-block" />
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- SwiperJS CDN -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<section class="bg-gray-100 py-16">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Відгуки клієнтів</h2>
-
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
-        <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
-          <p class="text-lg text-gray-700 mb-4">
-            Недавно отдав свой <strong>MAN</strong> в <strong>В гараж</strong> на ремонт. Ремонтировали <strong>ТНВД Bosch VP44</strong>, <strong>турбину</strong> и <strong>форсунки</strong>. Сделали все быстро и качественно. После ремонта расход топлива уменьшился, а дымность исчезла. Машина стала работать мощнее и стабильнее. <strong>Рекомендую</strong> этот сервис.
-          </p>
-          <div class="flex items-center mt-4">
-            <div class="flex text-yellow-400 mr-3">
-              ★★★★★
-            </div>
-            <span class="text-gray-600 text-sm">– Володимир, MAN TGA</span>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
-          <p class="text-lg text-gray-700 mb-4">
-            Робив <strong>форсунки Delphi</strong> на <strong>Renault Premium</strong>. Дуже задоволений: мотор став працювати рівно, без стуків. При запуску більше немає диму, а тяга покращилась. Обслуговування привітне, є гарантія.
-          </p>
-          <div class="flex items-center mt-4">
-            <div class="flex text-yellow-400 mr-3">
-              ★★★★★
-            </div>
-            <span class="text-gray-600 text-sm">– Сергій, Renault Premium</span>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
-          <p class="text-lg text-gray-700 mb-4">
-            Здавав <strong>Volvo FH12</strong> на ремонт <strong>турбіни</strong> і чистку <strong>форсунок CR</strong>. Робота на вищому рівні. Все зробили швидко. Майстри пояснили, що саме було несправне. Після ремонту поїхав у рейс — машина тягне як нова.
-          </p>
-          <div class="flex items-center mt-4">
-            <div class="flex text-yellow-400 mr-3">
-              ★★★★★
-            </div>
-            <span class="text-gray-600 text-sm">– Ігор, Volvo FH12</span>
-          </div>
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
-          <p class="text-lg text-gray-700 mb-4">
-            Міняв <strong>плунжерну пару</strong> в <strong>Bosch ПНВТ</strong>. Довго шукав де зробити – і тут все чітко. Швидка діагностика, якісні комплектуючі. Навіть дали поради по обслуговуванню дизеля. Обов’язково звернусь ще.
-          </p>
-          <div class="flex items-center mt-4">
-            <div class="flex text-yellow-400 mr-3">
-              ★★★★★
-            </div>
-            <span class="text-gray-600 text-sm">– Микола, Mercedes Atego</span>
-          </div>
-        </div>
-
-        <!-- Slide 5 -->
-        <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
-          <p class="text-lg text-gray-700 mb-4">
-            Чистив <strong>розпилювачі</strong> і замінював <strong>шайби</strong> в <strong>Common Rail</strong> на <strong>DAF XF</strong>. Якість сервісу на 5 з плюсом. Все чітко, вчасно, без зайвого тягнення. Дали гарантію і навіть відео з діагностики.
-          </p>
-          <div class="flex items-center mt-4">
-            <div class="flex text-yellow-400 mr-3">
-              ★★★★★
-            </div>
-            <span class="text-gray-600 text-sm">– Олександр, DAF XF</span>
-          </div>
-        </div>
-
-      </div>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-2">
+    <div class="max-w-7xl mx-auto px-4">
+      <nav class="text-sm" aria-label="Breadcrumb">
+        <ol class="flex text-gray-600">
+          <li><a href="index.html" class="hover:text-red-600">Головна</a></li>
+          <li class="mx-2">/</li>
+          <li><a href="poslugi.html" class="hover:text-red-600">Послуги</a></li>
+          <li class="mx-2">/</li>
+          <li aria-current="page" class="text-gray-900">Ремонт насос-форсунок</li>
+        </ol>
+      </nav>
     </div>
   </div>
-</section>
 
-<!-- Swiper init -->
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 7000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: 1,
-    spaceBetween: 30,
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-    },
-  });
-</script>
+  <!-- Main section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <img 
+        src="images/banner-nasos-forsunki.png" 
+        alt="Ремонт насос-форсунок DELPHI і BOSCH для вантажних авто" 
+        class="rounded-xl shadow-lg"
+        width="600" 
+        height="400"
+      />
+      <div>
+        <h1 class="text-3xl font-bold text-gray-900 mb-4">Ремонт насос-форсунок для вантажних авто</h1>
+        <p class="text-lg mb-6">DTForce виконує повний ремонт насос-форсунок DELPHI та BOSCH для DAF, Volvo, Renault та інших марок. Встановлюємо нові розпилювачі, шайби, ущільнення. Тестування виконується на професійному стенді з видачею протоколу.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="tel:+380501234567" class="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition font-medium">📞 Зателефонувати</a>
+          <a href="#price" class="inline-block border-2 border-red-600 text-red-600 px-6 py-3 rounded-full hover:bg-red-600 hover:text-white transition font-medium">💰 Дізнатися ціни</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Карта -->
-  <section class="py-12">
+  <!-- Main types section -->
+  <section id="price" class="py-12 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-center mb-4">Наш сервіс на мапі</h2>
+      <h2 class="text-3xl font-bold text-center mb-10">Основні типи насос-форсунок та ціни</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <img 
+            src="images/delphi-a0-a1-a3.png" 
+            class="mx-auto rounded-xl shadow-md mb-4" 
+            alt="DELPHI A0 A1 A3 насос-форсунки для вантажівок" 
+            width="400" 
+            height="300"
+          />
+          <h3 class="text-xl font-semibold text-center">Насос-форсунки DELPHI A0, A1, A3</h3>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
+            <p class="font-medium">Зняття/установка:</p>
+            <p>від 500 грн</p>
+            <p class="font-medium">Перевірка на стенді:</p>
+            <p>450 грн</p>
+            <p class="font-medium">Ремонт:</p>
+            <p>від 4200 грн</p>
+          </div>
+
+          <h4 class="mt-4 text-lg font-semibold">Моделі:</h4>
+          <p>A0, A1, A3</p>
+
+          <h4 class="mt-3 text-lg font-semibold">Сумісність:</h4>
+          <ul class="list-disc list-inside">
+            <li>DAF 85, DAF 95</li>
+            <li>Renault Magnum</li>
+          </ul>
+
+          <h4 class="mt-3 text-lg font-semibold">Типові розпилювачі:</h4>
+          <ul class="list-disc list-inside">
+            <li>DLLA150P1011</li>
+            <li>DLLA145P870</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <img 
+            src="images/delphi-e1.png" 
+            class="mx-auto rounded-xl shadow-md mb-4" 
+            alt="DELPHI E1 насос-форсунки для Renault і Volvo" 
+            width="400" 
+            height="300"
+          />
+          <h3 class="text-xl font-semibold text-center">Насос-форсунки DELPHI E1</h3>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
+            <p class="font-medium">Зняття/установка:</p>
+            <p>від 550 грн</p>
+            <p class="font-medium">Перевірка на стенді:</p>
+            <p>500 грн</p>
+            <p class="font-medium">Ремонт:</p>
+            <p>від 4500 грн</p>
+          </div>
+
+          <h4 class="mt-4 text-lg font-semibold">Моделі:</h4>
+          <p>E1</p>
+
+          <h4 class="mt-3 text-lg font-semibold">Сумісність:</h4>
+          <ul class="list-disc list-inside">
+            <li>Renault Premium</li>
+            <li>Volvo FL</li>
+            <li>Iveco EuroTech</li>
+          </ul>
+
+          <h4 class="mt-3 text-lg font-semibold">Типові розпилювачі:</h4>
+          <ul class="list-disc list-inside">
+            <li>DLLA150P1275</li>
+            <li>DLLA152P1092</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <img 
+            src="images/delphi-e1.png" 
+            class="mx-auto rounded-xl shadow-md mb-4" 
+            alt="DELPHI E3 насос-форсунки для вантажівок" 
+            width="400" 
+            height="300"
+          />
+          <h3 class="text-xl font-semibold text-center">Насос-форсунки DELPHI E3</h3>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
+            <p class="font-medium">Зняття/установка:</p>
+            <p>від 600 грн</p>
+            <p class="font-medium">Перевірка на стенді:</p>
+            <p>550 грн</p>
+            <p class="font-medium">Ремонт:</p>
+            <p>від 4800 грн</p>
+          </div>
+
+          <h4 class="mt-4 text-lg font-semibold">Моделі:</h4>
+          <p>E3</p>
+
+          <h4 class="mt-3 text-lg font-semibold">Сумісність:</h4>
+          <ul class="list-disc list-inside">
+            <li>Renault Kerax</li>
+            <li>Volvo FM</li>
+            <li>Iveco EuroStar</li>
+          </ul>
+
+          <h4 class="mt-3 text-lg font-semibold">Типові розпилювачі:</h4>
+          <ul class="list-disc list-inside">
+            <li>DLLA155P1413</li>
+            <li>DLLA150P1062</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md">
+          <img 
+            src="images/bosh-nasos.png" 
+            class="mx-auto rounded-xl shadow-md mb-4" 
+            alt="BOSCH і DELPHI насос-форсунки для Volvo" 
+            width="400" 
+            height="300"
+          />
+          <h3 class="text-xl font-semibold text-center">BOSCH / DELPHI для VOLVO FH/FM</h3>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
+            <p class="font-medium">Зняття/установка:</p>
+            <p>від 550 грн</p>
+            <p class="font-medium">Перевірка на стенді:</p>
+            <p>500 грн</p>
+            <p class="font-medium">Ремонт:</p>
+            <p>від 4700 грн</p>
+          </div>
+
+          <h4 class="mt-4 text-lg font-semibold">Моделі:</h4>
+          <p>A0, A1, A3 (для Volvo)</p>
+
+          <h4 class="mt-3 text-lg font-semibold">Сумісність:</h4>
+          <ul class="list-disc list-inside">
+            <li>Volvo FH (1993–2001)</li>
+            <li>Volvo FM (1993–2001)</li>
+          </ul>
+
+          <h4 class="mt-3 text-lg font-semibold">Типові розпилювачі:</h4>
+          <ul class="list-disc list-inside">
+            <li>DLLA150P978</li>
+            <li>DLLA145P1005</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Технічна інформація про насос-форсунки</h2>
+      
+      <div class="space-y-8">
+        <div class="bg-gray-50 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Що таке насос-форсунка?</h3>
+          <p class="text-gray-700">
+            Насос-форсунка (також званий UIS - Unit Injector System) - це поєднання паливного насоса високого тиску (ПНВТ) та розпилювача в одному компакному корпусі. Пристрій забезпечує високий тиск впорскування (до 2200 бар), що значно покращує якість згоряння та зменшує шкідливі викиди.
+          </p>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Основні компоненти насос-форсунок</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li><span class="font-medium">Корпус</span> - містить всі компоненти системи</li>
+            <li><span class="font-medium">Плунжерна пара</span> - створює високий тиск</li>
+            <li><span class="font-medium">Розпилювач</span> - відповідає за якість розпилення</li>
+            <li><span class="font-medium">Електромагнітний клапан</span> (в електронних версіях) - контролює момент і тривалість впорскування</li>
+            <li><span class="font-medium">Пружинний механізм</span> - забезпечує закриття розпилювача</li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Переваги насос-форсунок перед іншими системами</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>Високий тиск впорскування (до 2200 бар)</li>
+            <li>Точне дозування палива</li>
+            <li>Краща економія пального</li>
+            <li>Зменшення шкідливих викидів</li>
+            <li>Підвищена потужність двигуна</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common problems section -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Поширені проблеми насос-форсунок</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-center text-red-600 mb-3">
+            <i class="fas fa-exclamation-triangle text-xl mr-3"></i>
+            <h3 class="text-lg font-semibold">Чорний дим із вихлопу</h3>
+          </div>
+          <p class="text-gray-700">Найчастіше виникає через зношений <strong>розпилювач</strong>, який не забезпечує належне розпилення палива. Це призводить до неповного згоряння та збільшеного споживання пального.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-center text-red-600 mb-3">
+            <i class="fas fa-exclamation-triangle text-xl mr-3"></i>
+            <h3 class="text-lg font-semibold">Втрата потужності двигуна</h3>
+          </div>
+          <p class="text-gray-700">Виникає через зношення <strong>плунжерної пари</strong>, що призводить до падіння тиску впорскування. Автомобіль втрачає динаміку, особливо на високих обертах.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-center text-red-600 mb-3">
+            <i class="fas fa-exclamation-triangle text-xl mr-3"></i>
+            <h3 class="text-lg font-semibold">Нестабільна робота двигуна</h3>
+          </div>
+          <p class="text-gray-700">Може бути викликана несправністю <strong>електромагнітного клапана</strong>, що призводить до нерівномірної подачі палива. Проявляється як "троєння" на холостому ходу.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-center text-red-600 mb-3">
+            <i class="fas fa-exclamation-triangle text-xl mr-3"></i>
+            <h3 class="text-lg font-semibold">Підтікання палива</h3>
+          </div>
+          <p class="text-gray-700">Найчастіше виникає через зношені <strong>ущільнення</strong> або тріщини в корпусі. Призводить до втрати тиску, появи диму та інших проблем із двигуном.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our advantages -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Чому обирають DTForce</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+          <i class="fas fa-tools text-3xl text-red-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Сучасне обладнання</h3>
+          <p>Діагностика та ремонт насос-форсунок на професійному стенді Bosch/Delphi з видачею протоколу випробувань.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+          <i class="fas fa-shield-alt text-3xl text-red-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Гарантія якості</h3>
+          <p>Гарантія до 12 місяців на всі види робіт. Використовуємо тільки якісні комплектуючі від перевірених постачальників.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+          <i class="fas fa-user-cog text-3xl text-red-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Досвідчені майстри</h3>
+          <p>Понад 10 років досвіду у сфері ремонту дизельного обладнання. Постійне навчання та підвищення кваліфікації.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repair process -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Етапи ремонту насос-форсунок</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-md relative">
+          <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-lg">1</div>
+          <h3 class="text-xl font-semibold mb-3 mt-2">Діагностика</h3>
+          <p class="text-gray-700">Проводимо повну діагностику насос-форсунок на професійному обладнанні для визначення точної причини несправності.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md relative">
+          <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-lg">2</div>
+          <h3 class="text-xl font-semibold mb-3 mt-2">Розбирання та очищення</h3>
+          <p class="text-gray-700">Демонтаж, ультразвукова очистка всіх деталей і перевірка стану кожного елемента насос-форсунки.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md relative">
+          <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-lg">3</div>
+          <h3 class="text-xl font-semibold mb-3 mt-2">Заміна деталей</h3>
+          <p class="text-gray-700">Встановлення нових розпилювачів, плунжерних пар, ущільнень та інших деталей, що підлягають заміні.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md relative">
+          <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-lg">4</div>
+          <h3 class="text-xl font-semibold mb-3 mt-2">Збірка</h3>
+          <p class="text-gray-700">Прецизійна збірка насос-форсунки з дотриманням усіх технологічних вимог.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md relative">
+          <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-lg">5</div>
+          <h3 class="text-xl font-semibold mb-3 mt-2">Тестування</h3>
+          <p class="text-gray-700">Перевірка роботи на спеціалізованому стенді з аналізом параметрів розпилення, тиску та загальної ефективності.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl shadow-md relative">
+          <div class="absolute -top-5 -left-5 w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-lg">6</div>
+          <h3 class="text-xl font-semibold mb-3 mt-2">Гарантія</h3>
+          <p class="text-gray-700">Надаємо протокол випробувань та гарантію на виконані роботи до 12 місяців.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands section -->
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-10">
+        Виконуємо ремонт насос-форсунок для всіх марок вантажних авто
+      </h2>
+  
+      <!-- Brand logos with auto-scroll -->
+      <div class="overflow-hidden">
+        <div class="flex animate-scroll whitespace-nowrap gap-12 items-center">
+          <img src="brands/man.png" alt="MAN вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/daf.png" alt="DAF вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/volvo.png" alt="Volvo вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/renault.png" alt="Renault вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/iveco.png" alt="IVECO вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/mercedes.png" alt="Mercedes-Benz вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/scania.png" alt="Scania вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/isuzu.png" alt="Isuzu вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          
+          <!-- Duplicate logos for infinite effect -->
+          <img src="brands/man.png" alt="MAN вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/daf.png" alt="DAF вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/volvo.png" alt="Volvo вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+          <img src="brands/renault.png" alt="Renault вантажівки" class="h-12 w-auto inline-block" width="120" height="48" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews section -->
+  <section class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Відгуки клієнтів</h2>
+
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
+            <p class="text-lg text-gray-700 mb-4">
+              Ремонтував <strong>насос-форсунки Delphi</strong> на <strong>DAF 95</strong>. Перед ремонтом двигун смикався і димів. Після обслуговування в DTForce машина запрацювала як годинник. Ціни адекватні, терміни виконання дотримані.
+            </p>
+            <div class="flex items-center mt-4">
+              <div class="flex text-yellow-400 mr-3">
+                <span aria-hidden="true">★★★★★</span>
+                <span class="sr-only">5 з 5 зірок</span>
+              </div>
+              <span class="text-gray-600 text-sm">– Володимир, DAF 95</span>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
+            <p class="text-lg text-gray-700 mb-4">
+              Робив <strong>насос-форсунки E3</strong> на <strong>Renault Kerax</strong>. Дуже задоволений: мотор став працювати рівно, без стуків. При запуску більше немає диму, а тяга покращилась. Обслуговування привітне, є гарантія.
+            </p>
+            <div class="flex items-center mt-4">
+              <div class="flex text-yellow-400 mr-3">
+                <span aria-hidden="true">★★★★★</span>
+                <span class="sr-only">5 з 5 зірок</span>
+              </div>
+              <span class="text-gray-600 text-sm">– Сергій, Renault Kerax</span>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
+            <p class="text-lg text-gray-700 mb-4">
+              Здавав <strong>Volvo FH</strong> на ремонт <strong>насос-форсунок</strong>. Робота на вищому рівні. Все зробили швидко. Майстри пояснили, що саме було несправне. Після ремонту поїхав у рейс — машина тягне як нова.
+            </p>
+            <div class="flex items-center mt-4">
+              <div class="flex text-yellow-400 mr-3">
+                <span aria-hidden="true">★★★★★</span>
+                <span class="sr-only">5 з 5 зірок</span>
+              </div>
+              <span class="text-gray-600 text-sm">– Ігор, Volvo FH</span>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide bg-white rounded-2xl shadow-lg p-8">
+            <p class="text-lg text-gray-700 mb-4">
+              Міняв <strong>розпилювачі</strong> в <strong>насос-форсунках Delphi</strong>. Довго шукав де зробити – і тут все чітко. Швидка діагностика, якісні комплектуючі. Навіть дали поради по обслуговуванню дизеля.
+            </p>
+            <div class="flex items-center mt-4">
+              <div class="flex text-yellow-400 mr-3">
+                <span aria-hidden="true">★★★★★</span>
+                <span class="sr-only">5 з 5 зірок</span>
+              </div>
+              <span class="text-gray-600 text-sm">– Микола, DAF</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="bg-red-600 text-white py-12">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Потрібна консультація або ремонт насос-форсунок?</h2>
+      <p class="text-xl mb-8">Зателефонуйте нам або залиште заявку, і ми зв'яжемося з вами</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:+380501234567" class="bg-white text-red-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition">
+          📞 Зателефонувати
+        </a>
+        <a href="contact.html" class="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-red-600 transition">
+          ✉️ Залишити заявку
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map section -->
+  <section id="contacts" class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-6">Наш сервіс на мапі</h2>
       <div class="w-full h-80 rounded-lg overflow-hidden shadow-lg">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Розташування DTForce на мапі"
+          aria-label="Карта розташування дизель сервісу DTForce"
+        ></iframe>
       </div>
     </div>
   </section>
-<!-- Footer -->
-<footer class="bg-[#2e3845] text-white pt-16 pb-10">
+
+  <!-- Footer -->
+  <footer class="bg-[#2e3845] text-white pt-16 pb-10">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
-  
-      <!-- Блок 1: Лого -->
+      <!-- Logo block -->
       <div>
-        <a href="/" class="flex items-center text-2xl font-bold mb-4">
-          <img src="images/logo.png" alt="DTForce" class="h-10 mr-2">
-         
+        <a href="index.html" class="flex items-center text-2xl font-bold mb-4">
+          <img src="images/logo.png" alt="DTForce" class="h-10 mr-2" width="100" height="40">
         </a>
         <p class="text-gray-300 text-sm leading-relaxed">
-          Діагностика та ремонт ТНВД, форсунок, турбін. Працюємо по всій Україні.
+          Діагностика та ремонт насос-форсунок, ПНВТ, форсунок, турбін. Працюємо по всій Україні. Якісно, з гарантією до 12 місяців.
         </p>
       </div>
   
-      <!-- Блок 2: Навігація -->
+      <!-- Navigation block -->
       <div>
         <h3 class="text-lg font-semibold mb-4">Меню</h3>
         <ul class="space-y-2 text-gray-300 text-sm">
-          <li><a href="/" class="hover:text-red-400">Головна</a></li>
+          <li><a href="index.html" class="hover:text-red-400">Головна</a></li>
           <li><a href="#about" class="hover:text-red-400">Про компанію</a></li>
-          <li><a href="#services" class="hover:text-red-400">Послуги</a></li>
-          <li><a href="#contacts" class="hover:text-red-400">Контакти</a></li>
+          <li><a href="poslugi.html" class="hover:text-red-400">Послуги</a></li>
+          <li><a href="contact.html" class="hover:text-red-400">Контакти</a></li>
         </ul>
       </div>
   
-      <!-- Блок 3: Контакти -->
+      <!-- Contacts block -->
       <div>
         <h3 class="text-lg font-semibold mb-4">Контакти</h3>
-        <ul class="space-y-2 text-gray-300 text-sm">
-          <li>📍 м. Одеса, вул. Новікова, 3</li>
-          <li>📞 <a href="tel:+380XXXXXXXXX" class="hover:text-red-400">+38 (050) 123-45-67</a></li>
-          <li>📧 <a href="mailto:dtforce@example.com" class="hover:text-red-400">dtforce@example.com</a></li>
-        </ul>
-        <a href="tel:+380XXXXXXXXX" class="mt-6 inline-block bg-red-600 hover:bg-red-700 transition text-white px-6 py-3 rounded-full font-semibold text-sm">
+        <address class="not-italic">
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li>📍 м. Одеса, вул. Новікова, 3</li>
+            <li>📞 <a href="tel:+380501234567" class="hover:text-red-400">+38 (050) 123-45-67</a></li>
+            <li>📧 <a href="mailto:info@dtforce.ua" class="hover:text-red-400">info@dtforce.ua</a></li>
+          </ul>
+        </address>
+        <a href="tel:+380501234567" class="mt-6 inline-block bg-red-600 hover:bg-red-700 transition text-white px-6 py-3 rounded-full font-semibold text-sm">
           📞 Записатися на ремонт
         </a>
       </div>
-  
     </div>
   
-    <!-- Карта -->
-    <div class="mt-12">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
-        class="w-full h-64 border-0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-  
-    <!-- Подвал -->
+    <!-- Copyright -->
     <div class="mt-10 text-center text-sm text-gray-400">
-      © 2024 DTForce. Всі права захищені.
+      <p>© 2024 DTForce. Всі права захищені.</p>
+      <div class="mt-2">
+        <a href="privacy.html" class="hover:text-red-400 mr-4">Політика конфіденційності</a>
+        <a href="terms.html" class="hover:text-red-400">Умови використання</a>
+      </div>
     </div>
   </footer>
-  <style>
-    @keyframes scroll {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-50%); }
-    }
-  
-    .animate-scroll {
-      animation: scroll 30s linear infinite;
-    }
-  </style>
+
+  <!-- Scroll to top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-20 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition hidden z-50" aria-label="Прокрутити вгору">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Mobile bottom menu -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-red-600 text-white border-t border-gray-200">
+    <div class="flex justify-around items-center text-sm font-semibold py-2">
+      <!-- Call -->
+      <a href="tel:+380501234567" class="flex flex-col items-center hover:text-yellow-300" aria-label="Зателефонувати">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 5a2 2 0 012-2h1.586a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V8a1 1 0 01-.293.707l-1.586 1.586a16 16 0 006.586 6.586l1.586-1.586A1 1 0 0116 14h1.879a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />
+        </svg>
+        Дзвінок
+      </a>
+
+      <!-- Services -->
+      <a href="poslugi.html" class="flex flex-col items-center hover:text-yellow-300" aria-label="Послуги">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        Послуги
+      </a>
+
+      <!-- Map -->
+      <a href="https://maps.app.goo.gl/NcXgjJG5iKZ6oLbW9" target="_blank" class="flex flex-col items-center hover:text-yellow-300" aria-label="Карта">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 20l-5.447-2.724A2 2 0 013 15.382V5.618a2 2 0 011.553-1.894L9 2m0 0l6 3m0 0l5.447 2.724A2 2 0 0121 8.618v9.764a2 2 0 01-1.553 1.894L15 22m0 0V9m0 13l-6-3" />
+        </svg>
+        Карта
+      </a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+    // Mobile menu toggle
     const toggle = document.getElementById("menuToggle");
     const menu = document.getElementById("mobileMenu");
+    
     toggle.addEventListener("click", () => {
       menu.classList.toggle("hidden");
+      const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", !isExpanded);
     });
 
+    // Scroll to top functionality
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-    function toggleMore() {
-      const block = document.getElementById("moreArticle");
-      const btn = document.getElementById("toggleBtn");
-  
-      block.classList.toggle("hidden");
-      btn.innerText = block.classList.contains("hidden") ? "Детальніше" : "Приховати";
-    }
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.remove("hidden");
+      } else {
+        scrollToTopBtn.classList.add("hidden");
+      }
+    });
 
-    
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+
+    // Swiper initialization
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 30,
+      breakpoints: {
+        768: { slidesPerView: 2 }
+      }
+    });
   </script>
-<!-- Добавьте этот код в нужное место вашего HTML -->
-<button id="scrollToTopBtn" class="fixed bottom-20 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition hidden z-50">
-  <!-- Иконка стрелки вверх -->
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-  </svg>
-</button>
-
-<script>
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-  // Показать кнопку при прокрутке вниз
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollToTopBtn.classList.remove("hidden");
-    } else {
-      scrollToTopBtn.classList.add("hidden");
-    }
-  });
-
-  // Прокрутка наверх при нажатии на кнопку
-  scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-</script>
-<!-- Нижнє мобільне меню -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-red-600 text-white border-t border-gray-200">
-  <div class="flex justify-around items-center text-sm font-semibold py-2">
-
-    <!-- Дзвінок -->
-    <a href="tel:+380XXXXXXXXX" class="flex flex-col items-center hover:text-yellow-300">
-      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M3 5a2 2 0 012-2h1.586a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V8a1 1 0 01-.293.707l-1.586 1.586a16 16 0 006.586 6.586l1.586-1.586A1 1 0 0116 14h1.879a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />
-      </svg>
-      Дзвінок
-    </a>
-
-    <!-- Послуги -->
-    <a href="#services" class="flex flex-col items-center hover:text-yellow-300">
-      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      Послуги
-    </a>
-
-    <!-- Карта -->
-    <a href="https://maps.app.goo.gl/NcXgjJG5iKZ6oLbW9" target="_blank" class="flex flex-col items-center hover:text-yellow-300">
-      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M9 20l-5.447-2.724A2 2 0 013 15.382V5.618a2 2 0 011.553-1.894L9 2m0 0l6 3m0 0l5.447 2.724A2 2 0 0121 8.618v9.764a2 2 0 01-1.553 1.894L15 22m0 0V9m0 13l-6-3" />
-      </svg>
-      Карта
-    </a>
-
-  </div>
-</div>
-
 </body>
 </html>
