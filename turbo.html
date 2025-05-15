@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ремонт турбін – DTForce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    .bg-dtforce { background-color: #2e3845; }
+    @keyframes scroll { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+    .animate-scroll { animation: scroll 30s linear infinite; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- Хедер -->
+  <header class="bg-dtforce border-top-red shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+
+      <!-- Логотип -->
+      <a href="index.html" class="flex items-center text-xl font-bold text-white">
+        <img src="images/logo.png" alt="DTForce" class="h-12 mr-3">
+        <div class="text-left leading-tight">
+         
+        </div>
+      </a>
+
+      <!-- Навигация -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <a href="index.html" class="hover:text-red-400">Головна</a>
+        <a href="#about" class="hover:text-red-400">Про компанію</a>
+        <a href="blog.html">Блог</a>
+
+
+        <!-- Dropdown -->
+        <div class="relative group">
+          <button class="hover:text-red-400 focus:outline-none"><a href="poslugi.html">Послуги</a></button>
+          <div class="absolute left-0 mt-2 w-72 bg-white text-gray-900 border rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-10">
+            <a href="pld.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт PLD секції</a>
+            <a href="cr.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт форсунок CR</a>
+            <a href="nasos-forsunki.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт насос форсунок</a>
+            <a href="turbo.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт турбін</a>
+            <a href="tnvd.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт ПНВТ</a>
+            <a href="chiptuning.html" class="block px-4 py-2 hover:bg-gray-100">Чип-тюнінг (ADBLUE, EGR, DPF OFF)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="hover:text-red-400">Контакти</a>
+        <button class="hover:text-red-400">UA</button>
+      </nav>
+
+      <!-- Мобильное меню (бургер) -->
+      <button id="menuToggle" class="md:hidden text-white hover:text-red-400 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-dtforce text-white">
+      <a href="/" class="block py-2 border-b border-gray-600">Головна</a>
+      <a href="#about" class="block py-2 border-b border-gray-600">Про компанію</a>
+      <a href="blog.html">Блог</a><!-- New Blog Link -->
+
+      <div class="py-2 border-b border-gray-600">
+        <span class="font-semibold">Послуги:</span>
+        <div class="ml-4 space-y-1 mt-1">
+          <a href="pld.html" class="block">• Ремонт PLD секції</a>
+          <a href="cr.html" class="block">• Ремонт форсунок CR</a>
+          <a href="nasos-forsunki.html" class="block">• Ремонт насос форсунок</a>
+          <a href="turbo.html" class="block">• Ремонт турбін</a>
+          <a href="tnvd.html" class="block">• Ремонт ПНВТ</a>
+          <a href="chiptuning.html" class="block">• Чип-тюнінг</a>
+        </div>
+      </div>
+      <a href="contact.html" class="block py-2 border-b border-gray-600">Контакти</a>
+      <button class="mt-2 hover:text-red-400">UA</button>
+    </div>
+  </header>
+
+<!-- Основний блок -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+    <img src="images/turnini.png" alt="Ремонт турбін" class="rounded-xl shadow-lg" />
+    <div>
+      <h1 class="text-3xl font-bold text-gray-900 mb-4">Професійний ремонт турбін</h1>
+      <p class="text-lg mb-6">DTForce пропонує повний спектр послуг з діагностики, обслуговування та ремонту турбокомпресорів для вантажних авто. Працюємо з Garrett, Holset, BorgWarner, Schwitzer, IHI, Mitsubishi, KKK. Безкоштовна діагностика турбіни. Доставка НП — за наш рахунок!</p>
+      <a href="tel:+380501234567" class="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition">Зателефонувати</a>
+    </div>
+  </div>
+</section>
+
+<!-- Слайдер брендів турбін -->
+<section class="bg-gray-50 py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper flex items-center">
+        <div class="swiper-slide"><img src="brands/garret.png" class="h-12 mx-auto" alt="Garrett"></div>
+        <div class="swiper-slide"><img src="brands/holset.png" class="h-12 mx-auto" alt="Holset"></div>
+        <div class="swiper-slide"><img src="brands/BorgWarner.png" class="h-12 mx-auto" alt="BorgWarner"></div>
+        <div class="swiper-slide"><img src="brands/schwitzer.png" class="h-12 mx-auto" alt="Schwitzer"></div>
+        <div class="swiper-slide"><img src="brands/IHI.png" class="h-12 mx-auto" alt="IHI"></div>
+        <div class="swiper-slide"><img src="brands/mitsu.png" class="h-12 mx-auto" alt="Mitsubishi"></div>
+        <div class="swiper-slide"><img src="brands/kkk.png" class="h-12 mx-auto" alt="KKK"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ціна і фото майстра -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="text-2xl font-bold mb-4">Ціни на ремонт турбіни</h2>
+      <ul class="text-gray-700 space-y-2">
+        <li>• Зняття / установка — від 600 грн</li>
+        <li>• Діагностика на стенді — безкоштовно</li>
+        <li>• Балансування ротора — від 800 грн</li>
+        <li>• Ремонт комплектом (ремкомплект + балансування) — від 3500 грн</li>
+        <li>• Повна реставрація з корпусом — від 5500 грн</li>
+      </ul>
+    </div>
+    <div>
+      <img src="brands/kostya.jpg" alt="Майстер DTForce" class="rounded-xl shadow-lg max-w-xs mx-auto " />
+    </div>
+  </div>
+</section>
+
+<!-- Стаття про правильний підхід -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6">Професійний підхід до ремонту турбіни</h2>
+    <p class="text-lg text-gray-700">Ремонт турбіни — це не просто заміна деталей, а складний технологічний процес. Ми використовуємо лише оригінальні комплектуючі, здійснюємо балансування, тестування геометрії та перевірку актуаторів. Це дозволяє забезпечити довготривалу роботу турбіни без повторних поломок. Обираючи DTForce — ви отримуєте якість та гарантію.</p>
+  </div>
+</section>
+
+<!-- Проблеми та рішення -->
+<section class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Типові проблеми турбін та їх вирішення</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Димність двигуна</h3>
+        <p>Причина: закоксовані лопаті турбіни або дефекти актуатора. <br>Рішення: чистка геометрії, заміна актуатора або реставрація ротора.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Витік масла з турбіни</h3>
+        <p>Причина: знос сальників або турбокомпресора. <br>Рішення: заміна ремкомплекту та балансування.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Свист або шум при роботі</h3>
+        <p>Причина: несправність підшипника або порушення балансу. <br>Рішення: перевірка вала, повна діагностика турбіни, заміна деталей.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Падіння тяги</h3>
+        <p>Причина: несправна геометрія, проблеми з клапаном. <br>Рішення: повна перевірка актуатора, відновлення геометрії турбіни.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Відправка Новою Поштою -->
+<section class="bg-gray-100 py-16">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="text-2xl font-bold mb-4">Зручний ремонт з доставкою</h2>
+    <p class="text-lg text-gray-700">Відправляйте зняту турбіну Новою Поштою або приїжджайте особисто. <br>Ми оплачуємо доставку, а ви — лише ремонт після отримання відновленої турбіни. <br><strong>Діагностика — безкоштовно!</strong></p>
+  </div>
+</section>
+
+<!-- Чому обирають нас + відгуки -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Чому обирають DTForce</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div class="p-6 bg-white rounded-xl shadow">
+          <i class="fas fa-tools text-3xl text-red-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Сучасне обладнання</h3>
+          <p>Діагностика та ремонт на професійному стенді Bosch/Delphi.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow">
+          <i class="fas fa-shield-alt text-3xl text-red-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Гарантія якості</h3>
+          <p>Гарантія до 12 місяців на всі види робіт.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow">
+          <i class="fas fa-user-cog text-3xl text-red-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Досвідчені майстри</h3>
+          <p>Понад 10 років досвіду у сфері ремонту дизельного обладнання.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Секция с марками авто -->
+ <section class="bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-10">
+        Виконуємо ремонт ПНВТ, Форсунок, Турбін для марок автомобілів
+      </h2>
+  
+      <!-- Логотипы брендов с автопрокруткой -->
+      <div class="overflow-hidden">
+        <div class="flex animate-scroll whitespace-nowrap gap-12 items-center">
+  
+          <img src="brands/man.png" alt="MAN" class="h-12 w-auto inline-block" />
+          <img src="brands/daf.png" alt="DAF" class="h-12 w-auto inline-block" />
+          <img src="brands/volvo.png" alt="Volvo" class="h-12 w-auto inline-block" />
+          <img src="brands/renault.png" alt="Renault" class="h-12 w-auto inline-block" />
+          <img src="brands/iveco.png" alt="IVECO" class="h-12 w-auto inline-block" />
+          <img src="brands/mercedes.png" alt="Mercedes-Benz" class="h-12 w-auto inline-block" />
+          <img src="brands/scania.png" alt="Scania" class="h-12 w-auto inline-block" />
+          <img src="brands/isuzu.png" alt="Isuzu" class="h-12 w-auto inline-block" />
+  
+          <!-- Повтор логотипов для бесконечного эффекта -->
+          <img src="brands/man.png" alt="MAN" class="h-12 w-auto inline-block" />
+          <img src="brands/daf.png" alt="DAF" class="h-12 w-auto inline-block" />
+          <img src="brands/volvo.png" alt="Volvo" class="h-12 w-auto inline-block" />
+          <img src="brands/renault.png" alt="Renault" class="h-12 w-auto inline-block" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Карта -->
+  <section class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-4">Наш сервіс на мапі</h2>
+      <div class="w-full h-80 rounded-lg overflow-hidden shadow-lg">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+<!-- Footer -->
+<footer class="bg-[#2e3845] text-white pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+  
+      <!-- Блок 1: Лого -->
+      <div>
+        <a href="/" class="flex items-center text-2xl font-bold mb-4">
+          <img src="images/logo.png" alt="DTForce" class="h-10 mr-2">
+         
+        </a>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Діагностика та ремонт ТНВД, форсунок, турбін. Працюємо по всій Україні.
+        </p>
+      </div>
+  
+      <!-- Блок 2: Навігація -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Меню</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><a href="/" class="hover:text-red-400">Головна</a></li>
+          <li><a href="#about" class="hover:text-red-400">Про компанію</a></li>
+          <li><a href="#services" class="hover:text-red-400">Послуги</a></li>
+          <li><a href="#contacts" class="hover:text-red-400">Контакти</a></li>
+        </ul>
+      </div>
+  
+      <!-- Блок 3: Контакти -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Контакти</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li>📍 м. Одеса, вул. Новікова, 3</li>
+          <li>📞 <a href="tel:+380XXXXXXXXX" class="hover:text-red-400">+38 (050) 123-45-67</a></li>
+          <li>📧 <a href="mailto:dtforce@example.com" class="hover:text-red-400">dtforce@example.com</a></li>
+        </ul>
+        <a href="tel:+380XXXXXXXXX" class="mt-6 inline-block bg-red-600 hover:bg-red-700 transition text-white px-6 py-3 rounded-full font-semibold text-sm">
+          📞 Записатися на ремонт
+        </a>
+      </div>
+  
+    </div>
+  
+    <!-- Карта -->
+    <div class="mt-12">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
+        class="w-full h-64 border-0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  
+    <!-- Подвал -->
+    <div class="mt-10 text-center text-sm text-gray-400">
+      © 2024 DTForce. Всі права захищені.
+    </div>
+  </footer>
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+  
+    .animate-scroll {
+      animation: scroll 30s linear infinite;
+    }
+  </style>
+  <script>
+    const toggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("mobileMenu");
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+
+    function toggleMore() {
+      const block = document.getElementById("moreArticle");
+      const btn = document.getElementById("toggleBtn");
+  
+      block.classList.toggle("hidden");
+      btn.innerText = block.classList.contains("hidden") ? "Детальніше" : "Приховати";
+    }
+
+    
+  </script>
+
+<!-- Swiper init -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 3,
+    spaceBetween: 20,
+    breakpoints: {
+      768: { slidesPerView: 4 },
+      1024: { slidesPerView: 5 }
+    },
+  });
+</script>
+<!-- Добавьте этот код в нужное место вашего HTML -->
+<button id="scrollToTopBtn" class="fixed bottom-20 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition hidden z-50">
+  <!-- Иконка стрелки вверх -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<script>
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  // Показать кнопку при прокрутке вниз
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.remove("hidden");
+    } else {
+      scrollToTopBtn.classList.add("hidden");
+    }
+  });
+
+  // Прокрутка наверх при нажатии на кнопку
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+<!-- Нижнє мобільне меню -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-red-600 text-white border-t border-gray-200">
+  <div class="flex justify-around items-center text-sm font-semibold py-2">
+
+    <!-- Дзвінок -->
+    <a href="tel:+380XXXXXXXXX" class="flex flex-col items-center hover:text-yellow-300">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h1.586a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V8a1 1 0 01-.293.707l-1.586 1.586a16 16 0 006.586 6.586l1.586-1.586A1 1 0 0116 14h1.879a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />
+      </svg>
+      Дзвінок
+    </a>
+
+    <!-- Послуги -->
+    <a href="#services" class="flex flex-col items-center hover:text-yellow-300">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      Послуги
+    </a>
+
+    <!-- Карта -->
+    <a href="https://maps.app.goo.gl/NcXgjJG5iKZ6oLbW9" target="_blank" class="flex flex-col items-center hover:text-yellow-300">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 20l-5.447-2.724A2 2 0 013 15.382V5.618a2 2 0 011.553-1.894L9 2m0 0l6 3m0 0l5.447 2.724A2 2 0 0121 8.618v9.764a2 2 0 01-1.553 1.894L15 22m0 0V9m0 13l-6-3" />
+      </svg>
+      Карта
+    </a>
+
+  </div>
+</div>
+
+</body>
+</html>

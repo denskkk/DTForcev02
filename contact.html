@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакти DTForce | Дизель сервіс в Одесі | Ремонт дизельного обладнання</title>
+  <meta name="description" content="Сервісний центр DTForce в Одесі - професійний ремонт дизельного обладнання. Адреса, телефони, графік роботи, карта проїзду.">
+  <meta name="keywords" content="DTForce, контакти, дизель сервіс, ремонт дизельного обладнання, Одеса, ПНВТ, форсунки">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dtforce.ua/contact.html">
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Контакти DTForce | Дизель сервіс в Одесі">
+  <meta property="og:description" content="Сервісний центр DTForce - ремонт дизельного обладнання. Адреса, телефони, карта проїзду.">
+  <meta property="og:url" content="https://dtforce.ua/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dtforce.ua/images/logo.png">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bg-dtforce { background-color: #2e3845; }
+    html {scroll-behavior: smooth;}
+  </style>
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "DTForce",
+      "image": "https://dtforce.ua/images/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Новікова 3",
+        "addressLocality": "Одеса",
+        "addressRegion": "Одеська область",
+        "postalCode": "65000",
+        "addressCountry": "UA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.467848,
+        "longitude": 30.681104
+      },
+      "url": "https://dtforce.ua",
+      "telephone": "+380501234567",
+      "email": "info@dtforce.ua",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "16:00"
+        }
+      ],
+      "priceRange": "$$"
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Хедер -->
+  <header class="bg-dtforce shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <!-- Логотип -->
+      <a href="index.html" class="flex items-center text-xl font-bold text-white" aria-label="DTForce головна сторінка">
+        <img src="images/logo.png" alt="DTForce логотип" class="h-12 mr-3" width="150" height="60">
+      </a>
+
+      <!-- Десктопна навігація -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-white">
+        <a href="index.html" class="hover:text-red-400">Головна</a>
+        <a href="index.html#about" class="hover:text-red-400">Про компанію</a>
+        <a href="blog.html" class="hover:text-red-400">Блог</a>
+
+        <!-- Dropdown послуг -->
+        <div class="relative group">
+          <a href="poslugi.html" class="hover:text-red-400 focus:outline-none">Послуги</a>
+          <div class="absolute left-0 mt-2 w-72 bg-white text-gray-900 border rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-10">
+            <a href="pld.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт PLD секції</a>
+            <a href="cr.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт форсунок CR</a>
+            <a href="nasos-forsunki.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт насос форсунок</a>
+            <a href="turbo.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт турбін</a>
+            <a href="tnvd.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт ПНВТ</a>
+            <a href="chiptuning.html" class="block px-4 py-2 hover:bg-gray-100">Чип-тюнінг (ADBLUE, EGR, DPF OFF)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="text-red-400 font-bold">Контакти</a>
+        <button class="hover:text-red-400">UA</button>
+      </nav>
+
+      <!-- Мобільний бургер -->
+      <button id="menuToggle" class="md:hidden text-white hover:text-red-400 focus:outline-none" aria-label="Відкрити меню">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Мобільне меню -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-dtforce text-white">
+      <a href="index.html" class="block py-2 border-b border-gray-600">Головна</a>
+      <a href="index.html#about" class="block py-2 border-b border-gray-600">Про компанію</a>
+      <a href="blog.html" class="block py-2 border-b border-gray-600">Блог</a>
+
+      <div class="py-2 border-b border-gray-600">
+        <a href="poslugi.html" class="font-semibold">Послуги:</a>
+        <div class="ml-4 space-y-1 mt-1">
+          <a href="pld.html" class="block">• Ремонт PLD секції</a>
+          <a href="cr.html" class="block">• Ремонт форсунок CR</a>
+          <a href="nasos-forsunki.html" class="block">• Ремонт насос форсунок</a>
+          <a href="turbo.html" class="block">• Ремонт турбін</a>
+          <a href="tnvd.html" class="block">• Ремонт ПНВТ</a>
+          <a href="chiptuning.html" class="block">• Чип-тюнінг</a>
+        </div>
+      </div>
+      <a href="contact.html" class="block py-2 border-b border-gray-600 text-red-400 font-bold">Контакти</a>
+      <button class="mt-2 hover:text-red-400">UA</button>
+    </div>
+  </header>
+
+  <!-- Основний контент -->
+  <main>
+    <!-- Контакти -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-10 text-gray-900">Контакти DTForce</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Зв'яжіться з нами</h2>
+            <p class="mb-4">DTForce – професійний сервіс з ремонту дизельного паливного обладнання в Одесі.</p>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">📍</span>
+                <span><strong>Адреса:</strong> вул. Новікова 3, м. Одеса, 65000</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">📞</span>
+                <span><strong>Телефон:</strong> <a href="tel:+380501234567" class="text-red-600 hover:underline">+38 (050) 123-45-67</a></span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">📧</span>
+                <span><strong>Email:</strong> <a href="mailto:info@dtforce.ua" class="text-red-600 hover:underline">info@dtforce.ua</a></span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">🕒</span>
+                <span><strong>Графік роботи:</strong><br>Понеділок–П'ятниця: 9:00 – 18:00<br>Субота: 10:00 – 16:00<br>Неділя: вихідний</span>
+              </li>
+            </ul>
+            
+            <!-- Соцмережі -->
+            <div class="mt-6">
+              <h3 class="text-lg font-semibold text-gray-800 mb-3">Ми в соцмережах</h3>
+              <div class="flex space-x-5 text-2xl text-gray-600">
+                <a href="https://instagram.com/dtforce" target="_blank" rel="noopener" class="hover:text-red-600" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="viber://chat?number=+380501234567" class="hover:text-purple-600" aria-label="Viber">
+                  <i class="fab fa-viber"></i>
+                </a>
+                <a href="https://t.me/dtforce" target="_blank" rel="noopener" class="hover:text-blue-500" aria-label="Telegram">
+                  <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://wa.me/380501234567" target="_blank" rel="noopener" class="hover:text-green-500" aria-label="WhatsApp">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://tiktok.com/@dtforce" target="_blank" rel="noopener" class="hover:text-black" aria-label="TikTok">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <h2 class="text-xl font-semibold mb-4">Надішліть запит</h2>
+            <form id="contactForm" action="send_mail.php" method="POST" class="space-y-4">
+              <div>
+                <label for="name" class="block text-sm font-medium">Ім'я</label>
+                <input type="text" id="name" name="name" required class="w-full mt-1 p-2 border rounded-md" aria-required="true">
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium">Телефон</label>
+                <input type="tel" id="phone" name="phone" required class="w-full mt-1 p-2 border rounded-md" pattern="[0-9+\s\-\(\)]{10,}" aria-required="true">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium">Email</label>
+                <input type="email" id="email" name="email" class="w-full mt-1 p-2 border rounded-md">
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium">Повідомлення</label>
+                <textarea id="message" name="message" rows="4" class="w-full mt-1 p-2 border rounded-md"></textarea>
+              </div>
+              <div class="text-sm text-gray-500">
+                <input type="checkbox" id="privacy" name="privacy" required class="mr-2" aria-required="true">
+                <label for="privacy">Я погоджуюсь з <a href="privacy.html" class="text-red-600 hover:underline">політикою конфіденційності</a></label>
+              </div>
+              <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition">Надіслати</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Карта -->
+        <div id="map" class="mt-16">
+          <h2 class="text-2xl font-semibold mb-4">Ми на карті</h2>
+          <div class="w-full h-80 rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="DTForce на Google Maps"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">DTForce</h3>
+          <p class="text-gray-300 text-sm">Професійний ремонт дизельного обладнання в Одесі з 2010 року.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Зв'язок</h3>
+          <ul class="text-gray-300 text-sm space-y-2">
+            <li>📞 <a href="tel:+380501234567" class="hover:text-red-400">+38 (050) 123-45-67</a></li>
+            <li>📧 <a href="mailto:info@dtforce.ua" class="hover:text-red-400">info@dtforce.ua</a></li>
+            <li>📍 вул. Новікова 3, м. Одеса</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Навігація</h3>
+          <ul class="text-gray-300 text-sm space-y-2">
+            <li><a href="index.html" class="hover:text-red-400">Головна</a></li>
+            <li><a href="poslugi.html" class="hover:text-red-400">Послуги</a></li>
+            <li><a href="blog.html" class="hover:text-red-400">Блог</a></li>
+            <li><a href="contact.html" class="hover:text-red-400">Контакти</a></li>
+            <li><a href="privacy.html" class="hover:text-red-400">Політика конфіденційності</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
+        <p>© 2010-2025 DTForce. Всі права захищені.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Кнопка прокрутки вгору -->
+  <button id="scrollToTopBtn" class="fixed bottom-20 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition hidden z-50" aria-label="Прокрутити наверх">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Нижнє мобільне меню -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-red-600 text-white border-t border-gray-200">
+    <div class="flex justify-around items-center text-sm font-semibold py-2">
+      <!-- Дзвінок -->
+      <a href="tel:+380501234567" class="flex flex-col items-center hover:text-yellow-300" aria-label="Зателефонувати нам">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 5a2 2 0 012-2h1.586a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V8a1 1 0 01-.293.707l-1.586 1.586a16 16 0 006.586 6.586l1.586-1.586A1 1 0 0116 14h1.879a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />
+        </svg>
+        Дзвінок
+      </a>
+
+      <!-- Послуги -->
+      <a href="poslugi.html" class="flex flex-col items-center hover:text-yellow-300" aria-label="Наші послуги">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        Послуги
+      </a>
+
+      <!-- Карта -->
+      <a href="#map" class="flex flex-col items-center hover:text-yellow-300" aria-label="Показати на карті">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 20l-5.447-2.724A2 2 0 013 15.382V5.618a2 2 0 011.553-1.894L9 2m0 0l6 3m0 0l5.447 2.724A2 2 0 0121 8.618v9.764a2 2 0 01-1.553 1.894L15 22m0 0V9m0 13l-6-3" />
+        </svg>
+        Карта
+      </a>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Мобільне меню
+    const toggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("mobileMenu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    }
+
+    // Кнопка прокрутки вгору
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    if (scrollToTopBtn) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollToTopBtn.classList.remove("hidden");
+        } else {
+          scrollToTopBtn.classList.add("hidden");
+        }
+      });
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
+
+    // Валідація форми
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+      contactForm.addEventListener("submit", function(event) {
+        const phone = document.getElementById("phone").value;
+        const phonePattern = /[0-9+\s\-\(\)]{10,}/;
+        
+        if (!phonePattern.test(phone)) {
+          event.preventDefault();
+          alert("Будь ласка, введіть коректний номер телефону");
+        }
+      });
+    }
+  </script>
+</body>
+</html>

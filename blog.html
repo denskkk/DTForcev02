@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO мета-теги -->
+    <title>Блог про ремонт дизельної паливної апаратури - DTForce</title>
+    <meta name="description" content="Інформативний блог про ремонт та обслуговування дизельного обладнання: ПНВТ, форсунки, турбіни, плунжерні пари та інше - від компанії DTForce, Одеса">
+    <meta name="keywords" content="дизельне обладнання, ПНВТ, форсунки, плунжерні пари, турбіни, ремонт дизельних систем, DTForce">
+    
+    <!-- Open Graph для соціальних мереж -->
+    <meta property="og:title" content="Блог про ремонт дизельної паливної апаратури - DTForce">
+    <meta property="og:description" content="Корисні статті про ремонт та обслуговування дизельного обладнання: ПНВТ, форсунок, турбін та іншого">
+    <meta property="og:url" content="https://dtforce.com.ua/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://dtforce.com.ua/images/logo.png">
+    
+    <!-- Canonical URL для запобігання дублювання контенту -->
+    <link rel="canonical" href="https://dtforce.com.ua/blog.html">
+    
+    <!-- Стилі -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-dtforce { background-color: #2e3845; }
+        /* Додаткові стилі для поліпшення доступності */
+        a:focus, button:focus {
+            outline: 2px solid #ef4444;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+  <!-- Хедер -->
+  <header class="bg-dtforce border-top-red shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+
+      <!-- Логотип -->
+      <a href="index.html" class="flex items-center text-xl font-bold text-white" aria-label="DTForce головна сторінка">
+        <img src="images/logo.png" alt="Логотип DTForce" class="h-12 mr-3" width="120" height="48">
+      </a>
+
+      <!-- Навігація -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <a href="index.html" class="text-white hover:text-red-400">Головна</a>
+        <a href="index.html#about" class="text-white hover:text-red-400">Про компанію</a>
+        <a href="blog.html" class="text-white hover:text-red-400 font-semibold" aria-current="page">Блог</a>
+
+        <!-- Dropdown -->
+        <div class="relative group">
+          <button class="text-white hover:text-red-400 focus:outline-none">
+            <a href="poslugi.html" class="text-white hover:text-red-400">Послуги</a>
+          </button>
+          <div class="absolute left-0 mt-2 w-72 bg-white text-gray-900 border rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-10">
+            <a href="pld.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт PLD секції</a>
+            <a href="cr.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт форсунок CR</a>
+            <a href="nasos-forsunki.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт насос форсунок</a>
+            <a href="turbo.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт турбін</a>
+            <a href="tnvd.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт ПНВТ</a>
+            <a href="chiptuning.html" class="block px-4 py-2 hover:bg-gray-100">Чип-тюнінг (ADBLUE, EGR, DPF OFF)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="text-white hover:text-red-400">Контакти</a>
+        <button class="text-white hover:text-red-400" aria-label="Українська мова">UA</button>
+      </nav>
+
+      <!-- Мобільне меню (бургер) -->
+      <button id="menuToggle" class="md:hidden text-white hover:text-red-400 focus:outline-none" aria-expanded="false" aria-controls="mobileMenu" aria-label="Меню">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Мобільне меню -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-dtforce text-white">
+      <a href="index.html" class="block py-2 border-b border-gray-600">Головна</a>
+      <a href="index.html#about" class="block py-2 border-b border-gray-600">Про компанію</a>
+      <a href="blog.html" class="block py-2 border-b border-gray-600 font-semibold">Блог</a>
+
+      <div class="py-2 border-b border-gray-600">
+        <span class="font-semibold">Послуги:</span>
+        <div class="ml-4 space-y-1 mt-1">
+          <a href="pld.html" class="block">• Ремонт PLD секції</a>
+          <a href="cr.html" class="block">• Ремонт форсунок CR</a>
+          <a href="nasos-forsunki.html" class="block">• Ремонт насос форсунок</a>
+          <a href="turbo.html" class="block">• Ремонт турбін</a>
+          <a href="tnvd.html" class="block">• Ремонт ПНВТ</a>
+          <a href="chiptuning.html" class="block">• Чип-тюнінг</a>
+        </div>
+      </div>
+      <a href="contact.html" class="block py-2 border-b border-gray-600">Контакти</a>
+      <button class="mt-2 hover:text-red-400" aria-label="Українська мова">UA</button>
+    </div>
+  </header>
+    
+  <!-- Головний контент -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-extrabold text-center text-gray-800 mb-8">Блог про дизельне обладнання</h1>
+    
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Блог картка 1 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Що таке плунжерна пара?</h2>
+        <p class="text-gray-600 mb-4">Плунжерна пара — ключовий елемент паливного насоса високого тиску (ПНВТ), що відповідає за точне дозування пального...</p>
+        <a href="blog1.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+      </article>
+
+      <!-- Блог картка 2 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Чому важливо замінювати розпилювачі?</h2>
+        <p class="text-gray-600 mb-4">Розпилювачі забезпечують правильне розпилення пального у камері згоряння. Зношений розпилювач може викликати дим...</p>
+        <a href="blog2.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+      </article>
+
+      <!-- Блог картка 3 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Ознаки несправної турбіни</h2>
+        <p class="text-gray-600 mb-4">Несправна турбіна може викликати зниження потужності двигуна та підвищення витрат пального. Дізнайтеся більше...</p>
+        <a href="blog3.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+      </article>
+
+      <!-- Блог картка 4 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Діагностика системи Common Rail</h2>
+        <p class="text-gray-600 mb-4">Сучасна діагностика систем Common Rail дозволяє точно визначити причини несправностей та запобігти серйозним поломкам...</p>
+        <a href="blog4.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+      </article>
+
+      <!-- Блог картка 5 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Переваги чип-тюнінгу дизельних двигунів</h2>
+        <p class="text-gray-600 mb-4">Професійний чип-тюнінг дизельного двигуна може збільшити потужність та крутний момент, одночасно зменшуючи витрату пального...</p>
+        <a href="blog5.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+      </article>
+
+      <!-- Блог картка 6 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Обслуговування ТНВД: що потрібно знати</h2>
+        <p class="text-gray-600 mb-4">Регулярне обслуговування ТНВД продовжує термін служби паливної системи та забезпечує оптимальну роботу двигуна...</p>
+        <a href="blog6.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+      </article>
+    </section>
+
+    <!-- Пагінація -->
+    <div class="flex justify-center mt-12">
+      <nav aria-label="Навігація сторінками">
+        <ul class="flex items-center space-x-2">
+          <li>
+            <span class="bg-red-600 text-white px-4 py-2 rounded" aria-current="page">1</span>
+          </li>
+          <li>
+            <a href="blog-page2.html" class="text-gray-600 hover:bg-gray-200 px-4 py-2 rounded">2</a>
+          </li>
+          <li>
+            <a href="blog-page3.html" class="text-gray-600 hover:bg-gray-200 px-4 py-2 rounded">3</a>
+          </li>
+          <li>
+            <a href="blog-page2.html" class="text-gray-600 hover:bg-gray-200 px-4 py-2 rounded" aria-label="Наступна сторінка">
+              →
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Секція підписки на новини (додатково для SEO та конверсій) -->
+  <section class="bg-gray-100 py-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold mb-4">Підпишіться на наші новини</h2>
+      <p class="text-gray-600 mb-6">Отримуйте корисні статті та поради щодо обслуговування дизельного обладнання</p>
+      <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <input type="email" placeholder="Ваш e-mail" class="flex-1 px-4 py-3 border border-gray-300 rounded focus:ring-red-500 focus:border-red-500" required>
+        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded transition">Підписатися</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#2e3845] text-white pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+  
+      <!-- Блок 1: Лого -->
+      <div>
+        <a href="index.html" class="flex items-center text-2xl font-bold mb-4" aria-label="DTForce головна сторінка">
+          <img src="images/logo.png" alt="Логотип DTForce" class="h-10 mr-2" width="100" height="40">
+        </a>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Діагностика та ремонт ТНВД, форсунок, турбін. Працюємо по всій Україні з 2010 року. Якісний ремонт з гарантією.
+        </p>
+        <div class="mt-4 flex space-x-3">
+          <a href="https://facebook.com/" aria-label="Facebook" class="text-gray-300 hover:text-white">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+          </a>
+          <a href="https://instagram.com/" aria-label="Instagram" class="text-gray-300 hover:text-white">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Блок 2: Навігація -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Меню</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><a href="index.html" class="hover:text-red-400">Головна</a></li>
+          <li><a href="index.html#about" class="hover:text-red-400">Про компанію</a></li>
+          <li><a href="poslugi.html" class="hover:text-red-400">Послуги</a></li>
+          <li><a href="blog.html" class="hover:text-red-400">Блог</a></li>
+          <li><a href="contact.html" class="hover:text-red-400">Контакти</a></li>
+        </ul>
+      </div>
+  
+      <!-- Блок 3: Контакти -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Контакти</h3>
+        <address class="not-italic">
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li>📍 м. Одеса, вул. Новікова, 3</li>
+            <li>📞 <a href="tel:+380501234567" class="hover:text-red-400">+38 (050) 123-45-67</a></li>
+            <li>📧 <a href="mailto:info@dtforce.com.ua" class="hover:text-red-400">info@dtforce.com.ua</a></li>
+            <li>⏰ Пн-Пт: 9:00-18:00, Сб: 9:00-15:00</li>
+          </ul>
+        </address>
+        <a href="tel:+380501234567" class="mt-6 inline-block bg-red-600 hover:bg-red-700 transition text-white px-6 py-3 rounded-full font-semibold text-sm">
+          📞 Записатися на ремонт
+        </a>
+      </div>
+  
+    </div>
+  
+    <!-- Карта -->
+    <div class="mt-12">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
+        class="w-full h-64 border-0"
+        title="Наше розташування на мапі"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  
+    <!-- Підвал -->
+    <div class="mt-10 text-center text-sm text-gray-400">
+      <p>© 2024 DTForce. Всі права захищені.</p>
+      <p class="mt-2">
+        <a href="privacy.html" class="hover:text-red-400 mr-4">Політика конфіденційності</a>
+        <a href="terms.html" class="hover:text-red-400">Умови використання</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript для мобільного меню -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      menuToggle.addEventListener('click', function() {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        mobileMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+  <!-- Структурировані дані для SEO (Schema.org) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Блог про дизельне обладнання - DTForce",
+      "url": "https://dtforce.com.ua/blog.html",
+      "description": "Інформативний блог про ремонт та обслуговування дизельного обладнання: ПНВТ, форсунки, турбіни, плунжерні пари та інше",
+      "publisher": {
+        "@type": "Organization",
+        "name": "DTForce",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://dtforce.com.ua/images/logo.png"
+        }
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Що таке плунжерна пара?",
+          "description": "Плунжерна пара — ключовий елемент паливного насоса високого тиску (ПНВТ), що відповідає за точне дозування пального...",
+          "url": "https://dtforce.com.ua/blog1.html",
+          "datePublished": "2024-05-01"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Чому важливо замінювати розпилювачі?",
+          "description": "Розпилювачі забезпечують правильне розпилення пального у камері згоряння. Зношений розпилювач може викликати дим...",
+          "url": "https://dtforce.com.ua/blog2.html",
+          "datePublished": "2024-04-15"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Ознаки несправної турбіни",
+          "description": "Несправна турбіна може викликати зниження потужності двигуна та підвищення витрат пального. Дізнайтеся більше...",
+          "url": "https://dtforce.com.ua/blog3.html",
+          "datePublished": "2024-03-28"
+        }
+      ]
+    }
+  </script>
+</body>
+</html>

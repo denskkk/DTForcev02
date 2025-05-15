@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Відключення AdBlue та Чип-тюнінг – DTForce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .bg-dtforce { background-color: #2e3845; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- Хедер -->
+  <header class="bg-dtforce border-top-red shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+
+      <!-- Логотип -->
+      <a href="index.html" class="flex items-center text-xl font-bold text-white">
+        <img src="images/logo.png" alt="DTForce" class="h-12 mr-3">
+        <div class="text-left leading-tight">
+         
+        </div>
+      </a>
+
+      <!-- Навигация -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <a href="index.html" class="hover:text-red-400">Головна</a>
+        <a href="#about" class="hover:text-red-400">Про компанію</a>
+        <a href="blog.html">Блог</a>
+
+
+        <!-- Dropdown -->
+        <div class="relative group">
+          <button class="hover:text-red-400 focus:outline-none"><a href="poslugi.html">Послуги</a></button>
+          <div class="absolute left-0 mt-2 w-72 bg-white text-gray-900 border rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-10">
+            <a href="pld.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт PLD секції</a>
+            <a href="cr.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт форсунок CR</a>
+            <a href="nasos-forsunki.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт насос форсунок</a>
+            <a href="turbo.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт турбін</a>
+            <a href="tnvd.html" class="block px-4 py-2 hover:bg-gray-100">Ремонт ПНВТ</a>
+            <a href="chiptuning.html" class="block px-4 py-2 hover:bg-gray-100">Чип-тюнінг (ADBLUE, EGR, DPF OFF)</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="hover:text-red-400">Контакти</a>
+        <button class="hover:text-red-400">UA</button>
+      </nav>
+
+      <!-- Мобильное меню (бургер) -->
+      <button id="menuToggle" class="md:hidden text-white hover:text-red-400 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-dtforce text-white">
+      <a href="/" class="block py-2 border-b border-gray-600">Головна</a>
+      <a href="#about" class="block py-2 border-b border-gray-600">Про компанію</a>
+      <a href="blog.html">Блог</a><!-- New Blog Link -->
+
+      <div class="py-2 border-b border-gray-600">
+        <span class="font-semibold">Послуги:</span>
+        <div class="ml-4 space-y-1 mt-1">
+          <a href="pld.html" class="block">• Ремонт PLD секції</a>
+          <a href="cr.html" class="block">• Ремонт форсунок CR</a>
+          <a href="nasos-forsunki.html" class="block">• Ремонт насос форсунок</a>
+          <a href="turbo.html" class="block">• Ремонт турбін</a>
+          <a href="tnvd.html" class="block">• Ремонт ПНВТ</a>
+          <a href="chiptuning.html" class="block">• Чип-тюнінг</a>
+        </div>
+      </div>
+      <a href="contact.html" class="block py-2 border-b border-gray-600">Контакти</a>
+      <button class="mt-2 hover:text-red-400">UA</button>
+    </div>
+  </header>
+
+<!-- Основний блок -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h1 class="text-3xl font-bold text-gray-900 mb-4">Відключення рідини AdBlue</h1>
+      <p class="text-lg mb-6">Пропонуємо відключення системи SCR та емуляцію AdBlue на вантажних авто та автобусах (DAF, MAN, VOLVO, IVECO, Renault, Mercedes-Benz та інші) відповідно до стандартів EURO-4, EURO-5, EURO-6.</p>
+      <ul class="list-disc ml-5 text-gray-700 mb-6">
+        <li>Вирішення проблем із замерзанням AdBlue</li>
+        <li>Уникнення обмеження потужності до 60%</li>
+        <li>Позбавлення від помилок по SCR/NOx</li>
+        <li>Зменшення витрат на обслуговування системи</li>
+      </ul>
+      <a href="tel:+380501234567" class="inline-block bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition">Зателефонувати</a>
+    </div>
+    <div>
+      <img src="brands/adblue.png" alt="AdBlue Delete" class="rounded-xl shadow-lg w-[350px] mx-auto">
+    </div>
+  </div>
+</section>
+
+<!-- Статті -->
+<section class="py-12 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center">Чип-тюнінг та видалення AdBlue: деталі</h2>
+
+    <h3 class="text-xl font-semibold mb-2">Відключення рідини AdBlue</h3>
+    <p class="mb-4 text-gray-700">Рідина AdBlue використовується в SCR-системах для зниження викидів NOx. Але в реальних умовах це створює серйозні труднощі: висока вартість, підробки, складне обслуговування. Часто вона замерзає, викликає обмеження потужності або аварійні режими.</p>
+
+    <h3 class="text-xl font-semibold mb-2">Проблеми з використанням AdBlue:</h3>
+    <ul class="list-disc ml-5 mb-4 text-gray-700">
+      <li>Блокування потужності двигуна (до 60%) при помилках SCR</li>
+      <li>Дорога заміна форсунок (до 30 000 грн)</li>
+      <li>Хімічні опіки, агресивна рідина</li>
+      <li>AdBlue замерзає при -11°C</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mb-2">Методи відключення:</h3>
+    <ol class="list-decimal ml-5 mb-4 text-gray-700">
+      <li><strong>Програмне відключення</strong> – перепрошивка ECU для відключення SCR та датчиків AdBlue</li>
+      <li><strong>Встановлення емулятора</strong> – пристрій, який імітує нормальну роботу системи</li>
+    </ol>
+
+    <h3 class="text-xl font-semibold mb-2">Наші переваги:</h3>
+    <ul class="list-disc ml-5 mb-6 text-gray-700">
+      <li>Безпечне програмне втручання без шкоди двигуну</li>
+      <li>Без демонтажу SCR</li>
+      <li>Діагностика та видалення помилок</li>
+      <li>Запис на зручний для вас час</li>
+      <li>Гарантія на виконані роботи</li>
+    </ul>
+
+    <p class="text-gray-700 mb-4">Чіп тюнінг AdBlue на вантажні автомобілі в Одесі, дизельний тюнінг EURO-5, оптимізація SCR, видалення екологічних обмежень для тягачів, ремонт і видалення AdBlue в MAN, Volvo FH, DAF XF, Mercedes Actros, Renault Premium, Iveco Stralis.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white py-16 text-center">
+  <h2 class="text-2xl font-bold mb-4">Готові позбутись проблем з AdBlue?</h2>
+  <p class="text-lg mb-6 text-gray-700">Телефонуйте просто зараз або залишайте заявку на сайті. Ми гарантуємо результат.</p>
+  <a href="tel:+380501234567" class="inline-block bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition text-lg">📞 Зателефонувати</a>
+</section>
+  <!-- Секция с марками авто -->
+  <section class="bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-10">
+        Виконуємо ремонт ПНВТ, Форсунок, Турбін для марок автомобілів
+      </h2>
+  
+      <!-- Логотипы брендов с автопрокруткой -->
+      <div class="overflow-hidden">
+        <div class="flex animate-scroll whitespace-nowrap gap-12 items-center">
+  
+          <img src="brands/man.png" alt="MAN" class="h-12 w-auto inline-block" />
+          <img src="brands/daf.png" alt="DAF" class="h-12 w-auto inline-block" />
+          <img src="brands/volvo.png" alt="Volvo" class="h-12 w-auto inline-block" />
+          <img src="brands/renault.png" alt="Renault" class="h-12 w-auto inline-block" />
+          <img src="brands/iveco.png" alt="IVECO" class="h-12 w-auto inline-block" />
+          <img src="brands/mercedes.png" alt="Mercedes-Benz" class="h-12 w-auto inline-block" />
+          <img src="brands/scania.png" alt="Scania" class="h-12 w-auto inline-block" />
+          <img src="brands/isuzu.png" alt="Isuzu" class="h-12 w-auto inline-block" />
+  
+          <!-- Повтор логотипов для бесконечного эффекта -->
+          <img src="brands/man.png" alt="MAN" class="h-12 w-auto inline-block" />
+          <img src="brands/daf.png" alt="DAF" class="h-12 w-auto inline-block" />
+          <img src="brands/volvo.png" alt="Volvo" class="h-12 w-auto inline-block" />
+          <img src="brands/renault.png" alt="Renault" class="h-12 w-auto inline-block" />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="blog" class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+        Блог про дизельне обладнання
+      </h2>
+  
+      <!-- Статья -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 mb-8 transition hover:shadow-xl">
+        <h3 class="text-2xl font-semibold text-gray-900">Що таке плунжерна пара та як вона впливає на роботу ПНВТ?</h3>
+        <p class="text-gray-700 mt-4">
+          Плунжерна пара — ключовий елемент паливного насоса високого тиску (ПНВТ), що відповідає за точне дозування пального...
+        </p>
+        <div class="mt-4 hidden transition-all duration-300 ease-in-out" id="article1">
+          <p class="text-gray-700">
+            Зношення плунжера або втрати герметичності можуть спричинити падіння тиску, перебої в роботі двигуна та збільшення витрати дизельного пального.
+            Регулярна перевірка плунжерної пари продовжує термін служби дизельного паливного обладнання.
+          </p>
+        </div>
+        <button onclick="toggleArticle('article1', this)" class="mt-4 inline-block bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition">
+          Детальніше
+        </button>
+      </div>
+  
+      <!-- Статья 2 -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 mb-8 transition hover:shadow-xl">
+        <h3 class="text-2xl font-semibold text-gray-900">Чому важливо замінювати розпилювачі у дизельних форсунках?</h3>
+        <p class="text-gray-700 mt-4">
+          Розпилювачі забезпечують правильне розпилення пального у камері згоряння. Зношений розпилювач може викликати дим, вібрації та погане згорання...
+        </p>
+        <div class="mt-4 hidden transition-all duration-300 ease-in-out" id="article2">
+          <p class="text-gray-700">
+            Важливо використовувати якісні дизельні розпилювачі (Bosch, Denso, Delphi), а також підбирати правильні шайби для герметичності. Це підвищує ефективність дизельного обладнання.
+          </p>
+        </div>
+        <button onclick="toggleArticle('article2', this)" class="mt-4 inline-block bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition">
+          Детальніше
+        </button>
+      </div>
+  
+      <!-- Статья 3 -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 mb-8 transition hover:shadow-xl">
+        <h3 class="text-2xl font-semibold text-gray-900">Ознаки несправної турбіни та як обрати правильний картридж</h3>
+        <p class="text-gray-700 mt-4">
+          Турбіна підвищує потужність дизельного мотора. Якщо чути свист, падає тяга — можливо, вийшов з ладу картридж турбіни...
+        </p>
+        <div class="mt-4 hidden transition-all duration-300 ease-in-out" id="article3">
+          <p class="text-gray-700">
+            Картридж містить основні частини: вал, крильчатку та підшипники. Якісна заміна картриджа — альтернатива повній заміні турбіни. Ми встановлюємо надійні турбіни з гарантією.
+          </p>
+        </div>
+        <button onclick="toggleArticle('article3', this)" class="mt-4 inline-block bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition">
+          Детальніше
+        </button>
+      </div>
+  
+    </div>
+  </section>
+
+  <style>
+    @keyframes scroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+  
+    .animate-scroll {
+      animation: scroll 30s linear infinite;
+    }
+  </style>
+  
+  
+<!-- Чому обирають нас (новий стиль) -->
+<section class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-12">Чому обирають нас</h2>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+  
+        <!-- Перевага 1 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-red-100 text-red-600 rounded-full p-4 shadow-lg mb-4">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="text-gray-700 text-base font-medium max-w-xs">Ми впевнені в якості наших робіт, тому даємо довготривалу гарантію.</p>
+        </div>
+  
+        <!-- Перевага 2 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-blue-100 text-blue-600 rounded-full p-4 shadow-lg mb-4">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M14 5l7 7-7 7M5 5h9v14H5z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="text-gray-700 text-base font-medium max-w-xs">Приймаємо запчастини через Нову Пошту — працюємо по всій Україні.</p>
+        </div>
+  
+        <!-- Перевага 3 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-green-100 text-green-600 rounded-full p-4 shadow-lg mb-4">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M9 12l2 2 4-4M12 22a10 10 0 100-20 10 10 0 000 20z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="text-gray-700 text-base font-medium max-w-xs">Ми використовуємо стенди, тестери і програматори останнього покоління.</p>
+        </div>
+  
+        <!-- Перевага 4 -->
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-yellow-100 text-yellow-600 rounded-full p-4 shadow-lg mb-4">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="text-gray-700 text-base font-medium max-w-xs">Майстри з величезним досвідом у ремонті ТНВД, форсунок, турбін.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+<!-- Footer -->
+<footer class="bg-[#2e3845] text-white pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+  
+      <!-- Блок 1: Лого -->
+      <div>
+        <a href="/" class="flex items-center text-2xl font-bold mb-4">
+          <img src="images/logo.png" alt="DTForce" class="h-10 mr-2">
+         
+        </a>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Діагностика та ремонт ТНВД, форсунок, турбін. Працюємо по всій Україні.
+        </p>
+      </div>
+  
+      <!-- Блок 2: Навігація -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Меню</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><a href="/" class="hover:text-red-400">Головна</a></li>
+          <li><a href="#about" class="hover:text-red-400">Про компанію</a></li>
+          <li><a href="#services" class="hover:text-red-400">Послуги</a></li>
+          <li><a href="#contacts" class="hover:text-red-400">Контакти</a></li>
+        </ul>
+      </div>
+  
+      <!-- Блок 3: Контакти -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Контакти</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li>📍 м. Одеса, вул. Новікова, 3</li>
+          <li>📞 <a href="tel:+380XXXXXXXXX" class="hover:text-red-400">+38 (050) 123-45-67</a></li>
+          <li>📧 <a href="mailto:dtforce@example.com" class="hover:text-red-400">dtforce@example.com</a></li>
+        </ul>
+        <a href="tel:+380XXXXXXXXX" class="mt-6 inline-block bg-red-600 hover:bg-red-700 transition text-white px-6 py-3 rounded-full font-semibold text-sm">
+          📞 Записатися на ремонт
+        </a>
+      </div>
+  
+    </div>
+  
+    <!-- Карта -->
+    <div class="mt-12">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
+        class="w-full h-64 border-0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  
+    <!-- Подвал -->
+    <div class="mt-10 text-center text-sm text-gray-400">
+      © 2024 DTForce. Всі права захищені.
+    </div>
+  </footer>
+  
+
+  <script>
+    const toggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("mobileMenu");
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    function toggleArticle(id, btn) {
+    const block = document.getElementById(id);
+    block.classList.toggle("hidden");
+    if (!block.classList.contains("hidden")) {
+      btn.innerText = "Приховати";
+    } else {
+      btn.innerText = "Детальніше";
+    }
+  }
+  </script>
+<!-- Добавьте этот код в нужное место вашего HTML -->
+<button id="scrollToTopBtn" class="fixed bottom-20 right-6 bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition hidden z-50">
+  <!-- Иконка стрелки вверх -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<script>
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  // Показать кнопку при прокрутке вниз
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.remove("hidden");
+    } else {
+      scrollToTopBtn.classList.add("hidden");
+    }
+  });
+
+  // Прокрутка наверх при нажатии на кнопку
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+<!-- Нижнє мобільне меню -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-red-600 text-white border-t border-gray-200">
+  <div class="flex justify-around items-center text-sm font-semibold py-2">
+
+    <!-- Дзвінок -->
+    <a href="tel:+380XXXXXXXXX" class="flex flex-col items-center hover:text-yellow-300">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 5a2 2 0 012-2h1.586a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V8a1 1 0 01-.293.707l-1.586 1.586a16 16 0 006.586 6.586l1.586-1.586A1 1 0 0116 14h1.879a1 1 0 01.707.293l2.121 2.121a1 1 0 01.293.707V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z" />
+      </svg>
+      Дзвінок
+    </a>
+
+    <!-- Послуги -->
+    <a href="#services" class="flex flex-col items-center hover:text-yellow-300">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      Послуги
+    </a>
+
+    <!-- Карта -->
+    <a href="https://maps.app.goo.gl/NcXgjJG5iKZ6oLbW9" target="_blank" class="flex flex-col items-center hover:text-yellow-300">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 20l-5.447-2.724A2 2 0 013 15.382V5.618a2 2 0 011.553-1.894L9 2m0 0l6 3m0 0l5.447 2.724A2 2 0 0121 8.618v9.764a2 2 0 01-1.553 1.894L15 22m0 0V9m0 13l-6-3" />
+      </svg>
+      Карта
+    </a>
+
+  </div>
+</div>
+
+
+</body>
+</html>
