@@ -200,28 +200,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-lg">
-      <h2 class="text-xl font-semibold mb-4">Надішліть запит</h2>
-      <form id="contactForm" action="send_mail.php" method="POST" class="space-y-4">
-        <div>
-          <label for="name" class="block text-sm font-medium">Ім'я</label>
-          <input type="text" id="name" name="name" required class="w-full mt-1 p-2 border rounded-md" aria-required="true">
-        </div>
-        <div>
-          <label for="phone" class="block text-sm font-medium">Телефон</label>
-          <input type="tel" id="phone" name="phone" required class="w-full mt-1 p-2 border rounded-md" pattern="[0-9+\s\-\(\)]{10,}" aria-required="true">
-        </div>
-        <div>
-          <label for="message" class="block text-sm font-medium">Повідомлення (необов'язково)</label>
-          <textarea id="message" name="message" rows="4" class="w-full mt-1 p-2 border rounded-md"></textarea>
-        </div>
-        <div class="text-sm text-gray-500">
-          <input type="checkbox" id="privacy" name="privacy" required class="mr-2" aria-required="true">
-          <label for="privacy">Я погоджуюсь з <a href="privacy.html" class="text-red-600 hover:underline">політикою конфіденційності</a></label>
-        </div>
-        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition">Надіслати</button>
-      </form>
+        <!-- ...existing code... -->
+<div class="bg-white p-6 rounded-xl shadow-lg">
+  <h2 class="text-xl font-semibold mb-4">Надішліть запит</h2>
+  <form id="contactForm" action="https://formsubmit.co/failarm13@gmail.com" method="POST" class="space-y-4">
+    <!-- Защита от спама -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://dtforce.in.ua/thank-you.html">
+    <input type="hidden" name="_subject" value="Новий запит з сайту DTForce">
+    <input type="hidden" name="_template" value="table">
+    
+    <div>
+      <label for="name" class="block text-sm font-medium">Ім'я</label>
+      <input type="text" id="name" name="name" required class="w-full mt-1 p-2 border rounded-md" aria-required="true">
     </div>
+    <div>
+      <label for="phone" class="block text-sm font-medium">Телефон</label>
+      <input type="tel" id="phone" name="phone" required class="w-full mt-1 p-2 border rounded-md" pattern="[0-9+\s\-\(\)]{10,}" aria-required="true">
+    </div>
+    <div>
+      <label for="message" class="block text-sm font-medium">Повідомлення (необов'язково)</label>
+      <textarea id="message" name="message" rows="4" class="w-full mt-1 p-2 border rounded-md"></textarea>
+    </div>
+    <div class="text-sm text-gray-500">
+      <input type="checkbox" id="privacy" name="privacy" required class="mr-2" aria-required="true">
+      <label for="privacy">Я погоджуюсь з <a href="privacy.html" class="text-red-600 hover:underline">політикою конфіденційності</a></label>
+    </div>
+    <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition">Надіслати</button>
+  </form>
+</div>
+<!-- ...existing code... -->
 
         <!-- Карта -->
         <div id="map" class="mt-16">
