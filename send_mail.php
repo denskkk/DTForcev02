@@ -1,25 +1,55 @@
 <?php
-// filepath: c:\Users\Admin\Desktop\DTForcev02-main\DTForcev02-main\send_mail.php
+<?php
+// Проверка, что форма отправлена
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars(trim($_POST['name']));
-    $phone = htmlspecialchars(trim($_POST['phone']));
-    $email = htmlspecialchars(trim($_POST['email']));
-    $message = htmlspecialchars(trim($_POST['message']));
-
-    // Укажите ваш email
-    $to = "nikolaycpitera01@gmail.com"; // Замените на ваш email
-    $subject = "Новий запит з форми зворотного зв'язку";
-    $body = "Ім'я: $name\nТелефон: $phone\nEmail: $email\nПовідомлення:\n$message";
-
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Ваше повідомлення успішно надіслано!";
+    // Получение данных из формы
+    $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
+    $phone = isset($_POST['phone']) ? strip_tags(trim($_POST['phone'])) : '';
+    $message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : 'Не указано';
+    $privacy = isset($_POST['privacy']) ? true : false;
+    
+    // Проверка обязательных полей
+    if (empty($name) || empty($phone) || !$privacy) {
+        http_response_code(400);
+        echo "Будь ласка, заповніть всі обов'язкові поля.";
+        exit;
+    }
+    
+    // Email получателя
+    $to = 'failarm13@gmail.com';
+    
+    // Тема письма
+    $subject = 'Новий запит з сайту DTForce';
+    
+    // Содержимое письма
+    $email_content = "Ім'я: $name\n";
+    $email_content .= "Телефон: $phone\n";
+    $email_content .= "Повідомлення: $message\n";
+    
+    // Заголовки письма
+    $headers = "From: DTForce <noreply@dtforce.in.ua>\n";
+    $headers .= "Reply-To: $name <noreply@dtforce.in.ua>\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
+    
+    // Отправка письма
+    if (mail($to, $subject, $email_content, $headers)) {
+        // Успешно отправлено
+        http_response_code(200);
+        
+        // Перенаправление на страницу благодарности
+        header("Location: thank-you.html");
+        exit;
     } else {
-        echo "На жаль, сталася помилка при відправці повідомлення.";
+        // Ошибка отправки
+        http_response_code(500);
+        echo "Виникла помилка при відправці повідомлення.";
     }
 } else {
-    echo "Неправильний метод запиту.";
+    // Запрос не POST
+    http_response_code(403);
+    echo "Доступ заборонено.";
 }
 ?>
+
+
