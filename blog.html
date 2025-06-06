@@ -34,22 +34,6 @@
         a:focus, button:focus {
             outline: 2px solid #ef4444;
         }
-        
-        /* Pagination styles */
-        .pagination-active {
-            background-color: #dc2626;
-            color: white;
-        }
-        
-        .pagination-inactive {
-            color: #6b7280;
-            background-color: white;
-            border: 1px solid #d1d5db;
-        }
-        
-        .pagination-inactive:hover {
-            background-color: #f3f4f6;
-        }
     </style>
      <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQ2PMHYNXT"></script>
      <script>
@@ -134,111 +118,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main class="max-w-7xl mx-auto px-4 py-12">
     <h1 class="text-3xl font-extrabold text-center text-gray-800 mb-8">Блог про дизельне обладнання</h1>
     
-    <!-- Контейнер для сторінок -->
-    <div id="blogContainer">
-      <!-- Сторінка 1 (за замовчуванням) -->
-      <section id="page1" class="blog-page grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Блог картка 1 -->
-        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-          <div class="mb-4">
-            <img src="images/plunger-pair.jpg" alt="Плунжерна пара ПНВТ" class="w-full h-48 object-cover rounded-lg" loading="lazy">
-          </div>
-          <h2 class="text-xl font-bold text-gray-800 mb-4">Що таке плунжерна пара?</h2>
-          <p class="text-gray-600 mb-4">Плунжерна пара — ключовий елемент паливного насоса високого тиску (ПНВТ), що відповідає за точне дозування пального...</p>
-          <div class="flex items-center justify-between">
-            <span class="text-sm text-gray-500">1 травня 2024</span>
-            <a href="blog1.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
-          </div>
-        </article>
+    <!-- Всі блог карточки в одному контейнері -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Блог картка 1 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div class="mb-4">
+          <img src="images/plunger-pair.jpg" alt="Плунжерна пара ПНВТ" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+        </div>
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Що таке плунжерна пара?</h2>
+        <p class="text-gray-600 mb-4">Плунжерна пара — ключовий елемент паливного насоса високого тиску (ПНВТ), що відповідає за точне дозування пального...</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-gray-500">1 травня 2024</span>
+          <a href="blog1.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+        </div>
+      </article>
 
-        <!-- Блог картка 2 -->
-        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-          <div class="mb-4">
-            <img src="images/turbo-types.jpg" alt="Типи турбін для дизельних двигунів" class="w-full h-48 object-cover rounded-lg" loading="lazy">
-          </div>
-          <h2 class="text-xl font-bold text-gray-800 mb-4">Типи турбін для дизельних двигунів</h2>
-          <p class="text-gray-600 mb-4">Детальний огляд типів турбокомпресорів, їх переваг та недоліків. Як вибрати найкращу турбіну для...</p>
-          <div class="flex items-center justify-between">
-            <span class="text-sm text-gray-500">15 квітня 2024</span>
-            <a href="blog2.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
-          </div>
-        </article>
+      <!-- Блог картка 2 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div class="mb-4">
+          <img src="images/turbo-types.jpg" alt="Типи турбін для дизельних двигунів" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+        </div>
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Типи турбін для дизельних двигунів</h2>
+        <p class="text-gray-600 mb-4">Детальний огляд типів турбокомпресорів, їх переваг та недоліків. Як вибрати найкращу турбіну для...</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-gray-500">15 квітня 2024</span>
+          <a href="blog2.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+        </div>
+      </article>
 
-        <!-- Блог картка 3 -->
-        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-          <div class="mb-4">
-            <img src="images/common-rail.jpg" alt="Система Common Rail" class="w-full h-48 object-cover rounded-lg" loading="lazy">
-          </div>
-          <h2 class="text-xl font-bold text-gray-800 mb-4">Система Common Rail: принцип роботи</h2>
-          <p class="text-gray-600 mb-4">Розберемо принцип роботи системи Common Rail, її переваги та особливості діагностики і ремонту...</p>
-          <div class="flex items-center justify-between">
-            <span class="text-sm text-gray-500">28 березня 2024</span>
-            <a href="blog3.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
-          </div>
-        </article>
-      </section>
+      <!-- Блог картка 3 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div class="mb-4">
+          <img src="images/common-rail.jpg" alt="Система Common Rail" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+        </div>
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Система Common Rail: принцип роботи</h2>
+        <p class="text-gray-600 mb-4">Розберемо принцип роботи системи Common Rail, її переваги та особливості діагностики і ремонту...</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-gray-500">28 березня 2024</span>
+          <a href="blog3.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+        </div>
+      </article>
 
-      <!-- Сторінка 2 (приховано за замовчуванням) -->
-      <section id="page2" class="blog-page hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Блог картка 4 -->
-        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-          <div class="mb-4">
-            <img src="images/chiptuning.png" alt="Чип-тюнінг вантажівок" class="w-full h-48 object-cover rounded-lg" loading="lazy">
-          </div>
-          <h2 class="text-xl font-bold text-gray-800 mb-4">Чип-тюнінг вантажівок: як збільшити потужність</h2>
-          <p class="text-gray-600 mb-4">Професійний чип-тюнінг дизельних двигунів. Збільшення потужності до 30%, зниження витрати палива...</p>
-          <div class="flex items-center justify-between">
-            <span class="text-sm text-gray-500">30 травня 2024</span>
-            <a href="blog4.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
-          </div>
-        </article>
+      <!-- Блог картка 4 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div class="mb-4">
+          <img src="images/chiptuning.png" alt="Чип-тюнінг вантажівок" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+        </div>
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Чип-тюнінг вантажівок: як збільшити потужність</h2>
+        <p class="text-gray-600 mb-4">Професійний чип-тюнінг дизельних двигунів. Збільшення потужності до 30%, зниження витрати палива...</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-gray-500">30 травня 2024</span>
+          <a href="blog4.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+        </div>
+      </article>
 
-        <!-- Блог картка 5 -->
-        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-          <div class="mb-4">
-            <img src="images/ecu-tuning-algorithm.jpg" alt="Алгоритм прошивки ЕБУ" class="w-full h-48 object-cover rounded-lg" loading="lazy">
-          </div>
-          <h2 class="text-xl font-bold text-gray-800 mb-4">Алгоритм безпечної прошивки ЕБУ на тягачах</h2>
-          <p class="text-gray-600 mb-4">Професійний алгоритм чип-тюнінгу тягачів: від діагностики до стендового тестування. Безпечне збільшення потужності...</p>
-          <div class="flex items-center justify-between">
-            <span class="text-sm text-gray-500">30 травня 2024</span>
-            <a href="blog5.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
-          </div>
-        </article>
+      <!-- Блог картка 5 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div class="mb-4">
+          <img src="images/evu_check.png" alt="Алгоритм прошивки ЕБУ" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+        </div>
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Алгоритм безпечної прошивки ЕБУ на тягачах</h2>
+        <p class="text-gray-600 mb-4">Професійний алгоритм чип-тюнінгу тягачів: від діагностики до стендового тестування. Безпечне збільшення потужності...</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-gray-500">30 травня 2024</span>
+          <a href="blog5.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+        </div>
+      </article>
 
-        <!-- Блог картка 6 -->
-        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-          <div class="mb-4">
-            <img src="images/loaded-truck-tuning.jpg" alt="Чип-тюнінг завантажених тягачів" class="w-full h-48 object-cover rounded-lg" loading="lazy">
-          </div>
-          <h2 class="text-xl font-bold text-gray-800 mb-4">Індивідуальний чип-тюнінг при постійному завантаженні</h2>
-          <p class="text-gray-600 mb-4">Що дає індивідуальний чип-тюнінг тягача при постійному завантаженні. Збільшення тяги, економія палива...</p>
-          <div class="flex items-center justify-between">
-            <span class="text-sm text-gray-500">30 травня 2024</span>
-            <a href="blog6.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
-          </div>
-        </article>
-      </section>
-    </div>
-
-    <!-- Пагінація -->
-    <div class="flex justify-center mt-12">
-      <nav aria-label="Навігація сторінками">
-        <ul class="flex items-center space-x-2">
-          <li>
-            <button id="page1Btn" class="pagination-active px-4 py-2 rounded transition-colors" aria-current="page" onclick="showPage(1)">1</button>
-          </li>
-          <li>
-            <button id="page2Btn" class="pagination-inactive px-4 py-2 rounded transition-colors" onclick="showPage(2)">2</button>
-          </li>
-          <li>
-            <button id="nextBtn" class="pagination-inactive px-4 py-2 rounded transition-colors" aria-label="Наступна сторінка" onclick="nextPage()">
-              →
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <!-- Блог картка 6 -->
+      <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div class="mb-4">
+          <img src="images/322.png" alt="Чип-тюнінг завантажених тягачів" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+        </div>
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Індивідуальний чип-тюнінг при постійному завантаженні</h2>
+        <p class="text-gray-600 mb-4">Що дає індивідуальний чип-тюнінг тягача при постійному завантаженні. Збільшення тяги, економія палива...</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-gray-500">30 травня 2024</span>
+          <a href="blog6.html" class="text-red-600 font-semibold hover:underline">Детальніше</a>
+        </div>
+      </article>
+    </section>
   </main>
 
   <!-- Секція підписки на новини (додатково для SEO та конверсій) -->
@@ -312,7 +271,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Карта -->
     <div class="mt-12">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2lua!4v1746554190077!5m2!1sru!2sua"
         class="w-full h-64 border-0"
         title="Наше розташування на мапі"
         allowfullscreen=""
@@ -331,7 +290,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </footer>
 
-  <!-- JavaScript для мобільного меню та пагінації -->
+  <!-- JavaScript для мобільного меню -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const menuToggle = document.getElementById('menuToggle');
@@ -343,46 +302,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         mobileMenu.classList.toggle('hidden');
       });
     });
-
-    // Пагінація
-    let currentPage = 1;
-    const totalPages = 2;
-
-    function showPage(pageNumber) {
-      // Приховуємо всі сторінки
-      document.querySelectorAll('.blog-page').forEach(page => {
-        page.classList.add('hidden');
-      });
-
-      // Показуємо потрібну сторінку
-      document.getElementById(`page${pageNumber}`).classList.remove('hidden');
-
-      // Оновлюємо стиль кнопок пагінації
-      document.querySelectorAll('[id$="Btn"]').forEach(btn => {
-        btn.className = 'pagination-inactive px-4 py-2 rounded transition-colors';
-      });
-
-      // Виділяємо активну кнопку
-      document.getElementById(`page${pageNumber}Btn`).className = 'pagination-active px-4 py-2 rounded transition-colors';
-      document.getElementById(`page${pageNumber}Btn`).setAttribute('aria-current', 'page');
-
-      currentPage = pageNumber;
-
-      // Прокручуємо до верху
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function nextPage() {
-      if (currentPage < totalPages) {
-        showPage(currentPage + 1);
-      }
-    }
-
-    function prevPage() {
-      if (currentPage > 1) {
-        showPage(currentPage - 1);
-      }
-    }
   </script>
 
   <!-- Структурировані дані для SEO (Schema.org) -->
@@ -434,7 +353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           "@type": "BlogPosting",
           "headline": "Алгоритм безпечної прошивки ЕБУ на тягачах",
           "description": "Професійний алгоритм чип-тюнінгу тягачів: від діагностики до стендового тестування...",
-          "url": "https://dtforce.in.ua/blog-ecu-algorithm.html",
+          "url": "https://dtforce.in.ua/blog5.html",
           "datePublished": "2024-05-30"
         },
         {

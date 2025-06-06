@@ -87,7 +87,7 @@
     },
     "telephone": "+380671916336",
     "email": "dtforce@example.com",
-    "url": "https://dtforce.in.ua/DTForcev02/",
+    "url": "https://dtforce.in.ua/",
     "priceRange": "₴₴",
     "openingHours": "Mo-Fr 09:00-18:00",
     "sameAs": [
@@ -117,41 +117,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header class="bg-dtforce shadow-md sticky top-0 z-50 border-t-2 border-red-600">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
       <!-- Логотип -->
-      <a href="index.html" class="flex items-center text-xl font-bold text-white" aria-label="DTForce головна сторінка">
+      <a href="#" id="logoLink" class="flex items-center text-xl font-bold text-white" aria-label="DTForce головна сторінка">
         <img src="images/logo.png" alt="DTForce – Дизель сервіс логотип" class="h-12 mr-3" width="210" height="60">
       </a>
       
-      <!-- Основное меню (десктоп) -->
-      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-        <a href="index.html" class="text-white hover:text-red-400 transition">Головна</a>
-        <a href="#about" class="text-white hover:text-red-400 transition">Про компанію</a>
-        <a href="blog.html" class="text-white hover:text-red-400 transition">Блог</a>
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <a href="#" id="homeLink" class="text-white hover:text-red-400 transition" data-lang="home">Головна</a>
+        <a href="#about" class="text-white hover:text-red-400 transition" data-lang="about">Про компанію</a>
+        <a href="#" id="blogLink" class="text-white hover:text-red-400 transition" data-lang="blog">Блог</a>
         
         <!-- Выпадающее меню услуг -->
         <div class="dropdown relative">
-          <a href="poslugi.html" class="text-white hover:text-red-400 transition flex items-center">
-            Послуги
+          <a href="#" id="servicesLink" class="text-white hover:text-red-400 transition flex items-center">
+            <span data-lang="services">Послуги</span>
             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </a>
           <div class="dropdown-menu">
-            <a href="nasos-forsunki.html" class="block px-4 py-2 text-white hover:bg-red-600 transition">Ремонт насос-форсунок</a>
-            <a href="pld.html" class="block px-4 py-2 text-white hover:bg-red-600 transition">Ремонт насос-секцій</a>
-            <a href="cr.html" class="block px-4 py-2 text-white hover:bg-red-600 transition">Ремонт Common Rail</a>
-            <a href="tnvd.html" class="block px-4 py-2 text-white hover:bg-red-600 transition">Ремонт ТНВД</a>
-            <a href="turbo.html" class="block px-4 py-2 text-white hover:bg-red-600 transition">Ремонт турбін</a>
+            <a href="#" id="service1Link" class="block px-4 py-2 text-white hover:bg-red-600 transition" data-lang="service1Title">Ремонт насос-форсунок</a>
+            <a href="#" id="service2Link" class="block px-4 py-2 text-white hover:bg-red-600 transition" data-lang="service2Title">Ремонт насос-секцій</a>
+            <a href="#" id="service3Link" class="block px-4 py-2 text-white hover:bg-red-600 transition" data-lang="service3Title">Ремонт Common Rail</a>
+            <a href="#" id="service4Link" class="block px-4 py-2 text-white hover:bg-red-600 transition" data-lang="service4Title">Ремонт ТНВД</a>
+            <a href="#" id="service5Link" class="block px-4 py-2 text-white hover:bg-red-600 transition" data-lang="service5Title">Ремонт турбін</a>
           </div>
         </div>
         
-        <a href="contact.html" class="text-white hover:text-red-400 transition">Контакти</a>
+        <a href="#" id="contactLink" class="text-white hover:text-red-400 transition" data-lang="contacts">Контакти</a>
         <a href="tel:+380671916336" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition font-medium flex items-center justify-center">
           <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
           </svg>
-          Подзвонити
+          <span data-lang="call">Подзвонити</span>
         </a>        
-        <button class="hover:text-red-400 transition">UA</button>
+        <button class="text-white hover:text-red-400 transition" id="langBtn">UA</button>
       </nav>
       
       <!-- Меню бургер (мобильное) -->
@@ -164,35 +163,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <!-- Мобильное меню -->
     <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-dtforce text-white">
-      <a href="index.html" class="block py-2 border-b border-gray-600 hover:text-red-400">Головна</a>
-      <a href="#about" class="block py-2 border-b border-gray-600 hover:text-red-400">Про компанію</a>
-      <a href="blog.html" class="block py-2 border-b border-gray-600 hover:text-red-400">Блог</a>
+      <a href="#" id="homeLinkMobile" class="block py-2 border-b border-gray-600 hover:text-red-400" data-lang="home">Головна</a>
+      <a href="#about" class="block py-2 border-b border-gray-600 hover:text-red-400" data-lang="about">Про компанію</a>
+      <a href="#" id="blogLinkMobile" class="block py-2 border-b border-gray-600 hover:text-red-400" data-lang="blog">Блог</a>
       
       <!-- Мобильное выпадающее меню услуг -->
       <div class="py-2 border-b border-gray-600">
         <button id="mobileServicesBtn" class="flex items-center justify-between w-full hover:text-red-400">
-          Послуги
+          <span data-lang="services">Послуги</span>
           <svg id="mobileServicesArrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
         <div id="mobileServicesList" class="hidden pl-4 mt-2 space-y-2">
-          <a href="nasos-forsunki.html" class="block py-1 hover:text-red-400">Ремонт насос-форсунок</a>
-          <a href="pld.html" class="block py-1 hover:text-red-400">Ремонт насос-секцій</a>
-          <a href="cr.html" class="block py-1 hover:text-red-400">Ремонт Common Rail</a>
-          <a href="tnvd.html" class="block py-1 hover:text-red-400">Ремонт ТНВД</a>
-          <a href="turbo.html" class="block py-1 hover:text-red-400">Ремонт турбін</a>
+          <a href="#" id="service1LinkMobile" class="block py-1 hover:text-red-400" data-lang="service1Title">Ремонт насос-форсунок</a>
+          <a href="#" id="service2LinkMobile" class="block py-1 hover:text-red-400" data-lang="service2Title">Ремонт насос-секцій</a>
+          <a href="#" id="service3LinkMobile" class="block py-1 hover:text-red-400" data-lang="service3Title">Ремонт Common Rail</a>
+          <a href="#" id="service4LinkMobile" class="block py-1 hover:text-red-400" data-lang="service4Title">Ремонт ТНВД</a>
+          <a href="#" id="service5LinkMobile" class="block py-1 hover:text-red-400" data-lang="service5Title">Ремонт турбін</a>
         </div>
       </div>
       
-      <a href="contact.html" class="block py-2 border-b border-gray-600 hover:text-red-400">Контакти</a>
+      <a href="#" id="contactLinkMobile" class="block py-2 border-b border-gray-600 hover:text-red-400" data-lang="contacts">Контакти</a>
       <div class="flex justify-between items-center mt-4">
-        <button class="hover:text-red-400">UA</button>
+        <button class="text-white hover:text-red-400 transition" id="langBtnMobile">UA</button>
         <a href="tel:+380671916336" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition font-medium flex items-center justify-center">
           <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
           </svg>
-          Подзвонити
+          <span data-lang="call">Подзвонити</span>
         </a>
       </div>
     </div>
@@ -207,9 +206,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="w-full lg:w-1/2 text-center lg:text-left">
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 leading-tight">
           <span class="text-red-600">DTForce</span> – <br>
-          Діагностика та ремонт ТНВД,<br>форсунок, турбін вантажних авто
+          <span data-lang="heroTitle">Діагностика та ремонт ТНВД,<br>форсунок, турбін вантажних авто</span>
         </h1>
-        <p class="mt-6 text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+        <p class="mt-6 text-lg text-gray-600 max-w-xl mx-auto lg:mx-0" data-lang="heroDesc">
           Швидко, якісно, з гарантією до 12 місяців. Сучасне обладнання, професійна команда, працюємо з 2010 року.
         </p>
         <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -217,7 +216,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
             </svg>
-            Подзвонити
+            <span data-lang="call">Подзвонити</span>
           </a>
         </div>
       </div>
@@ -227,7 +226,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Секция с марками авто -->
   <section class="bg-gray-50 py-16">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-10">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-10" data-lang="brandsTitle">
         Виконуємо ремонт ПНВТ, Форсунок, Турбін для марок:
       </h2>
       <div class="overflow-hidden">
@@ -259,9 +258,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-10">
         <h2 class="text-2xl md:text-3xl font-extrabold text-gray-800">
-          <span class="text-red-600">Ремонт</span> вашої паливної системи
-        </h2>
-        <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+        <span class="text-red-600" data-lang="carSelectorTitle">Ремонт</span> <span data-lang="carSelectorTitleEnd">вашої паливної системи</span>
+      </h2>
+        <p class="mt-4 text-gray-600 max-w-3xl mx-auto" data-lang="carSelectorDesc">
           Оберіть марку, модель і рік випуску вашого авто — і система покаже, які форсунки встановлені, їхню вартість, а також підбере оптимальні варіанти ремонту.
         </p>
       </div>
@@ -270,9 +269,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
           <!-- Марка авто -->
           <div class="relative">
-            <label for="brand" class="text-sm font-medium text-gray-700 mb-1 block">Марка автомобіля</label>
+            <label for="brand" class="text-sm font-medium text-gray-700 mb-1 block" data-lang="brandLabel">Марка автомобіля</label>
             <select id="brand" class="w-full text-gray-800 border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
-              <option value="">Оберіть марку</option>
+              <option value="" data-lang="selectBrand">Оберіть марку</option>
               <option value="DAF">DAF</option>
               <option value="IVECO">IVECO</option>
               <option value="MAN">MAN</option>
@@ -285,23 +284,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <!-- Модель авто -->
           <div class="relative">
-            <label for="model" class="text-sm font-medium text-gray-700 mb-1 block">Модель автомобіля</label>
+            <label for="model" class="text-sm font-medium text-gray-700 mb-1 block" data-lang="modelLabel">Модель автомобіля</label>
             <select id="model" class="w-full text-gray-800 border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
-              <option value="">Спочатку оберіть марку</option>
+              <option value="" data-lang="selectModel">Спочатку оберіть марку</option>
             </select>
           </div>
 
           <!-- Рік авто -->
           <div class="relative">
-            <label for="year" class="text-sm font-medium text-gray-700 mb-1 block">Рік випуску</label>
+            <label for="year" class="text-sm font-medium text-gray-700 mb-1 block" data-lang="yearLabel">Рік випуску</label>
             <select id="year" class="w-full text-gray-800 border border-gray-300 rounded-lg px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
-              <option value="">Оберіть рік</option>
+              <option value="" data-lang="selectYear">Оберіть рік</option>
             </select>
           </div>
 
           <!-- Кнопка переходу -->
           <div class="text-center">
-            <button id="searchBtn" class="w-full bg-red-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-red-700 transition">
+            <button id="searchBtn" class="w-full bg-red-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-red-700 transition" data-lang="needRepair">
               ПОТРІБЕН РЕМОНТ
             </button>
           </div>
@@ -313,17 +312,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Основные услуги -->
   <section id="services" class="bg-white py-14">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Наші послуги з ремонту дизельних систем</h2>
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-10" data-lang="servicesTitle">Наші послуги з ремонту дизельних систем</h2>
       
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         
         <!-- Картка 1 -->
-        <a href="nasos-forsunki.html" class="block group">
+        <a href="#" id="service1Card" class="block group">
           <div class="bg-red-600 text-white rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition-all transform hover:-translate-y-1 h-full">
             <img src="images/nasosfors.png" alt="Насос-форсунка для вантажних авто" class="h-44 object-contain mb-4" width="150" height="96">
-            <h3 class="text-base font-bold text-center uppercase">Ремонт насос-форсунок</h3>
-            <p class="text-sm text-gray-100 mt-3 text-center">Діагностика та ремонт насос-форсунок Bosch, Delphi для MAN, Mercedes</p>
-            <span class="mt-3 text-white group-hover:underline inline-flex items-center">Детальніше 
+            <h3 class="text-base font-bold text-center uppercase" data-lang="service1Title">Ремонт насос-форсунок</h3>
+            <p class="text-sm text-gray-100 mt-3 text-center" data-lang="service1Desc">Діагностика та ремонт насос-форсунок Bosch, Delphi для MAN, Mercedes</p>
+            <span class="mt-3 text-white group-hover:underline inline-flex items-center">
+              <span data-lang="readMore">Детальніше</span>
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
@@ -332,12 +332,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- Картка 2 -->
-        <a href="pld.html" class="block group">
+        <a href="#" id="service2Card" class="block group">
           <div class="bg-rose-300 text-black rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition-all transform hover:-translate-y-1 h-full">
             <img src="images/pld.png" alt="PLD секція для вантажних авто" class="h-44 object-contain mb-4" width="150" height="96">
-            <h3 class="text-base font-bold text-center uppercase">Ремонт насос-секцій</h3>
-            <p class="text-sm text-gray-700 mt-3 text-center">Відновлення PLD секцій Bosch для Volvo, MAN, Mercedes, Scania</p>
-            <span class="mt-3 text-gray-800 group-hover:underline inline-flex items-center">Детальніше 
+            <h3 class="text-base font-bold text-center uppercase" data-lang="service2Title">Ремонт насос-секцій</h3>
+            <p class="text-sm text-gray-700 mt-3 text-center" data-lang="service2Desc">Відновлення PLD секцій Bosch для Volvo, MAN, Mercedes, Scania</p>
+            <span class="mt-3 text-gray-800 group-hover:underline inline-flex items-center">
+              <span data-lang="readMore">Детальніше</span>
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
@@ -346,12 +347,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- Картка 3 -->
-        <a href="cr.html" class="block group">
+        <a href="#" id="service3Card" class="block group">
           <div class="bg-rose-200 text-black rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition-all transform hover:-translate-y-1 h-full">
             <img src="images/cr.png" alt="Форсунки Common Rail для вантажних авто" class="h-44 object-contain mb-4" width="150" height="96">
-            <h3 class="text-base font-bold text-center uppercase">Ремонт Common Rail</h3>
-            <p class="text-sm text-gray-700 mt-3 text-center">Діагностика та ремонт форсунок Bosch, Delphi, Denso для всіх марок</p>
-            <span class="mt-3 text-gray-800 group-hover:underline inline-flex items-center">Детальніше 
+            <h3 class="text-base font-bold text-center uppercase" data-lang="service3Title">Ремонт Common Rail</h3>
+            <p class="text-sm text-gray-700 mt-3 text-center" data-lang="service3Desc">Діагностика та ремонт форсунок Bosch, Delphi, Denso для всіх марок</p>
+            <span class="mt-3 text-gray-800 group-hover:underline inline-flex items-center">
+              <span data-lang="readMore">Детальніше</span>
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
@@ -360,12 +362,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
 
         <!-- Картка 4 -->
-        <a href="tnvd.html" class="block group">
+        <a href="#" id="service4Card" class="block group">
           <div class="bg-rose-100 text-black rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition-all transform hover:-translate-y-1 h-full">
             <img src="images/pnvt.png" alt="ПНВТ (ТНВД) для вантажних авто" class="h-44 object-contain mb-4" width="150" height="96">
-            <h3 class="text-base font-bold text-center uppercase">Ремонт ТНВД</h3>
-            <p class="text-sm text-gray-700 mt-3 text-center">Відновлення ПНВТ Bosch, Denso, DELPHI з заміною плунжерних пар</p>
-            <span class="mt-3 text-gray-800 group-hover:underline inline-flex items-center">Детальніше 
+            <h3 class="text-base font-bold text-center uppercase" data-lang="service4Title">Ремонт ТНВД</h3>
+            <p class="text-sm text-gray-700 mt-3 text-center" data-lang="service4Desc">Відновлення ПНВТ Bosch, Denso, DELPHI з заміною плунжерних пар</p>
+            <span class="mt-3 text-gray-800 group-hover:underline inline-flex items-center">
+              <span data-lang="readMore">Детальніше</span>
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
@@ -374,12 +377,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
         
         <!-- Дополнительная карточка - Ремонт турбин -->
-        <a href="turbo.html" class="block group sm:col-span-2 md:col-span-2 md:col-start-2 mt-4">
+        <a href="#" id="service5Card" class="block group sm:col-span-2 md:col-span-2 md:col-start-2 mt-4">
           <div class="bg-gray-800 text-white rounded-xl p-6 flex flex-col items-center hover:shadow-xl transition-all transform hover:-translate-y-1 h-full">
             <img src="images/turnini.png" alt="Турбіни для вантажних авто" class="h-44 object-contain mb-4" width="150" height="96">
-            <h3 class="text-base font-bold text-center uppercase">Ремонт турбін</h3>
-            <p class="text-sm text-gray-300 mt-3 text-center">Відновлення турбокомпресорів Garrett, Holset, BorgWarner, Mitsubishi для всіх марок вантажівок</p>
-            <span class="mt-3 text-white group-hover:underline inline-flex items-center">Детальніше 
+            <h3 class="text-base font-bold text-center uppercase" data-lang="service5Title">Ремонт турбін</h3>
+            <p class="text-sm text-gray-300 mt-3 text-center" data-lang="service5Desc">Відновлення турбокомпресорів Garrett, Holset, BorgWarner, Mitsubishi для всіх марок вантажівок</p>
+            <span class="mt-3 text-white group-hover:underline inline-flex items-center">
+              <span data-lang="readMore">Детальніше</span>
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
@@ -400,8 +404,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-800 mb-3">Гарантія на ремонт</h3>
-        <p class="text-gray-600 flex-grow">Впевненість у якості робіт підтверджуємо гарантією від 6 до 12 місяців на всі види ремонту.</p>
+        <h3 class="text-xl font-bold text-gray-800 mb-3" data-lang="advantage1Title">Гарантія на ремонт</h3>
+        <p class="text-gray-600 flex-grow" data-lang="advantage1Desc">Впевненість у якості робіт підтверджуємо гарантією від 6 до 12 місяців на всі види ремонту.</p>
       </div>
   
       <!-- Преимущество 2 -->
@@ -412,8 +416,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-800 mb-3">Працюємо з усією Україною</h3>
-        <p class="text-gray-600 flex-grow">Надсилайте та отримуйте відремонтовані деталі Новою Поштою незалежно від вашого регіону.</p>
+        <h3 class="text-xl font-bold text-gray-800 mb-3" data-lang="advantage2Title">Працюємо з усією Україною</h3>
+        <p class="text-gray-600 flex-grow" data-lang="advantage2Desc">Надсилайте та отримуйте відремонтовані деталі Новою Поштою незалежно від вашого регіону.</p>
       </div>
   
       <!-- Преимущество 3 -->
@@ -423,8 +427,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-gray-800 mb-3">Звіт про діагностику</h3>
-        <p class="text-gray-600 flex-grow">Надаємо детальний звіт про стан деталей та виконані роботи з фото і відео процесу діагностики.</p>
+        <h3 class="text-xl font-bold text-gray-800 mb-3" data-lang="advantage3Title">Звіт про діагностику</h3>
+        <p class="text-gray-600 flex-grow" data-lang="advantage3Desc">Надаємо детальний звіт про стан деталей та виконані роботи з фото і відео процесу діагностики.</p>
       </div>
     </div>
   
@@ -435,14 +439,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
           </svg>
-          Подзвонити
+          <span data-lang="call">Подзвонити</span>
         </a>
-          <!-- <a href="https://t.me/dtforce" target="_blank" rel="noopener" class="inline-block bg-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition flex items-center justify-center">
-            <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"></path>
-            </svg>
-            Написати в Telegram
-          </a> -->
       </div>
     </div>
   </section>
@@ -450,8 +448,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Наші майстри за справою -->
   <section class="bg-white py-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4">Наші майстри за справою</h2>
-      <p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4" data-lang="videoTitle">Наші майстри за справою</h2>
+      <p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto" data-lang="videoDesc">
         Подивіться коротке відео про те, як ми проводимо діагностику та ремонт дизельних систем на професійному обладнанні
       </p>
   
@@ -472,12 +470,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       <!-- Дополнительный призыв к действию -->
       <div class="mt-10">
-        <p class="text-gray-600 mb-4">Потрібна консультація? Зв'яжіться з нашими майстрами прямо зараз!</p>
+        <p class="text-gray-600 mb-4" data-lang="videoCallToAction">Потрібна консультація? Зв'яжіться з нашими майстрами прямо зараз!</p>
         <a href="tel:+380671916336" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition font-medium flex items-center justify-center">
           <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
           </svg>
-          Подзвонити
+          <span data-lang="call">Подзвонити</span>
         </a>
     </div>
   </section>
@@ -485,8 +483,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Відгуки клієнтів -->
   <section class="bg-gray-100 py-16">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Відгуки клієнтів</h2>
-      <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-6" data-lang="reviewsTitle">Відгуки клієнтів</h2>
+      <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12" data-lang="reviewsSubtitle">
         Що про нас говорять власники вантажівок, які скористались нашими послугами
       </p>
 
@@ -499,16 +497,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="flex text-yellow-400 mb-4 text-xl">
                 ★★★★★
               </div>
-              <p class="text-lg text-gray-700 mb-4 italic">
-                "Недавно відремонтував свій <strong>MAN TGA</strong> в <strong>DTForce</strong>. Ремонтували <strong>ТНВД Bosch VP44</strong>, <strong>турбіну</strong> та <strong>форсунки</strong>. Зробили все швидко та якісно. Після ремонту витрата палива зменшилась, а димність зникла. Машина стала працювати потужніше та стабільніше. <strong>Рекомендую</strong> цей сервіс."
+              <p class="text-lg text-gray-700 mb-4 italic" data-lang="review1">
+                "Недавно відремонтував свій MAN TGA в DTForce. Ремонтували ТНВД Bosch VP44, турбіну та форсунки. Зробили все швидко та якісно. Після ремонту витрата палива зменшилась, а димність зникла. Машина стала працювати потужніше та стабільніше. Рекомендую цей сервіс."
               </p>
               <div class="flex items-center mt-4">
                 <div class="flex-shrink-0">
                   <img class="h-12 w-12 rounded-full" src="brands/man.png" alt="Фото Володимира" width="48" height="48">
                 </div>
                 <div class="ml-3">
-                  <p class="text-sm font-medium text-gray-900">Володимир Петренко</p>
-                  <p class="text-sm text-gray-500">MAN TGA, Одеська область</p>
+                  <p class="text-sm font-medium text-gray-900" data-lang="reviewer1Name">Володимир Петренко</p>
+                  <p class="text-sm text-gray-500" data-lang="reviewer1Car">MAN TGA, Одеська область</p>
                 </div>
               </div>
             </div>
@@ -520,16 +518,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="flex text-yellow-400 mb-4 text-xl">
                 ★★★★★
               </div>
-              <p class="text-lg text-gray-700 mb-4 italic">
-                "Робив <strong>форсунки Delphi</strong> на <strong>Renault Premium</strong>. Дуже задоволений: мотор став працювати рівно, без стуків. При запуску більше немає диму, а тяга покращилась. Обслуговування привітне, є гарантія."
+              <p class="text-lg text-gray-700 mb-4 italic" data-lang="review2">
+                "Робив форсунки Delphi на Renault Premium. Дуже задоволений: мотор став працювати рівно, без стуків. При запуску більше немає диму, а тяга покращилась. Обслуговування привітне, є гарантія."
               </p>
               <div class="flex items-center mt-4">
                 <div class="flex-shrink-0">
                   <img class="h-12 w-12 rounded-full" src="brands/man.png" alt="Фото Сергія" width="48" height="48">
                 </div>
                 <div class="ml-3">
-                  <p class="text-sm font-medium text-gray-900">Сергій Коваленко</p>
-                  <p class="text-sm text-gray-500">Renault Premium, Миколаїв</p>
+                  <p class="text-sm font-medium text-gray-900" data-lang="reviewer2Name">Сергій Коваленко</p>
+                  <p class="text-sm text-gray-500" data-lang="reviewer2Car">Renault Premium, Миколаїв</p>
                 </div>
               </div>
             </div>
@@ -541,16 +539,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="flex text-yellow-400 mb-4 text-xl">
                 ★★★★★
               </div>
-              <p class="text-lg text-gray-700 mb-4 italic">
-                "Здавав <strong>Volvo FH12</strong> на ремонт <strong>турбіни</strong> і чистку <strong>форсунок CR</strong>. Робота на вищому рівні. Все зробили швидко. Майстри пояснили, що саме було несправне. Після ремонту поїхав у рейс — машина тягне як нова."
+              <p class="text-lg text-gray-700 mb-4 italic" data-lang="review3">
+                "Здавав Volvo FH12 на ремонт турбіни і чистку форсунок CR. Робота на вищому рівні. Все зробили швидко. Майстри пояснили, що саме було несправне. Після ремонту поїхав у рейс — машина тягне як нова."
               </p>
               <div class="flex items-center mt-4">
                 <div class="flex-shrink-0">
                   <img class="h-12 w-12 rounded-full" src="brands/man.png" alt="Фото Ігора" width="48" height="48">
                 </div>
                 <div class="ml-3">
-                  <p class="text-sm font-medium text-gray-900">Ігор Савченко</p>
-                  <p class="text-sm text-gray-500">Volvo FH12, Львів</p>
+                  <p class="text-sm font-medium text-gray-900" data-lang="reviewer3Name">Ігор Савченко</p>
+                  <p class="text-sm text-gray-500" data-lang="reviewer3Car">Volvo FH12, Львів</p>
                 </div>
               </div>
             </div>
@@ -562,16 +560,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="flex text-yellow-400 mb-4 text-xl">
                 ★★★★★
               </div>
-              <p class="text-lg text-gray-700 mb-4 italic">
-                "Міняв <strong>плунжерну пару</strong> в <strong>Bosch ПНВТ</strong>. Довго шукав де зробити – і тут все чітко. Швидка діагностика, якісні комплектуючі. Навіть дали поради по обслуговуванню дизеля. Обов'язково звернусь ще."
+              <p class="text-lg text-gray-700 mb-4 italic" data-lang="review4">
+                "Міняв плунжерну пару в Bosch ПНВТ. Довго шукав де зробити – і тут все чітко. Швидка діагностика, якісні комплектуючі. Навіть дали поради по обслуговуванню дизеля. Обов'язково звернусь ще."
               </p>
               <div class="flex items-center mt-4">
                 <div class="flex-shrink-0">
                   <img class="h-12 w-12 rounded-full" src="brands/man.png" alt="Фото Миколи" width="48" height="48">
                 </div>
                 <div class="ml-3">
-                  <p class="text-sm font-medium text-gray-900">Микола Шевчук</p>
-                  <p class="text-sm text-gray-500">Mercedes Atego, Київ</p>
+                  <p class="text-sm font-medium text-gray-900" data-lang="reviewer4Name">Микола Шевчук</p>
+                  <p class="text-sm text-gray-500" data-lang="reviewer4Car">Mercedes Atego, Київ</p>
                 </div>
               </div>
             </div>
@@ -583,16 +581,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="flex text-yellow-400 mb-4 text-xl">
                 ★★★★★
               </div>
-              <p class="text-lg text-gray-700 mb-4 italic">
-                "Чистив <strong>розпилювачі</strong> і замінював <strong>шайби</strong> в <strong>Common Rail</strong> на <strong>DAF XF</strong>. Якість сервісу на 5 з плюсом. Все чітко, вчасно, без зайвого тягнення. Дали гарантію і навіть відео з діагностики."
+              <p class="text-lg text-gray-700 mb-4 italic" data-lang="review5">
+                "Чистив розпилювачі і замінював шайби в Common Rail на DAF XF. Якість сервісу на 5 з плюсом. Все чітко, вчасно, без зайвого тягнення. Дали гарантію і навіть відео з діагностики."
               </p>
               <div class="flex items-center mt-4">
                 <div class="flex-shrink-0">
                   <img class="h-12 w-12 rounded-full" src="brands/man.png" alt="Фото Олександра" width="48" height="48">
                 </div>
                 <div class="ml-3">
-                  <p class="text-sm font-medium text-gray-900">Олександр Мельник</p>
-                  <p class="text-sm text-gray-500">DAF XF, Дніпро</p>
+                  <p class="text-sm font-medium text-gray-900" data-lang="reviewer5Name">Олександр Мельник</p>
+                  <p class="text-sm text-gray-500" data-lang="reviewer5Car">DAF XF, Дніпро</p>
                 </div>
               </div>
             </div>
@@ -607,7 +605,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="mt-10 flex justify-center">
         <a href="https://g.page/r/dtforce-review" target="_blank" rel="noopener" class="inline-flex items-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
           <img src="images/maps.png" alt="Google" class="w-5 h-5 mr-2" width="20" height="20">
-          Написати відгук на Google Maps
+          <span data-lang="googleReview">Написати відгук на Google Maps</span>
         </a>
       </div>
     </div>
@@ -624,14 +622,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
       <!-- Текстовый блок -->
       <div class="w-full md:w-1/2 md:pl-12">
-        <h2 class="text-4xl font-bold text-gray-900 mb-6">Про компанію <span class="text-red-600">DTForce</span></h2>
-        <p class="text-gray-700 text-lg leading-relaxed">
-          Ми – спеціалізований <strong>дизель сервіс</strong> з багаторічним досвідом у сфері ремонту паливної апаратури. Наша команда виконує професійний ремонт <strong>форсунок Common Rail</strong>, <strong>турбін</strong>, <strong>ПНВТ</strong>, <strong>насос-форсунок</strong> та <strong>PLD секцій</strong> з використанням якісних <strong>розпилювачів</strong>, <strong>шайб</strong> і <strong>катриджів</strong>.
+        <h2 class="text-4xl font-bold text-gray-900 mb-6" data-lang="aboutTitle">Про компанію <span class="text-red-600">DTForce</span></h2>
+        <p class="text-gray-700 text-lg leading-relaxed" data-lang="aboutDesc1">
+          Ми – спеціалізований дизель сервіс з багаторічним досвідом у сфері ремонту паливної апаратури. Наша команда виконує професійний ремонт форсунок Common Rail, турбін, ПНВТ, насос-форсунок та PLD секцій з використанням якісних розпилювачів, шайб і катриджів.
         </p>
-        <p class="text-gray-700 text-lg mt-4">
-          Ми працюємо з брендами <strong>Bosch, Delphi, Denso</strong> та іншими світовими виробниками дизельного обладнання. У нашому розпорядженні сучасне діагностичне обладнання та досвідчені фахівці, які досконало знають принцип роботи <strong>плунжерних пар</strong>, <strong>турбокомпресорів</strong> і систем <strong>впорскування</strong>.
+        <p class="text-gray-700 text-lg mt-4" data-lang="aboutDesc2">
+          Ми працюємо з брендами Bosch, Delphi, Denso та іншими світовими виробниками дизельного обладнання. У нашому розпорядженні сучасне діагностичне обладнання та досвідчені фахівці, які досконало знають принцип роботи плунжерних пар, турбокомпресорів і систем впорскування.
         </p>
-        <p class="text-gray-700 text-lg mt-4">
+        <p class="text-gray-700 text-lg mt-4" data-lang="aboutDesc3">
           Наш пріоритет – якість, надійність і довготривала робота вашого дизельного авто. Надаємо гарантію до 12 місяців на всі види робіт.
         </p>
         
@@ -641,9 +639,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
             </svg>
-            Подзвонити
+            <span data-lang="call">Подзвонити</span>
           </a>
-          <a href="#contacts" class="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-full hover:bg-red-50 transition">
+          <a href="#contacts" class="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-full hover:bg-red-50 transition" data-lang="ourContacts">
             Наші контакти
           </a>
         </div>
@@ -655,10 +653,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="blog" class="bg-gray-100 py-16">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold text-gray-800 mb-4">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4" data-lang="blogTitle">
           Блог про дизельне обладнання
         </h2>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto" data-lang="blogDesc">
           Корисні статті та поради з обслуговування та ремонту дизельного обладнання
         </p>
       </div>
@@ -668,19 +666,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition hover:shadow-xl">
           <img src="images/plunger-pair.jpg" alt="Плунжерна пара ПНВТ" class="w-full h-48 object-cover" loading="lazy" width="400" height="200">
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 hover:text-red-600 transition">Що таке плунжерна пара та як вона впливає на роботу ПНВТ?</h3>
-            <p class="text-gray-700 mt-3 line-clamp-3">
+            <h3 class="text-xl font-semibold text-gray-900 hover:text-red-600 transition" data-lang="blogPost1Title">Що таке плунжерна пара та як вона впливає на роботу ПНВТ?</h3>
+            <p class="text-gray-700 mt-3 line-clamp-3" data-lang="blogPost1Desc">
               Плунжерна пара — ключовий елемент паливного насоса високого тиску (ПНВТ), що відповідає за точне дозування пального. Зношення плунжера або втрати герметичності можуть спричинити падіння тиску...
             </p>
-            <a href="blog1.html" class="mt-4 inline-flex items-center text-red-600 hover:text-red-700 font-medium">
-              Читати далі 
+            <a href="#" id="blog1Link" class="mt-4 inline-flex items-center text-red-600 hover:text-red-700 font-medium">
+              <span data-lang="readMore">Читати далі</span>
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
             </a>
           </div>
         </article>
-    
         <!-- Статья 2 -->
         <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition hover:shadow-xl">
           <img src="images/common-rail.jpg" alt="Розпилювач дизельної форсунки" class="w-full h-48 object-cover" loading="lazy" width="400" height="200">
@@ -892,6 +889,176 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   
   <script>
+
+    const translations = {
+  ua: {
+    // Header
+    home: "Головна",
+    about: "Про компанію", 
+    blog: "Блог",
+    services: "Послуги",
+    contacts: "Контакти",
+    call: "Подзвонити",
+    
+    // Hero section
+    heroTitle: "DTForce – <br>Діагностика та ремонт ТНВД,<br>форсунок, турбін вантажних авто",
+    heroDesc: "Швидко, якісно, з гарантією до 12 місяців. Сучасне обладнання, професійна команда, працюємо з 2010 року.",
+    
+    // Car selector
+    carSelectorTitle: "Ремонт вашої паливної системи",
+    carSelectorDesc: "Оберіть марку, модель і рік випуску вашого авто — і система покаже, які форсунки встановлені, їхню вартість, а також підбере оптимальні варіанти ремонту.",
+    selectBrand: "Оберіть марку",
+    selectModel: "Спочатку оберіть марку",
+    selectYear: "Оберіть рік",
+    needRepair: "ПОТРІБЕН РЕМОНТ",
+    
+    // Services
+    servicesTitle: "Наші послуги з ремонту дизельних систем",
+    service1Title: "Ремонт насос-форсунок",
+    service1Desc: "Діагностика та ремонт насос-форсунок Bosch, Delphi для MAN, Mercedes",
+    service2Title: "Ремонт насос-секцій", 
+    service2Desc: "Відновлення PLD секцій Bosch для Volvo, MAN, Mercedes, Scania",
+    service3Title: "Ремонт Common Rail",
+    service3Desc: "Діагностика та ремонт форсунок Bosch, Delphi, Denso для всіх марок",
+    service4Title: "Ремонт ТНВД",
+    service4Desc: "Відновлення ПНВТ Bosch, Denso, DELPHI з заміною плунжерних пар",
+    service5Title: "Ремонт турбін",
+    service5Desc: "Відновлення турбокомпресорів Garrett, Holset, BorgWarner, Mitsubishi для всіх марок вантажівок",
+    readMore: "Детальніше",
+    
+    // Advantages
+    advantage1Title: "Гарантія якості",
+    advantage1Desc: "Ми впевнені в якості наших робіт, тому даємо довготривалу гарантію до 12 місяців на всі види ремонту.",
+    advantage2Title: "Працюємо з усією Україною", 
+    advantage2Desc: "Приймаємо запчастини через Нову Пошту з будь-якого міста України. Швидка доставка відремонтованих деталей.",
+    advantage3Title: "Сучасне обладнання",
+    advantage3Desc: "Використовуємо професійні стенди, тестери та програматори останнього покоління від Bosch, Delphi та Denso.",
+    advantage4Title: "Досвідчені майстри",
+    advantage4Desc: "Наші спеціалісти мають більше 10 років досвіду в ремонті ТНВД, форсунок та турбін вантажних автомобілів.",
+    
+    // About
+    aboutTitle: "Про компанію DTForce",
+    aboutDesc1: "Ми – спеціалізований дизель сервіс з багаторічним досвідом у сфері ремонту паливної апаратури. Наша команда виконує професійний ремонт форсунок Common Rail, турбін, ПНВТ, насос-форсунок та PLD секцій з використанням якісних розпилювачів, шайб і катриджів.",
+    aboutDesc2: "Ми працюємо з брендами Bosch, Delphi, Denso та іншими світовими виробниками дизельного обладнання. У нашому розпорядженні сучасне діагностичне обладнання та досвідчені фахівці, які досконало знають принцип роботи плунжерних пар, турбокомпресорів і систем впорскування.",
+    aboutDesc3: "Наш пріоритет – якість, надійність і довготривала робота вашого дизельного авто. Надаємо гарантію до 12 місяців на всі види робіт.",
+    ourContacts: "Наші контакти",
+    
+    // Blog
+    blogTitle: "Блог про дизельне обладнання",
+    blogDesc: "Корисні статті та поради з обслуговування та ремонту дизельного обладнання",
+    allArticles: "Всі статті блогу",
+    
+    // Footer
+    menu: "Меню",
+    
+    // Mobile menu
+    map: "Карта"
+  },
+  
+  ru: {
+    // Header
+    home: "Главная",
+    about: "О компании",
+    blog: "Блог", 
+    services: "Услуги",
+    contacts: "Контакты",
+    call: "Позвонить",
+    
+    // Hero section
+    heroTitle: "DTForce – <br>Диагностика и ремонт ТНВД,<br>форсунок, турбин грузовых авто",
+    heroDesc: "Быстро, качественно, с гарантией до 12 месяцев. Современное оборудование, профессиональная команда, работаем с 2010 года.",
+    
+    // Car selector
+    carSelectorTitle: "Ремонт вашей топливной системы",
+    carSelectorDesc: "Выберите марку, модель и год выпуска вашего авто — и система покажет, какие форсунки установлены, их стоимость, а также подберет оптимальные варианты ремонта.",
+    selectBrand: "Выберите марку",
+    selectModel: "Сначала выберите марку",
+    selectYear: "Выберите год",
+    needRepair: "НУЖЕН РЕМОНТ",
+    
+    // Services
+    servicesTitle: "Наши услуги по ремонту дизельных систем",
+    service1Title: "Ремонт насос-форсунок",
+    service1Desc: "Диагностика и ремонт насос-форсунок Bosch, Delphi для MAN, Mercedes",
+    service2Title: "Ремонт насос-секций",
+    service2Desc: "Восстановление PLD секций Bosch для Volvo, MAN, Mercedes, Scania", 
+    service3Title: "Ремонт Common Rail",
+    service3Desc: "Диагностика и ремонт форсунок Bosch, Delphi, Denso для всех марок",
+    service4Title: "Ремонт ТНВД",
+    service4Desc: "Восстановление ТНВД Bosch, Denso, DELPHI с заменой плунжерных пар",
+    service5Title: "Ремонт турбин",
+    service5Desc: "Восстановление турбокомпрессоров Garrett, Holset, BorgWarner, Mitsubishi для всех марок грузовиков",
+    readMore: "Подробнее",
+    
+    // Advantages
+    advantage1Title: "Гарантия качества",
+    advantage1Desc: "Мы уверены в качестве наших работ, поэтому даем долгосрочную гарантию до 12 месяцев на все виды ремонта.",
+    advantage2Title: "Работаем со всей Украиной",
+    advantage2Desc: "Принимаем запчасти через Новую Почту из любого города Украины. Быстрая доставка отремонтированных деталей.",
+    advantage3Title: "Современное оборудование", 
+    advantage3Desc: "Используем профессиональные стенды, тестеры и программаторы последнего поколения от Bosch, Delphi и Denso.",
+    advantage4Title: "Опытные мастера",
+    advantage4Desc: "Наши специалисты имеют более 10 лет опыта в ремонте ТНВД, форсунок и турбин грузовых автомобилей.",
+    
+    // About
+    aboutTitle: "О компании DTForce",
+    aboutDesc1: "Мы – специализированный дизель сервис с многолетним опытом в сфере ремонта топливной аппаратуры. Наша команда выполняет профессиональный ремонт форсунок Common Rail, турбин, ТНВД, насос-форсунок и PLD секций с использованием качественных распылителей, шайб и картриджей.",
+    aboutDesc2: "Мы работаем с брендами Bosch, Delphi, Denso и другими мировыми производителями дизельного оборудования. В нашем распоряжении современное диагностическое оборудование и опытные специалисты, которые отлично знают принцип работы плунжерных пар, турбокомпрессоров и систем впрыска.",
+    aboutDesc3: "Наш приоритет – качество, надежность и долговременная работа вашего дизельного авто. Предоставляем гарантию до 12 месяцев на все виды работ.",
+    ourContacts: "Наши контакты",
+    
+    // Blog
+    blogTitle: "Блог о дизельном оборудовании",
+    blogDesc: "Полезные статьи и советы по обслуживанию и ремонту дизельного оборудования",
+    allArticles: "Все статьи блога",
+    
+    // Footer
+    menu: "Меню",
+    
+    // Mobile menu
+    map: "Карта"
+  }
+};
+
+// Функция переключения языка
+function switchLanguage(lang) {
+  const elements = document.querySelectorAll('[data-lang]');
+  
+  elements.forEach(element => {
+    const key = element.getAttribute('data-lang');
+    if (translations[lang] && translations[lang][key]) {
+      element.innerHTML = translations[lang][key];
+    }
+  });
+  
+  // Обновляем кнопки языка
+  document.getElementById('langBtn').textContent = lang.toUpperCase();
+  document.getElementById('langBtnMobile').textContent = lang.toUpperCase();
+  
+  // Сохраняем выбранный язык
+  localStorage.setItem('selectedLanguage', lang);
+}
+
+// Обработчики для кнопок языка
+document.getElementById('langBtn').addEventListener('click', function() {
+  const currentLang = this.textContent.toLowerCase();
+  const newLang = currentLang === 'ua' ? 'ru' : 'ua';
+  switchLanguage(newLang);
+});
+
+document.getElementById('langBtnMobile').addEventListener('click', function() {
+  const currentLang = this.textContent.toLowerCase();
+  const newLang = currentLang === 'ua' ? 'ru' : 'ua';
+  switchLanguage(newLang);
+});
+
+// Загружаем сохраненный язык при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+  const savedLang = localStorage.getItem('selectedLanguage') || 'ua';
+  if (savedLang === 'ru') {
+    switchLanguage('ru');
+  }
+});
     // Мобильное меню
     const toggle = document.getElementById("menuToggle");
     const menu = document.getElementById("mobileMenu");
