@@ -1,0 +1,44 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /logs/
+Disallow: /*.php$
+Allow: /send_mail.php
+Disallow: /*?*
+Allow: /*?utm_*
+Disallow: /search/
+Disallow: /filter/
+Disallow: /thank-you-page.html
+
+# Allow important pages
+Allow: /
+Allow: /index.html
+Allow: /poslugi.html
+Allow: /blog.html
+Allow: /contact.html
+Allow: /pld.html
+Allow: /cr.html
+Allow: /nasos-forsunki.html
+Allow: /turbo.html
+Allow: /tnvd.html
+Allow: /chiptuning.html
+Allow: /blog1.html
+Allow: /blog2.html
+Allow: /blog3.html
+Allow: /blog4.html
+Allow: /blog5.html
+Allow: /blog6.html
+Allow: /images/
+Allow: /brands/
+
+# Block sensitive files
+Disallow: /*.log
+Disallow: /*.bak
+Disallow: /*.tmp
+
+Sitemap: https://dtforce.in.ua/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
