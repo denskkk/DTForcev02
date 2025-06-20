@@ -2741,42 +2741,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <!-- Скрипты -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
-  <script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-     // FAQ Toggle functionality
-    document.querySelectorAll('.faq-toggle').forEach(button => {
-      button.addEventListener('click', function() {
-        const content = this.nextElementSibling;
-        const arrow = this.querySelector('.faq-arrow');
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        
-        // Close all other FAQ items
-        document.querySelectorAll('.faq-toggle').forEach(otherButton => {
-          if (otherButton !== this) {
-            const otherContent = otherButton.nextElementSibling;
-            const otherArrow = otherButton.querySelector('.faq-arrow');
-            otherContent.classList.add('hidden');
-            otherArrow.classList.remove('rotate-180');
-            otherButton.setAttribute('aria-expanded', 'false');
-          }
-        });
-        
-        // Toggle current FAQ item
-        if (isExpanded) {
-          content.classList.add('hidden');
-          arrow.classList.remove('rotate-180');
-          this.setAttribute('aria-expanded', 'false');
-        } else {
-          content.classList.remove('hidden');
-          arrow.classList.add('rotate-180');
-          this.setAttribute('aria-expanded', 'true');
-        }
-      });
+<script>
+// FAQ Toggle functionality
+document.querySelectorAll('.faq-toggle').forEach(button => {
+  button.addEventListener('click', function() {
+    const content = this.nextElementSibling;
+    const arrow = this.querySelector('.faq-arrow');
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    
+    // Close all other FAQ items
+    document.querySelectorAll('.faq-toggle').forEach(otherButton => {
+      if (otherButton !== this) {
+        const otherContent = otherButton.nextElementSibling;
+        const otherArrow = otherButton.querySelector('.faq-arrow');
+        otherContent.classList.add('hidden');
+        otherArrow.classList.remove('rotate-180');
+        otherButton.setAttribute('aria-expanded', 'false');
+      }
     });
+    
+    // Toggle current FAQ item
+    if (isExpanded) {
+      content.classList.add('hidden');
+      arrow.classList.remove('rotate-180');
+      this.setAttribute('aria-expanded', 'false');
+    } else {
+      content.classList.remove('hidden');
+      arrow.classList.add('rotate-180');
+      this.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
 
-    const translations = {
+// Translations object
+const translations = {
   ua: {
     // Header
     home: "Головна",
@@ -2906,7 +2906,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 };
 
-// Функция переключения языка
+// Language switching function
 function switchLanguage(lang) {
   const elements = document.querySelectorAll('[data-lang]');
   
@@ -2917,275 +2917,317 @@ function switchLanguage(lang) {
     }
   });
   
-  // Обновляем кнопки языка
-  document.getElementById('langBtn').textContent = lang.toUpperCase();
-  document.getElementById('langBtnMobile').textContent = lang.toUpperCase();
+  // Update language buttons
+  const langBtn = document.getElementById('langBtn');
+  const langBtnMobile = document.getElementById('langBtnMobile');
   
-  // Сохраняем выбранный язык
+  if (langBtn) langBtn.textContent = lang.toUpperCase();
+  if (langBtnMobile) langBtnMobile.textContent = lang.toUpperCase();
+  
+  // Save selected language
   localStorage.setItem('selectedLanguage', lang);
 }
 
-// Обработчики для кнопок языка
-document.getElementById('langBtn').addEventListener('click', function() {
-  const currentLang = this.textContent.toLowerCase();
-  const newLang = currentLang === 'ua' ? 'ru' : 'ua';
-  switchLanguage(newLang);
-});
-
-document.getElementById('langBtnMobile').addEventListener('click', function() {
-  const currentLang = this.textContent.toLowerCase();
-  const newLang = currentLang === 'ua' ? 'ru' : 'ua';
-  switchLanguage(newLang);
-});
-
-// Загружаем сохраненный язык при загрузке страницы
+// Language button event handlers
 document.addEventListener('DOMContentLoaded', function() {
+  const langBtn = document.getElementById('langBtn');
+  const langBtnMobile = document.getElementById('langBtnMobile');
+  
+  if (langBtn) {
+    langBtn.addEventListener('click', function() {
+      const currentLang = this.textContent.toLowerCase();
+      const newLang = currentLang === 'ua' ? 'ru' : 'ua';
+      switchLanguage(newLang);
+    });
+  }
+  
+  if (langBtnMobile) {
+    langBtnMobile.addEventListener('click', function() {
+      const currentLang = this.textContent.toLowerCase();
+      const newLang = currentLang === 'ua' ? 'ru' : 'ua';
+      switchLanguage(newLang);
+    });
+  }
+  
+  // Load saved language on page load
   const savedLang = localStorage.getItem('selectedLanguage') || 'ua';
   if (savedLang === 'ru') {
     switchLanguage('ru');
   }
 });
-    // Мобильное меню
-    const toggle = document.getElementById("menuToggle");
-    const menu = document.getElementById("mobileMenu");
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
 
-    // Переключатель для блогов
-    function toggleArticle(id, btn) {
-      const block = document.getElementById(id);
-      block.classList.toggle("hidden");
-      if (!block.classList.contains("hidden")) {
-        btn.innerText = "Приховати";
-      } else {
-        btn.innerText = "Детальніше";
-      }
+// Mobile menu toggle - ИСПРАВЛЕННАЯ ВЕРСИЯ
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const isHidden = mobileMenu.classList.contains('hidden');
+    
+    if (isHidden) {
+      mobileMenu.classList.remove('hidden');
+      this.setAttribute('aria-expanded', 'true');
+      this.innerHTML = `
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      `;
+    } else {
+      mobileMenu.classList.add('hidden');
+      this.setAttribute('aria-expanded', 'false');
+      this.innerHTML = `
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      `;
     }
+  });
 
-    // Add this code inside your existing script tag, before the final script closing tag
-
-  // Mobile services dropdown
-  const mobileServicesBtn = document.getElementById("mobileServicesBtn");
-  const mobileServicesList = document.getElementById("mobileServicesList");
-  const mobileServicesArrow = document.getElementById("mobileServicesArrow");
-
-  if (mobileServicesBtn) {
-    mobileServicesBtn.addEventListener("click", () => {
-      mobileServicesList.classList.toggle("hidden");
-      
-      // Rotate arrow when menu is open
-      if (!mobileServicesList.classList.contains("hidden")) {
-        mobileServicesArrow.classList.add("rotate-180");
-      } else {
-        mobileServicesArrow.classList.remove("rotate-180");
-      }
+  // Close menu when clicking on links
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.innerHTML = `
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      `;
     });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.innerHTML = `
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      `;
+    }
+  });
+}
+
+// Blog article toggle function
+function toggleArticle(id, btn) {
+  const block = document.getElementById(id);
+  if (block) {
+    block.classList.toggle("hidden");
+    if (!block.classList.contains("hidden")) {
+      btn.innerText = "Приховати";
+    } else {
+      btn.innerText = "Детальніше";
+    }
   }
+}
 
-    // Кнопка прокрутки вверх
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    
-    // Показать кнопку при прокрутке вниз
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        scrollToTopBtn.classList.remove("hidden");
-      } else {
-        scrollToTopBtn.classList.add("hidden");
-      }
-    });
-    
-    // Прокрутка наверх при нажатии на кнопку
-    scrollToTopBtn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
+// Scroll to top button
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-    // Инициализация Swiper
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: {
-        delay: 7000,
-        disableOnInteraction: false,
-      },
-      slidesPerView: 1,
-      spaceBetween: 30,
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
-      },
-    });
-
-    // Car selector enhancement with better UX
-    const carBrand = document.getElementById('carBrand');
-    const carModel = document.getElementById('carModel');
-    const carYear = document.getElementById('carYear');
-    const searchButton = document.getElementById('searchButton');
-
-    function updateSearchButton() {
-      if (carBrand.value && carModel.value && carYear.value) {
-        searchButton.disabled = false;
-        searchButton.classList.remove('opacity-50');
-        searchButton.classList.add('hover:shadow-xl');
-      } else {
-        searchButton.disabled = true;
-        searchButton.classList.add('opacity-50');
-        searchButton.classList.remove('hover:shadow-xl');
-      }
+if (scrollToTopBtn) {
+  // Show button when scrolling down
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.remove("hidden");
+    } else {
+      scrollToTopBtn.classList.add("hidden");
     }
-
-    // Update models when brand changes
-    carBrand.addEventListener('change', function() {
-      const selectedBrand = this.value;
-      carModel.innerHTML = '<option value="">Оберіть модель</option>';
-      carYear.innerHTML = '<option value="">Оберіть рік</option>';
-      
-      if (selectedBrand && modelsByBrand[selectedBrand]) {
-        carModel.disabled = false;
-        modelsByBrand[selectedBrand].forEach(model => {
-          const option = document.createElement('option');
-          option.value = model;
-          option.textContent = model;
-          carModel.appendChild(option);
-        });
-      } else {
-        carModel.disabled = true;
-        carYear.disabled = true;
-      }
-      
-      updateSearchButton();
-    });
-
-    // Update years when model changes
-    carModel.addEventListener('change', function() {
-      const brand = carBrand.value;
-      const model = this.value;
-      
-      if (brand && model) {
-        carYear.disabled = false;
-        populateYears(brand, model);
-      } else {
-        carYear.disabled = true;
-        carYear.innerHTML = '<option value="">Оберіть рік</option>';
-      }
-      
-      updateSearchButton();
-    });
-
-    carYear.addEventListener('change', updateSearchButton);
-
-    // Enhanced smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Performance optimizations
-    // Lazy load images when they come into viewport
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src || img.src;
-            img.classList.remove('loading-skeleton');
-            observer.unobserve(img);
-          }
-        });
-      });
-
-      document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-        imageObserver.observe(img);
-      });
-    }
-
-    // Preload critical resources
-    function preloadResource(href, as, type) {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = href;
-      link.as = as;
-      if (type) link.type = type;
-      document.head.appendChild(link);
-    }
-
-    // Preload important images
-    window.addEventListener('load', () => {
-      preloadResource('images/nasosfors.png', 'image');
-      preloadResource('images/pld.png', 'image');
-      preloadResource('images/cr.png', 'image');
-    });
-
-    // Enhanced mobile menu with better animations
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    menuToggle.addEventListener('click', function() {
-      const isOpen = !mobileMenu.classList.contains('hidden');
-      
-      if (isOpen) {
-        mobileMenu.classList.add('hidden');
-        this.setAttribute('aria-expanded', 'false');
-        this.innerHTML = `
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        `;
-      } else {
-        mobileMenu.classList.remove('hidden');
-        this.setAttribute('aria-expanded', 'true');
-        this.innerHTML = `
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        `;
-      }
-    });
-
-    // Close mobile menu when clicking on links
-    document.querySelectorAll('#mobileMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.innerHTML = `
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        `;
-      });
-    });
-  </script>
-
-  <!-- Binotel Widget -->
-  <script type="text/javascript">
-    (function(d, w, s) {
-      var widgetHash = 'kaetj667yfpludj8qk4b', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
-      gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js';
-      var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
-    })(document, window, 'script');
-  </script>
+  });
   
-    <!-- Binotel CallTracking -->
-    <script type="text/javascript">
-      (function(d, w, s) {
-        var widgetHash = 'i05h636bzd90wtswsdjj', ctw = d.createElement(s); ctw.type = 'text/javascript'; ctw.async = true;
-        ctw.src = '//widgets.binotel.com/calltracking/widgets/'+ widgetHash +'.js';
-        var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(ctw, sn);
-      })(document, window, 'script');
-    </script>
+  // Scroll to top when clicking the button
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
 
-  </body>
+// Initialize Swiper
+const swiper = new Swiper(".mySwiper", {
+  loop: true,
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+  },
+});
+
+// Car selector enhancement
+const carBrand = document.getElementById('carBrand');
+const carModel = document.getElementById('carModel');
+const carYear = document.getElementById('carYear');
+const searchButton = document.getElementById('searchButton');
+
+// Sample data for car models (you can expand this)
+const modelsByBrand = {
+  daf: ['XF', 'CF', 'LF', 'XF105', 'XF95'],
+  man: ['TGA', 'TGX', 'TGS', 'TGL', 'TGM'],
+  volvo: ['FH', 'FM', 'FE', 'FL', 'FMX'],
+  mercedes: ['Actros', 'Atego', 'Axor', 'Econic', 'Unimog'],
+  scania: ['R-series', 'P-series', 'G-series', 'T-series', 'S-series'],
+  iveco: ['Stralis', 'Trakker', 'EuroCargo', 'Daily', 'Magirus'],
+  renault: ['Premium', 'Magnum', 'Midlum', 'Kerax', 'Master']
+};
+
+function updateSearchButton() {
+  if (carBrand && carModel && carYear && searchButton) {
+    if (carBrand.value && carModel.value && carYear.value) {
+      searchButton.disabled = false;
+      searchButton.classList.remove('opacity-50');
+      searchButton.classList.add('hover:shadow-xl');
+    } else {
+      searchButton.disabled = true;
+      searchButton.classList.add('opacity-50');
+      searchButton.classList.remove('hover:shadow-xl');
+    }
+  }
+}
+
+// Update models when brand changes
+if (carBrand) {
+  carBrand.addEventListener('change', function() {
+    const selectedBrand = this.value;
+    if (carModel) {
+      carModel.innerHTML = '<option value="">Оберіть модель</option>';
+    }
+    if (carYear) {
+      carYear.innerHTML = '<option value="">Оберіть рік</option>';
+    }
+    
+    if (selectedBrand && modelsByBrand[selectedBrand] && carModel) {
+      carModel.disabled = false;
+      modelsByBrand[selectedBrand].forEach(model => {
+        const option = document.createElement('option');
+        option.value = model;
+        option.textContent = model;
+        carModel.appendChild(option);
+      });
+    } else if (carModel && carYear) {
+      carModel.disabled = true;
+      carYear.disabled = true;
+    }
+    
+    updateSearchButton();
+  });
+}
+
+// Update years when model changes
+if (carModel) {
+  carModel.addEventListener('change', function() {
+    const brand = carBrand ? carBrand.value : '';
+    const model = this.value;
+    
+    if (brand && model && carYear) {
+      carYear.disabled = false;
+      // Populate years from 2000 to current year
+      carYear.innerHTML = '<option value="">Оберіть рік</option>';
+      const currentYear = new Date().getFullYear();
+      for (let year = currentYear; year >= 2000; year--) {
+        const option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        carYear.appendChild(option);
+      }
+    } else if (carYear) {
+      carYear.disabled = true;
+      carYear.innerHTML = '<option value="">Оберіть рік</option>';
+    }
+    
+    updateSearchButton();
+  });
+}
+
+if (carYear) {
+  carYear.addEventListener('change', updateSearchButton);
+}
+
+// Enhanced smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Performance optimizations
+// Lazy load images when they come into viewport
+if ('IntersectionObserver' in window) {
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+        }
+        img.classList.remove('loading-skeleton');
+        observer.unobserve(img);
+      }
+    });
+  });
+
+  document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+    imageObserver.observe(img);
+  });
+}
+
+// Preload critical resources
+function preloadResource(href, as, type) {
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.href = href;
+  link.as = as;
+  if (type) link.type = type;
+  document.head.appendChild(link);
+}
+
+// Preload important images on window load
+window.addEventListener('load', () => {
+  preloadResource('images/nasosfors.png', 'image');
+  preloadResource('images/pld.png', 'image');
+  preloadResource('images/cr.png', 'image');
+});
+
+</script>
+
+<!-- Binotel Widget -->
+<script type="text/javascript">
+  (function(d, w, s) {
+    var widgetHash = 'kaetj667yfpludj8qk4b', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
+    gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js';
+    var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
+  })(document, window, 'script');
+</script>
+
+<!-- Binotel CallTracking -->
+<script type="text/javascript">
+  (function(d, w, s) {
+    var widgetHash = 'i05h636bzd90wtswsdjj', ctw = d.createElement(s); ctw.type = 'text/javascript'; ctw.async = true;
+    ctw.src = '//widgets.binotel.com/calltracking/widgets/'+ widgetHash +'.js';
+    var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(ctw, sn);
+  })(document, window, 'script');
+</script>
 
 </body>
 </html>
