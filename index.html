@@ -2742,7 +2742,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Скрипты -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 <script>
 // FAQ Toggle functionality
 document.querySelectorAll('.faq-toggle').forEach(button => {
@@ -2928,8 +2927,40 @@ function switchLanguage(lang) {
   localStorage.setItem('selectedLanguage', lang);
 }
 
-// Language button event handlers
+// Enhanced car selector enhancement
+const carBrand = document.getElementById('carBrand');
+const carModel = document.getElementById('carModel');
+const carYear = document.getElementById('carYear');
+const searchButton = document.getElementById('searchButton');
+
+// Sample data for car models (you can expand this)
+const modelsByBrand = {
+  daf: ['XF', 'CF', 'LF', 'XF105', 'XF95'],
+  man: ['TGA', 'TGX', 'TGS', 'TGL', 'TGM'],
+  volvo: ['FH', 'FM', 'FE', 'FL', 'FMX'],
+  mercedes: ['Actros', 'Atego', 'Axor', 'Econic', 'Unimog'],
+  scania: ['R-series', 'P-series', 'G-series', 'T-series', 'S-series'],
+  iveco: ['Stralis', 'Trakker', 'EuroCargo', 'Daily', 'Magirus'],
+  renault: ['Premium', 'Magnum', 'Midlum', 'Kerax', 'Master']
+};
+
+function updateSearchButton() {
+  if (carBrand && carModel && carYear && searchButton) {
+    if (carBrand.value && carModel.value && carYear.value) {
+      searchButton.disabled = false;
+      searchButton.classList.remove('opacity-50');
+      searchButton.classList.add('hover:shadow-xl');
+    } else {
+      searchButton.disabled = true;
+      searchButton.classList.add('opacity-50');
+      searchButton.classList.remove('hover:shadow-xl');
+    }
+  }
+}
+
+// DOM Content Loaded Event Listener
 document.addEventListener('DOMContentLoaded', function() {
+  // Language buttons setup
   const langBtn = document.getElementById('langBtn');
   const langBtnMobile = document.getElementById('langBtnMobile');
   
@@ -2954,9 +2985,136 @@ document.addEventListener('DOMContentLoaded', function() {
   if (savedLang === 'ru') {
     switchLanguage('ru');
   }
+
+  // Desktop services dropdown - add click support for mobile
+  const servicesDropdown = document.querySelector('.dropdown');
+  const servicesButton = document.getElementById('servicesLink');
+  
+  if (servicesButton && servicesDropdown) {
+    let isDropdownOpen = false;
+    
+    servicesButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const dropdownMenu = servicesDropdown.querySelector('.dropdown-menu');
+      
+      if (isDropdownOpen) {
+        dropdownMenu.style.display = 'none';
+        isDropdownOpen = false;
+        this.setAttribute('aria-expanded', 'false');
+      } else {
+        dropdownMenu.style.display = 'block';
+        isDropdownOpen = true;
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!servicesDropdown.contains(e.target)) {
+        const dropdownMenu = servicesDropdown.querySelector('.dropdown-menu');
+        dropdownMenu.style.display = 'none';
+        isDropdownOpen = false;
+        servicesButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Close dropdown when clicking on a link
+    servicesDropdown.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        const dropdownMenu = servicesDropdown.querySelector('.dropdown-menu');
+        dropdownMenu.style.display = 'none';
+        isDropdownOpen = false;
+        servicesButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Mobile services dropdown functionality
+  const mobileServicesBtn = document.getElementById('mobileServicesBtn');
+  const mobileServicesList = document.getElementById('mobileServicesList');
+  const mobileServicesArrow = document.getElementById('mobileServicesArrow');
+
+  if (mobileServicesBtn && mobileServicesList && mobileServicesArrow) {
+    mobileServicesBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      
+      if (isExpanded) {
+        mobileServicesList.classList.add('hidden');
+        mobileServicesArrow.classList.remove('rotate-180');
+        this.setAttribute('aria-expanded', 'false');
+      } else {
+        mobileServicesList.classList.remove('hidden');
+        mobileServicesArrow.classList.add('rotate-180');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  }
+
+  // Car selector event listeners
+  if (carBrand) {
+    carBrand.addEventListener('change', function() {
+      const selectedBrand = this.value;
+      if (carModel) {
+        carModel.innerHTML = '<option value="">Оберіть модель</option>';
+      }
+      if (carYear) {
+        carYear.innerHTML = '<option value="">Оберіть рік</option>';
+      }
+      
+      if (selectedBrand && modelsByBrand[selectedBrand] && carModel) {
+        carModel.disabled = false;
+        modelsByBrand[selectedBrand].forEach(model => {
+          const option = document.createElement('option');
+          option.value = model;
+          option.textContent = model;
+          carModel.appendChild(option);
+        });
+      } else if (carModel && carYear) {
+        carModel.disabled = true;
+        carYear.disabled = true;
+      }
+      
+      updateSearchButton();
+    });
+  }
+
+  // Update years when model changes
+  if (carModel) {
+    carModel.addEventListener('change', function() {
+      const brand = carBrand ? carBrand.value : '';
+      const model = this.value;
+      
+      if (brand && model && carYear) {
+        carYear.disabled = false;
+        // Populate years from 2000 to current year
+        carYear.innerHTML = '<option value="">Оберіть рік</option>';
+        const currentYear = new Date().getFullYear();
+        for (let year = currentYear; year >= 2000; year--) {
+          const option = document.createElement('option');
+          option.value = year;
+          option.textContent = year;
+          carYear.appendChild(option);
+        }
+      } else if (carYear) {
+        carYear.disabled = true;
+        carYear.innerHTML = '<option value="">Оберіть рік</option>';
+      }
+      
+      updateSearchButton();
+    });
+  }
+
+  if (carYear) {
+    carYear.addEventListener('change', updateSearchButton);
+  }
 });
 
-// Mobile menu toggle - ИСПРАВЛЕННАЯ ВЕРСИЯ
+// Mobile menu toggle - FIXED VERSION
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -3068,95 +3226,6 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-// Car selector enhancement
-const carBrand = document.getElementById('carBrand');
-const carModel = document.getElementById('carModel');
-const carYear = document.getElementById('carYear');
-const searchButton = document.getElementById('searchButton');
-
-// Sample data for car models (you can expand this)
-const modelsByBrand = {
-  daf: ['XF', 'CF', 'LF', 'XF105', 'XF95'],
-  man: ['TGA', 'TGX', 'TGS', 'TGL', 'TGM'],
-  volvo: ['FH', 'FM', 'FE', 'FL', 'FMX'],
-  mercedes: ['Actros', 'Atego', 'Axor', 'Econic', 'Unimog'],
-  scania: ['R-series', 'P-series', 'G-series', 'T-series', 'S-series'],
-  iveco: ['Stralis', 'Trakker', 'EuroCargo', 'Daily', 'Magirus'],
-  renault: ['Premium', 'Magnum', 'Midlum', 'Kerax', 'Master']
-};
-
-function updateSearchButton() {
-  if (carBrand && carModel && carYear && searchButton) {
-    if (carBrand.value && carModel.value && carYear.value) {
-      searchButton.disabled = false;
-      searchButton.classList.remove('opacity-50');
-      searchButton.classList.add('hover:shadow-xl');
-    } else {
-      searchButton.disabled = true;
-      searchButton.classList.add('opacity-50');
-      searchButton.classList.remove('hover:shadow-xl');
-    }
-  }
-}
-
-// Update models when brand changes
-if (carBrand) {
-  carBrand.addEventListener('change', function() {
-    const selectedBrand = this.value;
-    if (carModel) {
-      carModel.innerHTML = '<option value="">Оберіть модель</option>';
-    }
-    if (carYear) {
-      carYear.innerHTML = '<option value="">Оберіть рік</option>';
-    }
-    
-    if (selectedBrand && modelsByBrand[selectedBrand] && carModel) {
-      carModel.disabled = false;
-      modelsByBrand[selectedBrand].forEach(model => {
-        const option = document.createElement('option');
-        option.value = model;
-        option.textContent = model;
-        carModel.appendChild(option);
-      });
-    } else if (carModel && carYear) {
-      carModel.disabled = true;
-      carYear.disabled = true;
-    }
-    
-    updateSearchButton();
-  });
-}
-
-// Update years when model changes
-if (carModel) {
-  carModel.addEventListener('change', function() {
-    const brand = carBrand ? carBrand.value : '';
-    const model = this.value;
-    
-    if (brand && model && carYear) {
-      carYear.disabled = false;
-      // Populate years from 2000 to current year
-      carYear.innerHTML = '<option value="">Оберіть рік</option>';
-      const currentYear = new Date().getFullYear();
-      for (let year = currentYear; year >= 2000; year--) {
-        const option = document.createElement('option');
-        option.value = year;
-        option.textContent = year;
-        carYear.appendChild(option);
-      }
-    } else if (carYear) {
-      carYear.disabled = true;
-      carYear.innerHTML = '<option value="">Оберіть рік</option>';
-    }
-    
-    updateSearchButton();
-  });
-}
-
-if (carYear) {
-  carYear.addEventListener('change', updateSearchButton);
-}
-
 // Enhanced smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -3209,24 +3278,6 @@ window.addEventListener('load', () => {
   preloadResource('images/cr.png', 'image');
 });
 
-</script>
-
-<!-- Binotel Widget -->
-<script type="text/javascript">
-  (function(d, w, s) {
-    var widgetHash = 'kaetj667yfpludj8qk4b', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
-    gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js';
-    var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
-  })(document, window, 'script');
-</script>
-
-<!-- Binotel CallTracking -->
-<script type="text/javascript">
-  (function(d, w, s) {
-    var widgetHash = 'i05h636bzd90wtswsdjj', ctw = d.createElement(s); ctw.type = 'text/javascript'; ctw.async = true;
-    ctw.src = '//widgets.binotel.com/calltracking/widgets/'+ widgetHash +'.js';
-    var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(ctw, sn);
-  })(document, window, 'script');
 </script>
 
 </body>
