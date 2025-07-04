@@ -340,6 +340,109 @@
       transform: translateX(4px);
     }
     
+      /* Unified Button Styles for Call Tracking */
+.btn-call-primary {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  min-width: 200px;
+  text-align: center;
+}
+
+.btn-call-primary:hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-call-primary:active {
+  transform: translateY(0);
+}
+
+.btn-call-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-call-primary:hover::before {
+  left: 100%;
+}
+
+.btn-call-primary svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .btn-call-primary {
+    padding: 14px 24px;
+    font-size: 15px;
+    min-width: 180px;
+  }
+  
+  .btn-call-primary svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-call-primary {
+    padding: 12px 20px;
+    font-size: 14px;
+    min-width: 160px;
+  }
+  
+  .btn-call-primary svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Pulse animation for urgent buttons */
+.btn-call-primary.animate-pulse {
+  animation: pulse-btn 2s infinite;
+}
+
+@keyframes pulse-btn {
+  0% {
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(220, 38, 38, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  }
+}
+
+
     /* Enhanced button styles */
     .btn-primary {
       background: linear-gradient(135deg, var(--primary-color) 0%, #dc2626 100%);
@@ -437,219 +540,219 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Enhanced Header with improved SEO structure -->
-  <header class="bg-dtforce shadow-xl sticky top-0 z-50 border-t-4 border-red-600" role="banner">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-      <!-- Enhanced Logo with proper SEO -->
-      <a href="/" id="logoLink" class="flex items-center text-xl font-bold text-white smooth-transition hover:opacity-90" 
-         aria-label="DTForce - Дизель сервіс Одеса, головна сторінка" 
-         title="DTForce - Професійний ремонт ТНВД, форсунок, турбін">
-        <img src="images/logo.png" 
-             alt="DTForce – Дизель сервіс Одеса логотип" 
-             class="h-12 mr-3 smooth-transition hover:scale-105" 
-             width="210" 
-             height="60"
-             loading="eager">
+<!-- Enhanced Header with improved SEO structure -->
+<header class="bg-dtforce shadow-xl sticky top-0 z-50 border-t-4 border-red-600" role="banner">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+    <!-- Enhanced Logo with proper SEO -->
+    <a href="/" id="logoLink" class="flex items-center text-xl font-bold text-white smooth-transition hover:opacity-90" 
+       aria-label="DTForce - Дизель сервіс Одеса, головна сторінка" 
+       title="DTForce - Професійний ремонт ТНВД, форсунок, турбін">
+      <img src="images/logo.png" 
+           alt="DTForce – Дизель сервіс Одеса логотип" 
+           class="h-12 mr-3 smooth-transition hover:scale-105" 
+           width="210" 
+           height="60"
+           loading="eager">
+    </a>
+    
+    <!-- Enhanced Navigation with better structure -->
+    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium" role="navigation" aria-label="Головна навігація">
+      <a href="/" id="homeLink" 
+         class="text-white hover:text-red-400 smooth-transition relative group" 
+         data-lang="home"
+         aria-current="page">
+        Головна
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 group-hover:w-full transition-all duration-300"></span>
       </a>
       
-      <!-- Enhanced Navigation with better structure -->
-      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium" role="navigation" aria-label="Головна навігація">
-        <a href="/" id="homeLink" 
-           class="text-white hover:text-red-400 smooth-transition relative group" 
-           data-lang="home"
-           aria-current="page">
-          Головна
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 group-hover:w-full transition-all duration-300"></span>
-        </a>
-        
-        <a href="#about" 
-           class="text-white hover:text-red-400 smooth-transition relative group" 
-           data-lang="about">
-          Про компанію
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 group-hover:w-full transition-all duration-300"></span>
-        </a>
-        
-        <a href="blog.html" id="blogLink" 
-           class="text-white hover:text-red-400 smooth-transition relative group" 
-           data-lang="blog">
-          Блог
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 group-hover:w-full transition-all duration-300"></span>
-        </a>
-        
-        <!-- Enhanced Services Dropdown -->
-        <div class="dropdown relative">
-          <button id="servicesLink" 
-                  class="text-white hover:text-red-400 smooth-transition flex items-center focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-gray-800 rounded-md px-2 py-1"
-                  aria-expanded="false"
-                  aria-haspopup="true">
-            <span data-lang="services">Послуги</span>
-            <svg class="w-4 h-4 ml-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="dropdown-menu" role="menu">
-            <a href="nasos-forsunki.html" id="service1Link" 
-               class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
-               data-lang="service1Title" 
-               role="menuitem">
-              Ремонт насос-форсунок
-            </a>
-            <a href="pld.html" id="service2Link" 
-               class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
-               data-lang="service2Title" 
-               role="menuitem">
-              Ремонт насос-секцій
-            </a>
-            <a href="cr.html" id="service3Link" 
-               class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
-               data-lang="service3Title" 
-               role="menuitem">
-              Ремонт Common Rail
-            </a>
-            <a href="tnvd.html" id="service4Link" 
-               class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
-               data-lang="service4Title" 
-               role="menuitem">
-              Ремонт ТНВД
-            </a>
-            <a href="turbo.html" id="service5Link" 
-               class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
-               data-lang="service5Title" 
-               role="menuitem">
-              Ремонт турбін
-            </a>
-            <a href="chiptuning.html" id="service6Link" 
-               class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
-               data-lang="service6Title" 
-               role="menuitem">
-              Чип-тюнінг
-            </a>
-          </div>
+      <a href="#about" 
+         class="text-white hover:text-red-400 smooth-transition relative group" 
+         data-lang="about">
+        Про компанію
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      
+      <a href="blog.html" id="blogLink" 
+         class="text-white hover:text-red-400 smooth-transition relative group" 
+         data-lang="blog">
+        Блог
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      
+      <!-- Enhanced Services Dropdown -->
+      <div class="dropdown relative">
+        <button id="servicesLink" 
+                class="text-white hover:text-red-400 smooth-transition flex items-center focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-gray-800 rounded-md px-2 py-1"
+                aria-expanded="false"
+                aria-haspopup="true">
+          <span data-lang="services">Послуги</span>
+          <svg class="w-4 h-4 ml-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <a href="nasos-forsunki.html" id="service1Link" 
+             class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
+             data-lang="service1Title" 
+             role="menuitem">
+            Ремонт насос-форсунок
+          </a>
+          <a href="pld.html" id="service2Link" 
+             class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
+             data-lang="service2Title" 
+             role="menuitem">
+            Ремонт насос-секцій
+          </a>
+          <a href="cr.html" id="service3Link" 
+             class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
+             data-lang="service3Title" 
+             role="menuitem">
+            Ремонт Common Rail
+          </a>
+          <a href="tnvd.html" id="service4Link" 
+             class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
+             data-lang="service4Title" 
+             role="menuitem">
+            Ремонт ТНВД
+          </a>
+          <a href="turbo.html" id="service5Link" 
+             class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
+             data-lang="service5Title" 
+             role="menuitem">
+            Ремонт турбін
+          </a>
+          <a href="chiptuning.html" id="service6Link" 
+             class="block px-4 py-2 text-white hover:bg-red-600 smooth-transition" 
+             data-lang="service6Title" 
+             role="menuitem">
+            Чип-тюнінг
+          </a>
         </div>
-        
-        <a href="contact.html" id="contactLink" 
-           class="text-white hover:text-red-400 smooth-transition relative group" 
-           data-lang="contacts">
-          Контакти
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 group-hover:w-full transition-all duration-300"></span>
-        </a>
-        
-        <!-- Enhanced CTA Button -->
+      </div>
+      
+      <a href="contact.html" id="contactLink" 
+         class="text-white hover:text-red-400 smooth-transition relative group" 
+         data-lang="contacts">
+        Контакти
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-red-400 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      
+      <!-- Enhanced CTA Button -->
+      <a href="tel:+380671916336" 
+         class="btn-call-primary animate-pulse"
+         onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'header_cta'});">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+        </svg>
+        <span>Подзвонити</span>
+      </a>
+      
+      <!-- Enhanced Language Switcher -->
+      <button class="text-white hover:text-red-400 smooth-transition border border-white/30 px-3 py-1 rounded-md hover:border-red-400" 
+              id="langBtn"
+              aria-label="Змінити мову сайту">
+        UA
+      </button>
+    </nav>
+    
+    <!-- Enhanced Mobile Menu Button -->
+    <button id="menuToggle" 
+            class="md:hidden text-white hover:text-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-gray-800 rounded-md p-2" 
+            aria-label="Відкрити мобільне меню"
+            aria-expanded="false">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Enhanced Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden hidden mobile-menu-overlay px-4 pb-4 text-white">
+    <nav role="navigation" aria-label="Мобільна навігація">
+      <a href="/" id="homeLinkMobile" 
+         class="block py-3 border-b border-gray-600 hover:text-red-400 smooth-transition" 
+         data-lang="home">
+        Головна
+      </a>
+      <a href="#about" 
+         class="block py-3 border-b border-gray-600 hover:text-red-400 smooth-transition" 
+         data-lang="about">
+        Про компанію
+      </a>
+      <a href="blog.html" id="blogLinkMobile" 
+         class="block py-3 border-b border-gray-600 hover:text-red-400 smooth-transition" 
+         data-lang="blog">
+        Блог
+      </a>
+      
+      <!-- Enhanced Mobile Services Dropdown -->
+      <div class="py-3 border-b border-gray-600">
+        <button id="mobileServicesBtn" 
+                class="flex items-center justify-between w-full hover:text-red-400 smooth-transition focus:outline-none"
+                aria-expanded="false">
+          <span data-lang="services">Послуги</span> 
+          <svg id="mobileServicesArrow" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="mobileServicesList" class="hidden pl-4 mt-3 space-y-2">
+          <a href="nasos-forsunki.html" id="service1LinkMobile" 
+             class="block py-2 hover:text-red-400 smooth-transition" 
+             data-lang="service1Title">
+            Ремонт насос-форсунок
+          </a>
+          <a href="pld.html" id="service2LinkMobile" 
+             class="block py-2 hover:text-red-400 smooth-transition" 
+             data-lang="service2Title">
+            Ремонт насос-секцій
+          </a>
+          <a href="cr.html" id="service3LinkMobile" 
+             class="block py-2 hover:text-red-400 smooth-transition" 
+             data-lang="service3Title">
+            Ремонт Common Rail
+          </a>
+          <a href="tnvd.html" id="service4LinkMobile" 
+             class="block py-2 hover:text-red-400 smooth-transition" 
+             data-lang="service4Title">
+            Ремонт ТНВД
+          </a>
+          <a href="turbo.html" id="service5LinkMobile" 
+             class="block py-2 hover:text-red-400 smooth-transition" 
+             data-lang="service5Title">
+            Ремонт турбін
+          </a>
+          <a href="chiptuning.html" id="service6LinkMobile" 
+             class="block py-2 hover:text-red-400 smooth-transition" 
+             data-lang="service6Title">
+            Чип-тюнінг
+          </a>
+        </div>
+      </div>
+      
+      <a href="contact.html" id="contactLinkMobile" 
+         class="block py-3 border-b border-gray-600 hover:text-red-400 smooth-transition" 
+         data-lang="contacts">
+        Контакти
+      </a>
+      
+      <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-600">
+        <button class="text-white hover:text-red-400 smooth-transition border border-white/30 px-3 py-1 rounded-md hover:border-red-400" 
+                id="langBtnMobile"
+                aria-label="Змінити мову сайту">
+          UA
+        </button>
         <a href="tel:+380671916336" 
-           class="btn-primary text-white px-6 py-3 rounded-full font-medium flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+           class="btn-call-primary"
            aria-label="Подзвонити в DTForce для консультації">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
           </svg>
           <span data-lang="call">Подзвонити</span>
         </a>
-        
-        <!-- Enhanced Language Switcher -->
-        <button class="text-white hover:text-red-400 smooth-transition border border-white/30 px-3 py-1 rounded-md hover:border-red-400" 
-                id="langBtn"
-                aria-label="Змінити мову сайту">
-          UA
-        </button>
-      </nav>
-      
-      <!-- Enhanced Mobile Menu Button -->
-      <button id="menuToggle" 
-              class="md:hidden text-white hover:text-red-400 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 focus:ring-offset-gray-800 rounded-md p-2" 
-              aria-label="Відкрити мобільне меню"
-              aria-expanded="false">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-    
-    <!-- Enhanced Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden mobile-menu-overlay px-4 pb-4 text-white">
-      <nav role="navigation" aria-label="Мобільна навігація">
-        <a href="/" id="homeLinkMobile" 
-           class="block py-3 border-b border-gray-600 hover:text-red-400 smooth-transition" 
-           data-lang="home">
-          Головна
-        </a>
-        <a href="#about" 
-           class="block py-3 border-b border-gray-600 hover:text-red-400 smooth-transition" 
-           data-lang="about">
-          Про компанію
-        </a>
-        <a href="blog.html" id="blogLinkMobile" 
-           class="block py-3 border-b border-gray-600 hover:text-red-400 smooth-transition" 
-           data-lang="blog">
-          Блог
-        </a>
-        
-        <!-- Enhanced Mobile Services Dropdown -->
-        <div class="py-3 border-b border-gray-600">
-          <button id="mobileServicesBtn" 
-                  class="flex items-center justify-between w-full hover:text-red-400 smooth-transition focus:outline-none"
-                  aria-expanded="false">
-            <span data-lang="services">Послуги</span> 
-            <svg id="mobileServicesArrow" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="mobileServicesList" class="hidden pl-4 mt-3 space-y-2">
-            <a href="nasos-forsunki.html" id="service1LinkMobile" 
-               class="block py-2 hover:text-red-400 smooth-transition" 
-               data-lang="service1Title">
-              Ремонт насос-форсунок
-            </a>
-            <a href="pld.html" id="service2LinkMobile" 
-               class="block py-2 hover:text-red-400 smooth-transition" 
-               data-lang="service2Title">
-              Ремонт насос-секцій
-            </a>
-            <a href="cr.html" id="service3LinkMobile" 
-               class="block py-2 hover:text-red-400 smooth-transition" 
-               data-lang="service3Title">
-              Ремонт Common Rail
-            </a>
-            <a href="tnvd.html" id="service4LinkMobile" 
-               class="block py-2 hover:text-red-400 smooth-transition" 
-               data-lang="service4Title">
-              Ремонт ТНВД
-            </a>
-            <a href="turbo.html" id="service5LinkMobile" 
-               class="block py-2 hover:text-red-400 smooth-transition" 
-               data-lang="service5Title">
-              Ремонт турбін
-            </a>
-            <a href="chiptuning.html" id="service6LinkMobile" 
-               class="block py-2 hover:text-red-400 smooth-transition" 
-               data-lang="service6Title">
-              Чип-тюнінг
-            </a>
-          </div>
-        </div>
-        
-        <a href="contact.html" id="contactLinkMobile" 
-           class="block py-3 border-b border-gray-600 hover:text-red-400 smooth-transition" 
-           data-lang="contacts">
-          Контакти
-        </a>
-        
-        <div class="flex justify-between items-center mt-4 pt-4 border-t border-gray-600">
-          <button class="text-white hover:text-red-400 smooth-transition border border-white/30 px-3 py-1 rounded-md hover:border-red-400" 
-                  id="langBtnMobile"
-                  aria-label="Змінити мову сайту">
-            UA
-          </button>
-          <a href="tel:+380671916336" 
-             class="btn-primary text-white px-6 py-3 rounded-full font-medium flex items-center justify-center space-x-2"
-             aria-label="Подзвонити в DTForce">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            <span data-lang="call">Подзвонити</span>
-          </a>
-        </div>
-      </nav>
-    </div>
-  </header>
+      </div>
+    </nav>
+  </div>
+</header>
 
  <!-- Enhanced Hero Section with better conversion optimization -->
 <section class="bg-gradient-to-br from-white via-gray-50 to-white py-12 sm:py-16 lg:py-24 relative overflow-hidden min-h-screen flex items-center">
@@ -705,9 +808,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="mt-6 sm:mt-8 lg:mt-10 space-y-3 sm:space-y-0 sm:flex sm:flex-col md:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
           <!-- Main CTA Button -->
           <a href="tel:+380671916336" 
-             class="btn-primary text-white px-6 sm:px-8 py-4 sm:py-5 rounded-full font-bold text-base sm:text-lg flex items-center justify-center space-x-2 sm:space-x-3 shadow-2xl group w-full sm:w-auto animate-pulse"
+             class="btn-call-primary animate-pulse"
              onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'hero_primary_cta'});">
-            <svg class="w-5 h-5 sm:w-6 sm:h-6 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
             </svg>
             <span>Подзвонити</span>
@@ -770,8 +873,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </svg>
   </div>
 </section>
-
-
 
  <!-- Секция с марками авто - Enhanced -->
   <section class="bg-gray-50 py-16" id="brands">
@@ -953,123 +1054,120 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- Селектор автомобиля - Enhanced -->
-  <section id="car-selector" class="bg-gradient-to-r from-white via-gray-50 to-white py-16 shadow-inner">
-    <div class="max-w-7xl mx-auto px-6">
-      <!-- Enhanced heading -->
-      <div class="text-center mb-12">
-        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-lang="carSelectorTitle">
-          Підберіть запчастини для вашого авто
-        </h2>
-        <p class="text-xl text-gray-600 max-w-4xl mx-auto" data-lang="carSelectorDesc">
-          Оберіть марку, модель і рік випуску вашого авто — система покаже встановлені форсунки, їхню вартість та підбере оптимальні варіанти ремонту.
-        </p>
-      </div>
-      
-      <!-- Enhanced car selector with better UX -->
-      <div class="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <!-- Vehicle type selector -->
-          <div class="relative">
-            <label for="vehicleType" class="block text-sm font-medium text-gray-700 mb-2">
-              Тип авто
-            </label>
-            <select id="vehicleType" 
-                    class="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 focus:outline-none smooth-transition text-lg"
-                    aria-label="Оберіть тип автомобіля">
-              <option value="" data-lang="selectType">Оберіть тип</option>
-              <option value="car">Легкові авто</option>
-              <option value="truck">Вантажні авто</option>
-            </select>
-          </div>
-          
-          <!-- Brand selector -->
-          <div class="relative">
-            <label for="carBrand" class="block text-sm font-medium text-gray-700 mb-2">
-              Марка автомобіля
-            </label>
-            <select id="carBrand" 
-                    class="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 focus:outline-none smooth-transition text-lg"
-                    disabled
-                    aria-label="Оберіть марку автомобіля">
-              <option value="" data-lang="selectBrand">Спочатку оберіть тип</option>
-            </select>
-          </div>
-          
-          <!-- Model selector -->
-          <div class="relative">
-            <label for="carModel" class="block text-sm font-medium text-gray-700 mb-2">
-              Модель
-            </label>
-            <select id="carModel" 
-                    class="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 focus:outline-none smooth-transition text-lg"
-                    disabled
-                    aria-label="Оберіть модель автомобіля">
-              <option value="" data-lang="selectModel">Спочатку оберіть марку</option>
-            </select>
-          </div>
-          
-          <!-- Year selector -->
-          <div class="relative">
-            <label for="carYear" class="block text-sm font-medium text-gray-700 mb-2">
-              Рік випуску
-            </label>
-            <select id="carYear" 
-                    class="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 focus:outline-none smooth-transition text-lg"
-                    disabled
-                    aria-label="Оберіть рік випуску">
-              <option value="" data-lang="selectYear">Оберіть рік</option>
-            </select>
-          </div>
+<section id="car-selector" class="bg-gradient-to-r from-white via-gray-50 to-white py-16 shadow-inner">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Enhanced heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4" data-lang="carSelectorTitle">
+        Підберіть запчастини для вашого авто
+      </h2>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto" data-lang="carSelectorDesc">
+        Оберіть марку, модель і рік випуску вашого авто — система покаже встановлені форсунки, їхню вартість та підбере оптимальні варіанти ремонту.
+      </p>
+    </div>
+    
+    <!-- Enhanced car selector with better UX -->
+    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <!-- Vehicle type selector -->
+        <div class="relative">
+          <label for="vehicleType" class="block text-sm font-medium text-gray-700 mb-2">
+            Тип авто
+          </label>
+          <select id="vehicleType" 
+                  class="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 focus:outline-none smooth-transition text-lg"
+                  aria-label="Оберіть тип автомобіля">
+            <option value="" data-lang="selectType">Оберіть тип</option>
+            <option value="car">Легкові авто</option>
+            <option value="truck">Вантажні авто</option>
+          </select>
         </div>
         
-        <!-- Search button -->
-        <div class="text-center">
-          <button id="searchButton" 
-                  class="btn-primary text-white px-12 py-4 rounded-xl font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed smooth-transition shadow-lg hover:shadow-xl"
+        <!-- Brand selector -->
+        <div class="relative">
+          <label for="carBrand" class="block text-sm font-medium text-gray-700 mb-2">
+            Марка автомобіля
+          </label>
+          <select id="carBrand" 
+                  class="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 focus:outline-none smooth-transition text-lg"
                   disabled
-                  onclick="gtag('event', 'search', {'event_category': 'car_selector', 'event_label': 'search_parts'});">
-            <span class="flex items-center justify-center space-x-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-              <span>Знайти запчастини</span>
-            </span>
-          </button>
+                  aria-label="Оберіть марку автомобіля">
+            <option value="" data-lang="selectBrand">Спочатку оберіть тип</option>
+          </select>
         </div>
         
-        <!-- Results section -->
-        <div id="searchResults" class="hidden mt-8 p-6 bg-gray-50 rounded-xl">
-          <h3 class="text-lg font-semibold text-gray-900 mb-4">Результати пошуку:</h3>
-          <div id="resultsContent"></div>
+        <!-- Model selector -->
+        <div class="relative">
+          <label for="carModel" class="block text-sm font-medium text-gray-700 mb-2">
+            Модель
+          </label>
+          <select id="carModel" 
+                  class="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 focus:outline-none smooth-transition text-lg"
+                  disabled
+                  aria-label="Оберіть модель автомобіля">
+            <option value="" data-lang="selectModel">Спочатку оберіть марку</option>
+          </select>
+        </div>
+        
+        <!-- Year selector -->
+        <div class="relative">
+          <label for="carYear" class="block text-sm font-medium text-gray-700 mb-2">
+            Рік випуску
+          </label>
+          <select id="carYear" 
+                  class="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 focus:outline-none smooth-transition text-lg"
+                  disabled
+                  aria-label="Оберіть рік випуску">
+            <option value="" data-lang="selectYear">Оберіть рік</option>
+          </select>
         </div>
       </div>
       
-      <!-- Quick action buttons -->
-      <div class="mt-12 text-center">
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="tel:+380671916336" 
-             class="inline-flex items-center bg-red-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-red-700 smooth-transition shadow-lg">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+      <!-- Search button -->
+      <div class="text-center">
+        <button id="searchButton" 
+                class="btn-primary text-white px-12 py-4 rounded-xl font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed smooth-transition shadow-lg hover:shadow-xl"
+                disabled
+                onclick="gtag('event', 'search', {'event_category': 'car_selector', 'event_label': 'search_parts'});">
+          <span class="flex items-center justify-center space-x-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
-            <span data-lang="needRepair">Подзвонити</span>
-          </a>
-          
-          <a href="#services" 
-             class="inline-flex items-center bg-white text-gray-700 px-6 py-3 rounded-xl font-medium border-2 border-gray-200 hover:border-red-600 hover:text-red-600 smooth-transition shadow-lg">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z"></path>
-            </svg>
-            Наші послуги
-          </a>
-        </div>
+            <span>Знайти запчастини</span>
+          </span>
+        </button>
+      </div>
+      
+      <!-- Results section -->
+      <div id="searchResults" class="hidden mt-8 p-6 bg-gray-50 rounded-xl">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Результати пошуку:</h3>
+        <div id="resultsContent"></div>
       </div>
     </div>
-  </section>
-
-
-
-  
+    
+    <!-- Quick action buttons -->
+    <div class="mt-12 text-center">
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:+380671916336" 
+           class="btn-call-primary"
+           onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'car_selector_cta'});">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          <span data-lang="needRepair">Подзвонити</span>
+        </a>
+        
+        <a href="#services" 
+           class="inline-flex items-center bg-white text-gray-700 px-6 py-3 rounded-xl font-medium border-2 border-gray-200 hover:border-red-600 hover:text-red-600 smooth-transition shadow-lg">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z"></path>
+          </svg>
+          Наші послуги
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
    <!-- Основные услуги - Enhanced -->
   <section id="services" class="bg-white py-20">
     <div class="max-w-7xl mx-auto px-6">
@@ -1422,33 +1520,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
       </div>
       
-      <!-- CTA section -->
-      <div class="mt-16 text-center bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          Не знайшли потрібну послугу?
-        </h3>
-        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Ми працюємо з широким спектром дизельних систем. 
-          Зв'яжіться з нами для консультації щодо вашої конкретної проблеми.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+380671916336" 
-             class="btn-primary text-white px-8 py-3 rounded-xl font-medium inline-flex items-center justify-center"
-             onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'services_cta'});">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            Подзвонити
-          </a>
-          
-          <a href="contact.html" 
-             class="inline-flex items-center justify-center px-8 py-3 border-2 border-red-600 text-red-600 rounded-xl font-medium hover:bg-red-600 hover:text-white smooth-transition">
-            Написати нам
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+      <<!-- CTA section -->
+<div class="mt-16 text-center bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8">
+  <h3 class="text-2xl font-bold text-gray-900 mb-4">
+    Не знайшли потрібну послугу?
+  </h3>
+  <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+    Ми працюємо з широким спектром дизельних систем. 
+    Зв'яжіться з нами для консультації щодо вашої конкретної проблеми.
+  </p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="tel:+380671916336" 
+       class="btn-call-primary"
+       onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'services_cta'});">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+      </svg>
+      <span>Подзвонити</span>
+    </a>
+    
+    <a href="contact.html" 
+       class="inline-flex items-center justify-center px-8 py-3 border-2 border-red-600 text-red-600 rounded-xl font-medium hover:bg-red-600 hover:text-white smooth-transition">
+      Написати нам
+    </a>
+  </div>
+</div>
 
   <!-- Услуги для легковых автомобилей - New Section -->
   <section class="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-20" id="car-services">
@@ -1795,33 +1891,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       
       <!-- Car services CTA -->
-      <div class="mt-16 text-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          Маєте дизельний легковий автомобіль?
-        </h3>
-        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Довірте його обслуговування професіоналам DTForce. Ми знаємо всі особливості дизельних систем BMW, Mercedes, Volkswagen, Audi та інших марок.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+380671916336" 
-             class="bg-blue-600 text-white px-8 py-3 rounded-xl font-medium inline-flex items-center justify-center hover:bg-blue-700 smooth-transition shadow-lg"
-             onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'car_services_cta'});">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            Подзвонити
-          </a>
-          
-          <a href="#car-selector" 
-             class="inline-flex items-center justify-center px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-medium hover:bg-blue-600 hover:text-white smooth-transition">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-            Підбір запчастин
-          </a>
-        </div>
-      </div>
-    </div>
+<div class="mt-16 text-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
+  <h3 class="text-2xl font-bold text-gray-900 mb-4">
+    Маєте дизельний легковий автомобіль?
+  </h3>
+  <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+    Довірте його обслуговування професіоналам DTForce. Ми знаємо всі особливості дизельних систем BMW, Mercedes, Volkswagen, Audi та інших марок.
+  </p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="tel:+380671916336" 
+       class="btn-call-primary"
+       onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'car_services_cta'});">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+      </svg>
+      <span>Подзвонити</span>
+    </a>
+    
+    <a href="#car-selector" 
+       class="inline-flex items-center justify-center px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-medium hover:bg-blue-600 hover:text-white smooth-transition">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+      </svg>
+      Підбір запчастин
+    </a>
+  </div>
+</div>
   </section>
 
    <!-- Преимущества - Enhanced -->
@@ -2013,34 +2108,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       
       <!-- CTA Section -->
-      <div class="mt-12 text-center">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          Готові довірити свій автомобіль професіоналам?
-        </h3>
-        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Зв'яжіться з нами прямо зараз для безкоштовної консультації та діагностики вашого авто.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+380671916336" 
-             class="btn-primary text-white px-8 py-4 rounded-xl font-medium inline-flex items-center justify-center shadow-lg"
-             onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'advantages_cta'});">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            Подзвонити
-          </a>
-          
-          <a href="#contacts" 
-             class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl font-medium hover:border-red-600 hover:text-red-600 smooth-transition">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-            Наші контакти
-          </a>
-        </div>
-      </div>
-    </div>
+<div class="mt-12 text-center">
+  <h3 class="text-2xl font-bold text-gray-900 mb-4">
+    Готові довірити свій автомобіль професіоналам?
+  </h3>
+  <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+    Зв'яжіться з нами прямо зараз для безкоштовної консультації та діагностики вашого авто.
+  </p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="tel:+380671916336" 
+       class="btn-call-primary"
+       onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'advantages_cta'});">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+      </svg>
+      <span>Подзвонити</span>
+    </a>
+    
+    <a href="#contacts" 
+       class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl font-medium hover:border-red-600 hover:text-red-600 smooth-transition">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+      </svg>
+      Наші контакти
+    </a>
+  </div>
+</div>
   </section>
 
   <!-- Наші майстри за справою - Enhanced -->
@@ -2118,33 +2212,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       
       <!-- Enhanced CTA -->
-      <div class="mt-12 text-center bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4" data-lang="videoCallToAction">
-          Потрібна консультація? Зв'яжіться з нашими майстрами!
-        </h3>
-        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Наші експерти відповідають на дзвінки з 9:00 до 18:00 та надають безкоштовні консультації з будь-яких питань.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+380671916336" 
-             class="btn-primary text-white px-8 py-3 rounded-xl font-medium inline-flex items-center justify-center"
-             onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'video_cta'});">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            <span data-lang="call">Подзвонити</span>
-          </a>
-          
-          <a href="https://www.youtube.com/@dtforce" target="_blank" rel="noopener" 
-             class="inline-flex items-center justify-center px-8 py-3 border-2 border-red-600 text-red-600 rounded-xl font-medium hover:bg-red-600 hover:text-white smooth-transition">
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-            </svg>
-            Наш YouTube канал
-          </a>
-        </div>
-      </div>
-    </div>
+<div class="mt-12 text-center bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8">
+  <h3 class="text-2xl font-bold text-gray-900 mb-4" data-lang="videoCallToAction">
+    Потрібна консультація? Зв'яжіться з нашими майстрами!
+  </h3>
+  <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+    Наші експерти відповідають на дзвінки з 9:00 до 18:00 та надають безкоштовні консультації з будь-яких питань.
+  </p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="tel:+380671916336" 
+       class="btn-call-primary"
+       onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'video_cta'});">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+      </svg>
+      <span data-lang="call">Подзвонити</span>
+    </a>
+    
+    <a href="https://www.youtube.com/@dtforce" target="_blank" rel="noopener" 
+       class="inline-flex items-center justify-center px-8 py-3 border-2 border-red-600 text-red-600 rounded-xl font-medium hover:bg-red-600 hover:text-white smooth-transition">
+      <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      </svg>
+      Наш YouTube канал
+    </a>
+  </div>
+</div>
   </section>
 
   <!-- Відгуки клієнтів - Enhanced -->
@@ -2547,34 +2640,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- CTA Section -->
-      <div class="mt-16 text-center bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          Не знайшли відповіді на ваше питання?
-        </h3>
-        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Наші технічні спеціалісти готові надати детальну консультацію з будь-яких питань 
-          ремонту дизельних систем.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+380671916336" 
-             class="btn-primary text-white px-8 py-3 rounded-xl font-medium inline-flex items-center justify-center"
-             onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'faq_cta'});">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            Подзвонити
-          </a>
-          
-          <a href="https://t.me/dtforce" target="_blank" rel="noopener" 
-             class="inline-flex items-center justify-center px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-medium hover:bg-blue-600 hover:text-white smooth-transition">
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-            </svg>
-            Написати в Telegram
-          </a>
-        </div>
-      </div>
-    </div>
+<div class="mt-16 text-center bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8">
+  <h3 class="text-2xl font-bold text-gray-900 mb-4">
+    Не знайшли відповіді на ваше питання?
+  </h3>
+  <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+    Наші технічні спеціалісти готові надати детальну консультацію з будь-яких питань 
+    ремонту дизельних систем.
+  </p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="tel:+380671916336" 
+       class="btn-call-primary"
+       onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'faq_cta'});">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+      </svg>
+      <span>Подзвонити</span>
+    </a>
+    
+    <a href="https://t.me/dtforce" target="_blank" rel="noopener" 
+       class="inline-flex items-center justify-center px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-xl font-medium hover:bg-blue-600 hover:text-white smooth-transition">
+      <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+      </svg>
+      Написати в Telegram
+    </a>
+  </div>
+</div>
   </section>
 
   <!-- Contact Section - Enhanced -->
@@ -2818,18 +2910,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Наш пріоритет – якість, надійність і довготривала робота вашого дизельного авто. Надаємо гарантію до 12 місяців на всі види робіт.
         </p>
         
-        <!-- Контактные кнопки -->
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="tel:+380671916336" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition font-medium flex items-center justify-center">
-            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            <span data-lang="call">Подзвонити</span>
-          </a>
-          <a href="#contacts" class="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-full hover:bg-red-50 transition" data-lang="ourContacts">
-            Наші контакти
-          </a>
-        </div>
+       <div class="mt-8 flex flex-wrap gap-4">
+  <a href="tel:+380671916336" class="btn-call-primary">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+    </svg>
+    <span data-lang="call">Подзвонити</span>
+  </a>
+  <a href="#contacts" class="inline-block border border-red-600 text-red-600 px-6 py-3 rounded-full hover:bg-red-50 transition" data-lang="ourContacts">
+    Наші контакти
+  </a>
+</div>
       </div>
     </div>
   </section>
@@ -3041,34 +3132,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
     </div>
     
-    <!-- Enhanced CTA section -->
-    <div class="mt-16 text-center bg-gradient-to-r from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-lg">
-      <div class="max-w-2xl mx-auto">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-          Хочете дізнатися більше?
-        </h3>
-        <p class="text-gray-600 mb-6 leading-relaxed">
-          У нашому блозі ви знайдете експертні поради, інструкції з ремонту та корисні лайфхаки для обслуговування дизельного обладнання
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="blog.html" 
-             class="btn-primary text-white px-8 py-4 rounded-full font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl smooth-transition">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-            </svg>
-            <span data-lang="allArticles">Всі статті блогу</span>
-          </a>
-          
-          <a href="tel:+380671916336" 
-             class="bg-white text-gray-800 border-2 border-gray-300 hover:border-red-600 hover:text-red-600 px-8 py-4 rounded-full font-semibold flex items-center justify-center space-x-2 smooth-transition">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-            </svg>
-            <span>Подзвонити</span>
-          </a>
-        </div>
-      </div>
+  <!-- Enhanced CTA section -->
+<div class="mt-16 text-center bg-gradient-to-r from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-lg">
+  <div class="max-w-2xl mx-auto">
+    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+      Хочете дізнатися більше?
+    </h3>
+    <p class="text-gray-600 mb-6 leading-relaxed">
+      У нашому блозі ви знайдете експертні поради, інструкції з ремонту та корисні лайфхаки для обслуговування дизельного обладнання
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="blog.html" 
+         class="btn-primary text-white px-8 py-4 rounded-full font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl smooth-transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+        </svg>
+        <span data-lang="allArticles">Всі статті блогу</span>
+      </a>
+      
+      <a href="tel:+380671916336" 
+         class="btn-call-primary">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+        </svg>
+        <span>Подзвонити</span>
+      </a>
     </div>
+  </div>
+</div>
     
     <!-- Newsletter subscription -->
     <div class="mt-12 bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 text-white text-center">
@@ -3169,9 +3260,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       <!-- CTA Button -->
       <a href="tel:+380671916336" 
-         class="ml-3 bg-yellow-500 hover:bg-yellow-400 text-black px-4 py-3 rounded-full font-bold text-sm flex items-center space-x-2 shadow-lg animate-pulse"
+         class="btn-call-primary animate-pulse"
          onclick="gtag('event', 'click', {'event_category': 'phone', 'event_label': 'sticky_mobile_cta'});">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
         </svg>
         <span>Подзвонити</span>
