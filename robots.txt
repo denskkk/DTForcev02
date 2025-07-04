@@ -1,6 +1,16 @@
 User-agent: *
-Disallow: /admin/
+Allow: /
+
+# Разрешаем доступ ко всем CSS и JS файлам
+Allow: /styles/
+Allow: /scripts/
+Allow: /images/
+Allow: /brands/
+
+# Запрещаем доступ к служебным файлам
+Disallow: /cgi-bin/
 Disallow: /private/
+Disallow: /admin/
 Disallow: /temp/
 Disallow: /backup/
 Disallow: /logs/
@@ -8,6 +18,59 @@ Disallow: /*.php$
 Allow: /send_mail.php
 Disallow: /*?*
 Allow: /*?utm_*
+
+# Разрешаем основные файлы
+Allow: /index.html
+Allow: /blog.html
+Allow: /contact.html
+Allow: /nasos-forsunki.html
+Allow: /pld.html
+Allow: /cr.html
+Allow: /tnvd.html
+Allow: /turbo.html
+Allow: /chiptuning.html
+Allow: /poslugi.html
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /thank-you-page.html
+
+# Sitemap
+Sitemap: https://dtforce.in.ua/sitemap.xml
+
+# Время между запросами (рекомендуется для вежливых ботов)
+Crawl-delay: 1
+
+# Специальные настройки для поисковых систем
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Блокируем нежелательных ботов
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
 Disallow: /search/
 Disallow: /filter/
 Disallow: /thank-you-page.html
