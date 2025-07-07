@@ -1,5 +1,4 @@
 # DTForce Apache Configuration
-# Поместите этот файл в корень сайта как .htaccess
 
 # ============================================
 # ОСНОВНЫЕ НАСТРОЙКИ БЕЗОПАСНОСТИ
@@ -9,10 +8,24 @@
 Options -Indexes
 
 # ============================================
-# РЕДИРЕКТЫ ДЛЯ 404 СТРАНИЦ И КАНОНИЧЕСКИЕ URL
+# БЛОКИРОВКА СЛУЖЕБНЫХ СТРАНИЦ
 # ============================================
 
 RewriteEngine On
+
+# Блокировка доступа к RSS и Feed файлам
+RewriteRule ^.*feed.*$ - [F,L]
+RewriteRule ^comments/feed/$ - [F,L]
+RewriteRule ^.*\.rss$ - [F,L]
+
+# Блокировка поисковых страниц с параметрами
+RewriteCond %{QUERY_STRING} ^s=.*$
+RewriteRule ^(.*)$ - [F,L]
+
+# Блокировка служебных WordPress файлов (если они есть)
+RewriteRule ^wp-admin/.*$ - [F,L]
+RewriteRule ^wp-includes/.*$ - [F,L]
+RewriteRule ^wp-content/.*$ - [F,L]
 
 # ВАЖНО: Редирект index.html на главную страницу
 RewriteRule ^index\.html$ / [R=301,L]

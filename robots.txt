@@ -10,6 +10,13 @@ Allow: /scripts/
 # Запрещаем доступ к дублированным страницам
 Disallow: /index.html
 
+# Запрещаем доступ к служебным и поисковым страницам
+Disallow: /comments/feed/
+Disallow: /*?s=*
+Disallow: /*search*
+Disallow: /*?*
+Allow: /*?utm_*
+
 # Запрещаем доступ к несуществующим страницам (которые вызывают 404)
 Disallow: /remont-pnvt-bosch/
 Disallow: /remont-nasos-forsynku-delphi-*/
@@ -42,11 +49,18 @@ Disallow: /backup/
 Disallow: /logs/
 Disallow: /*.php$
 Allow: /send_mail.php
-Disallow: /*?*
-Allow: /*?utm_*
 Disallow: /*.log
 Disallow: /*.bak
 Disallow: /*.tmp
+
+# Запрещаем RSS и Feed файлы
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /*/feed/
+Disallow: /*/comments/feed/
+Disallow: /*.rss
+Disallow: /*.xml
+Allow: /sitemap.xml
 
 # Разрешаем основные страницы (только существующие)
 Allow: /
