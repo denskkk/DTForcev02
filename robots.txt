@@ -7,6 +7,9 @@ Allow: /brands/
 Allow: /styles/
 Allow: /scripts/
 
+# Запрещаем доступ к дублированным страницам
+Disallow: /index.html
+
 # Запрещаем доступ к несуществующим страницам (которые вызывают 404)
 Disallow: /remont-pnvt-bosch/
 Disallow: /remont-nasos-forsynku-delphi-*/
@@ -47,7 +50,6 @@ Disallow: /*.tmp
 
 # Разрешаем основные страницы (только существующие)
 Allow: /
-Allow: /index.html
 Allow: /poslugi.html
 Allow: /blog.html
 Allow: /contact.html
