@@ -1,11 +1,34 @@
 User-agent: *
 Allow: /
 
-# Разрешаем доступ ко всем CSS и JS файлам
-Allow: /styles/
-Allow: /scripts/
+# Разрешаем доступ к статическим файлам
 Allow: /images/
 Allow: /brands/
+Allow: /styles/
+Allow: /scripts/
+
+# Запрещаем доступ к несуществующим страницам (которые вызывают 404)
+Disallow: /remont-pnvt-bosch/
+Disallow: /remont-nasos-forsynku-delphi-*/
+Disallow: /remont-nasos-forsynku-bosch*/
+Disallow: /remont-nasos-forsynku/
+Disallow: /remont-common-rail-*/
+Disallow: /remont-forsynok-cr/
+Disallow: /remont-pld-sekcii/
+Disallow: /remont-nasos-sekcii-*/
+Disallow: /remont-nasos-cekcii-*/
+Disallow: /remont-tnvd/
+Disallow: /remont-tnvd-bosch/
+Disallow: /remont-tyrbin/
+Disallow: /chip-tuning/
+Disallow: /rus/
+Disallow: /ru/
+Disallow: /pro-kompaniyu/
+Disallow: /kontaktu/
+Disallow: /DTForcev02/
+Disallow: /blog/rozpyliuvachi-forsunok.html
+Disallow: /blog/plunzherna-para-tnvd.html
+Disallow: /blog/kartridzh-turbiny.html
 
 # Запрещаем доступ к служебным файлам
 Disallow: /cgi-bin/
@@ -18,27 +41,51 @@ Disallow: /*.php$
 Allow: /send_mail.php
 Disallow: /*?*
 Allow: /*?utm_*
+Disallow: /*.log
+Disallow: /*.bak
+Disallow: /*.tmp
 
-# Разрешаем основные файлы
+# Разрешаем основные страницы (только существующие)
+Allow: /
 Allow: /index.html
+Allow: /poslugi.html
 Allow: /blog.html
 Allow: /contact.html
-Allow: /nasos-forsunki.html
 Allow: /pld.html
 Allow: /cr.html
-Allow: /tnvd.html
+Allow: /nasos-forsunki.html
 Allow: /turbo.html
+Allow: /tnvd.html
 Allow: /chiptuning.html
-Allow: /poslugi.html
+Allow: /blog1.html
+Allow: /blog2.html
+Allow: /blog3.html
+Allow: /blog6.html
+Allow: /blog-chiptuning.html
+Allow: /blog-diesel-diagnostics.html
+Allow: /blog-diesel-mistakes.html
+Allow: /blog-7-reasons-diesel-dies.html
+Allow: /blog-ecu-algorithm.html
+Allow: /blog-fuel-adaptation.html
+Allow: /blog-high-mileage-tuning.html
 Allow: /privacy.html
 Allow: /terms.html
-Allow: /thank-you-page.html
 
-# Sitemap
-Sitemap: https://dtforce.in.ua/sitemap.xml
+# Блокируем нежелательных ботов
+User-agent: AhrefsBot
+Disallow: /
 
-# Время между запросами (рекомендуется для вежливых ботов)
-Crawl-delay: 1
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
 
 # Специальные настройки для поисковых систем
 User-agent: Googlebot
@@ -59,49 +106,8 @@ Allow: /
 User-agent: Twitterbot
 Allow: /
 
-# Блокируем нежелательных ботов
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: BLEXBot
-Disallow: /
-Disallow: /search/
-Disallow: /filter/
-Disallow: /thank-you-page.html
-
-# Allow important pages
-Allow: /
-Allow: /index.html
-Allow: /poslugi.html
-Allow: /blog.html
-Allow: /contact.html
-Allow: /pld.html
-Allow: /cr.html
-Allow: /nasos-forsunki.html
-Allow: /turbo.html
-Allow: /tnvd.html
-Allow: /chiptuning.html
-Allow: /blog1.html
-Allow: /blog2.html
-Allow: /blog3.html
-Allow: /blog4.html
-Allow: /blog5.html
-Allow: /blog6.html
-Allow: /images/
-Allow: /brands/
-
-# Block sensitive files
-Disallow: /*.log
-Disallow: /*.bak
-Disallow: /*.tmp
-
+# Sitemap
 Sitemap: https://dtforce.in.ua/sitemap.xml
 
-# Crawl-delay for respectful crawling
+# Время между запросами
 Crawl-delay: 1

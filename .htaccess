@@ -8,8 +8,85 @@
 # Отключение индексации директорий
 Options -Indexes
 
-# Защита от hotlinking изображений
-RewriteEngine on
+# ============================================
+# РЕДИРЕКТЫ ДЛЯ 404 СТРАНИЦ (ВАЖНО - В НАЧАЛЕ!)
+# ============================================
+
+RewriteEngine On
+
+# Редиректы для основных несуществующих страниц
+RewriteRule ^remont-pnvt-bosch/?$ /tnvd.html [R=301,L]
+RewriteRule ^remont-nasos-forsynku-delphi-a0-a1-a3/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^remont-nasos-forsynku-delphi-e3/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^remont-nasos-forsynku-delphi-e1/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^remont-nasos-forsynku-bosch-delphi-a0-a1-a3/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^remont-nasos-forsynku-bosch/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^remont-nasos-forsynku/?$ /nasos-forsunki.html [R=301,L]
+
+RewriteRule ^remont-common-rail-delphi/?$ /cr.html [R=301,L]
+RewriteRule ^remont-common-rail-bosch/?$ /cr.html [R=301,L]
+RewriteRule ^remont-common-rail-denso/?$ /cr.html [R=301,L]
+RewriteRule ^remont-common-rail-bosch-piezo/?$ /cr.html [R=301,L]
+RewriteRule ^remont-forsynok-cr/?$ /cr.html [R=301,L]
+
+RewriteRule ^remont-pld-sekcii/?$ /pld.html [R=301,L]
+RewriteRule ^remont-nasos-sekcii-bosch/?$ /pld.html [R=301,L]
+RewriteRule ^remont-nasos-cekcii-smart-injector-delphi-daf-105/?$ /pld.html [R=301,L]
+
+RewriteRule ^remont-tnvd/?$ /tnvd.html [R=301,L]
+RewriteRule ^remont-tnvd-bosch/?$ /tnvd.html [R=301,L]
+
+RewriteRule ^remont-tyrbin/?$ /turbo.html [R=301,L]
+RewriteRule ^chip-tuning/?$ /chiptuning.html [R=301,L]
+
+# Редиректы для русскоязычных страниц
+RewriteRule ^rus/?$ / [R=301,L]
+RewriteRule ^ru/?$ / [R=301,L]
+RewriteRule ^rus/remont-nasos-forsynku-delphi-e1/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^rus/remont-forsynok-cr/?$ /cr.html [R=301,L]
+RewriteRule ^rus/remont-nasos-sekcii-bosch/?$ /pld.html [R=301,L]
+RewriteRule ^rus/remont-common-rail-denso/?$ /cr.html [R=301,L]
+RewriteRule ^rus/remont-common-rail-bosch/?$ /cr.html [R=301,L]
+RewriteRule ^rus/remont-common-rail-bosch-piezo/?$ /cr.html [R=301,L]
+RewriteRule ^rus/remont-nasos-cekcii-smart-injector-delphi-daf-105/?$ /pld.html [R=301,L]
+RewriteRule ^rus/kontaktu/?$ /contact.html [R=301,L]
+RewriteRule ^rus/remont-pld-sekcii/?$ /pld.html [R=301,L]
+RewriteRule ^rus/o-kompanii/?$ /index.html#about [R=301,L]
+RewriteRule ^rus/remont-nasos-forsynku-bosch/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^rus/remont-tnvd/?$ /tnvd.html [R=301,L]
+RewriteRule ^rus/yslygu/?$ /poslugi.html [R=301,L]
+RewriteRule ^rus/remont-tnvd-bosch/?$ /tnvd.html [R=301,L]
+RewriteRule ^rus/remont-nasos-forsynku-bosch-delphi-a0-a1-a3/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^rus/remont-nasos-forsynku-delphi-a0-a1-a3/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^rus/remont-nasos-forsynku/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^rus/remont-nasos-forsynku-delphi-e3/?$ /nasos-forsunki.html [R=301,L]
+RewriteRule ^rus/chip-tuning/?$ /chiptuning.html [R=301,L]
+
+# Редиректы для блога
+RewriteRule ^blog/rozpyliuvachi-forsunok\.html$ /blog1.html [R=301,L]
+RewriteRule ^blog/plunzherna-para-tnvd\.html$ /blog2.html [R=301,L]
+RewriteRule ^blog/kartridzh-turbiny\.html$ /blog3.html [R=301,L]
+
+# Редиректы для основных страниц
+RewriteRule ^pro-kompaniyu/?$ /index.html#about [R=301,L]
+RewriteRule ^kontaktu/?$ /contact.html [R=301,L]
+
+# Редирект для старой версии
+RewriteRule ^DTForcev02/?$ / [R=301,L]
+
+# Принудительное использование HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Удаление слэша в конце URL (опционально)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# ============================================
+# ЗАЩИТА ОТ HOTLINKING
+# ============================================
+
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?dtforce\.in\.ua [NC]
 RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google\. [NC]
@@ -21,7 +98,6 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [NC,F,L]
 # ============================================
 
 <IfModule mod_deflate.c>
-    # Сжатие HTML, CSS, JavaScript, Text, XML и fonts
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/rss+xml
     AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
@@ -51,8 +127,6 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [NC,F,L]
 
 <IfModule mod_expires.c>
     ExpiresActive on
-
-    # Изображения
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
@@ -60,36 +134,22 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [NC,F,L]
     ExpiresByType image/webp "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/x-icon "access plus 1 year"
-
-    # Видео
     ExpiresByType video/mp4 "access plus 1 year"
     ExpiresByType video/mpeg "access plus 1 year"
-
-    # Шрифты
     ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
     ExpiresByType application/x-font-ttf "access plus 1 year"
     ExpiresByType application/x-font-woff "access plus 1 year"
     ExpiresByType application/font-woff "access plus 1 year"
     ExpiresByType application/font-woff2 "access plus 1 year"
     ExpiresByType font/opentype "access plus 1 year"
-
-    # CSS и JavaScript
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
     ExpiresByType text/javascript "access plus 1 month"
-
-    # HTML
     ExpiresByType text/html "access plus 1 hour"
-
-    # Data
     ExpiresByType application/json "access plus 0 seconds"
     ExpiresByType application/xml "access plus 0 seconds"
     ExpiresByType text/xml "access plus 0 seconds"
-
-    # RSS
     ExpiresByType application/rss+xml "access plus 1 hour"
-
-    # Favicon
     ExpiresByType image/x-icon "access plus 1 week"
 </IfModule>
 
@@ -98,22 +158,18 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [NC,F,L]
 # ============================================
 
 <IfModule mod_headers.c>
-    # Статические ресурсы
     <filesMatch "\.(css|jpg|jpeg|png|gif|js|ico|webp|svg)$">
         Header set Cache-Control "max-age=31536000, public"
     </filesMatch>
-
-    # HTML файлы
     <filesMatch "\.(html|htm)$">
         Header set Cache-Control "max-age=3600, public, must-revalidate"
     </filesMatch>
-
-    # Безопасность
     Header always set X-Frame-Options SAMEORIGIN
     Header always set X-Content-Type-Options nosniff
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    Header unset ETag
 </IfModule>
 
 # ============================================
@@ -132,36 +188,15 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [NC,F,L]
 </IfModule>
 
 # ============================================
-# URL REWRITING (если нужно)
-# ============================================
-
-RewriteEngine On
-
-# Принудительное использование HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Принудительное использование WWW (опционально)
-# RewriteCond %{HTTP_HOST} !^www\.
-# RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Удаление слэша в конце URL (опционально)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [R=301,L]
-
-# ============================================
 # ЗАЩИТА ФАЙЛОВ
 # ============================================
 
-# Защита .htaccess
 <files ~ "^.*\.([Hh][Tt][Aa])">
     order allow,deny
     deny from all
     satisfy all
 </files>
 
-# Защита конфиденциальных файлов
 <FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|backup|sql)$">
     Order Allow,Deny
     Deny from all
@@ -187,12 +222,9 @@ ErrorDocument 404 /404.html
 ErrorDocument 500 /500.html
 
 # ============================================
-# ОТКЛЮЧЕНИЕ ETAGS (для лучшей производительности)
+# ОТКЛЮЧЕНИЕ ETAGS
 # ============================================
 
-<IfModule mod_headers.c>
-    Header unset ETag
-</IfModule>
 FileETag None
 
 # ============================================

@@ -4,132 +4,169 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  
+    <!-- Главная страница -->
     <url>
         <loc>https://dtforce.in.ua/</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
+    <!-- Основные страницы -->
     <url>
         <loc>https://dtforce.in.ua/poslugi.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://dtforce.in.ua/contact.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://dtforce.in.ua/blog.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
+    <!-- Страницы услуг -->
+    <url>
+        <loc>https://dtforce.in.ua/nasos-forsunki.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
     <url>
         <loc>https://dtforce.in.ua/pld.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://dtforce.in.ua/cr.html</loc>
-        <lastmod>2025-01-16</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://dtforce.in.ua/nasos-forsunki.html</loc>
-        <lastmod>2025-01-16</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://dtforce.in.ua/turbo.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://dtforce.in.ua/tnvd.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://dtforce.in.ua/turbo.html</loc>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://dtforce.in.ua/chiptuning.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
- 
+    <!-- Блог статьи (старые) -->
     <url>
         <loc>https://dtforce.in.ua/blog1.html</loc>
-        <lastmod>2024-05-01</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://dtforce.in.ua/blog2.html</loc>
-        <lastmod>2024-04-15</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://dtforce.in.ua/blog3.html</loc>
-        <lastmod>2024-03-28</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://dtforce.in.ua/blog4.html</loc>
-        <lastmod>2024-05-30</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://dtforce.in.ua/blog5.html</loc>
-        <lastmod>2024-05-30</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://dtforce.in.ua/blog6.html</loc>
-        <lastmod>2024-05-30</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
 
-  
+    <!-- Блог статьи (новые) -->
+    <url>
+        <loc>https://dtforce.in.ua/blog-chiptuning.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dtforce.in.ua/blog-diesel-diagnostics.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dtforce.in.ua/blog-diesel-mistakes.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dtforce.in.ua/blog-7-reasons-diesel-dies.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dtforce.in.ua/blog-ecu-algorithm.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dtforce.in.ua/blog-fuel-adaptation.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://dtforce.in.ua/blog-high-mileage-tuning.html</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Служебные страницы -->
     <url>
         <loc>https://dtforce.in.ua/privacy.html</loc>
-        <lastmod>2024-12-01</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
 
     <url>
         <loc>https://dtforce.in.ua/terms.html</loc>
-        <lastmod>2024-12-01</lastmod>
+        <lastmod>2025-07-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
