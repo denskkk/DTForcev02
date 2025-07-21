@@ -23,7 +23,6 @@ Disallow: /remont-nasos-forsynku-delphi-*/
 Disallow: /remont-nasos-forsynku-bosch*/
 Disallow: /remont-nasos-forsynku/
 Disallow: /remont-common-rail-*/
-Disallow: /remont-forsynok-cr/
 Disallow: /remont-pld-sekcii/
 Disallow: /remont-nasos-sekcii-*/
 Disallow: /remont-nasos-cekcii-*/
@@ -31,6 +30,8 @@ Disallow: /remont-tnvd/
 Disallow: /remont-tnvd-bosch/
 Disallow: /remont-tyrbin/
 Disallow: /chip-tuning/
+Disallow: /chiptuning.html
+Disallow: /cr.html
 Disallow: /rus/
 Disallow: /ru/
 Disallow: /pro-kompaniyu/
@@ -68,11 +69,11 @@ Allow: /poslugi.html
 Allow: /blog.html
 Allow: /contact.html
 Allow: /pld.html
-Allow: /cr.html
+Allow: /remont-forsynok-cr.html
 Allow: /nasos-forsunki.html
 Allow: /turbo.html
 Allow: /tnvd.html
-Allow: /chiptuning.html
+Allow: /chip-tuning.html
 Allow: /blog1.html
 Allow: /blog2.html
 Allow: /blog3.html
@@ -86,6 +87,7 @@ Allow: /blog-fuel-adaptation.html
 Allow: /blog-high-mileage-tuning.html
 Allow: /privacy.html
 Allow: /terms.html
+Allow: /thank-you-page.html
 
 # Блокируем нежелательных ботов
 User-agent: AhrefsBot

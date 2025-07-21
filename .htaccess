@@ -39,11 +39,11 @@ RewriteRule ^remont-nasos-forsynku-bosch-delphi-a0-a1-a3/?$ /nasos-forsunki.html
 RewriteRule ^remont-nasos-forsynku-bosch/?$ /nasos-forsunki.html [R=301,L]
 RewriteRule ^remont-nasos-forsynku/?$ /nasos-forsunki.html [R=301,L]
 
-RewriteRule ^remont-common-rail-delphi/?$ /cr.html [R=301,L]
-RewriteRule ^remont-common-rail-bosch/?$ /cr.html [R=301,L]
-RewriteRule ^remont-common-rail-denso/?$ /cr.html [R=301,L]
-RewriteRule ^remont-common-rail-bosch-piezo/?$ /cr.html [R=301,L]
-RewriteRule ^remont-forsynok-cr/?$ /cr.html [R=301,L]
+RewriteRule ^remont-common-rail-delphi/?$ /remont-forsynok-cr.html [R=301,L]
+RewriteRule ^remont-common-rail-bosch/?$ /remont-forsynok-cr.html [R=301,L]
+RewriteRule ^remont-common-rail-denso/?$ /remont-forsynok-cr.html [R=301,L]
+RewriteRule ^remont-common-rail-bosch-piezo/?$ /remont-forsynok-cr.html [R=301,L]
+RewriteRule ^remont-forsynok-cr/?$ /remont-forsynok-cr.html [R=301,L]
 
 RewriteRule ^remont-pld-sekcii/?$ /pld.html [R=301,L]
 RewriteRule ^remont-nasos-sekcii-bosch/?$ /pld.html [R=301,L]
@@ -53,21 +53,21 @@ RewriteRule ^remont-tnvd/?$ /tnvd.html [R=301,L]
 RewriteRule ^remont-tnvd-bosch/?$ /tnvd.html [R=301,L]
 
 RewriteRule ^remont-tyrbin/?$ /turbo.html [R=301,L]
-RewriteRule ^chip-tuning/?$ /chiptuning.html [R=301,L]
+RewriteRule ^chip-tuning/?$ /chip-tuning.html [R=301,L]
 
 # Редиректы для русскоязычных страниц
 RewriteRule ^rus/?$ / [R=301,L]
 RewriteRule ^ru/?$ / [R=301,L]
 RewriteRule ^rus/remont-nasos-forsynku-delphi-e1/?$ /nasos-forsunki.html [R=301,L]
-RewriteRule ^rus/remont-forsynok-cr/?$ /cr.html [R=301,L]
+RewriteRule ^rus/remont-forsynok-cr/?$ /remont-forsynok-cr.html [R=301,L]
 RewriteRule ^rus/remont-nasos-sekcii-bosch/?$ /pld.html [R=301,L]
-RewriteRule ^rus/remont-common-rail-denso/?$ /cr.html [R=301,L]
-RewriteRule ^rus/remont-common-rail-bosch/?$ /cr.html [R=301,L]
-RewriteRule ^rus/remont-common-rail-bosch-piezo/?$ /cr.html [R=301,L]
+RewriteRule ^rus/remont-common-rail-denso/?$ /remont-forsynok-cr.html [R=301,L]
+RewriteRule ^rus/remont-common-rail-bosch/?$ /remont-forsynok-cr.html [R=301,L]
+RewriteRule ^rus/remont-common-rail-bosch-piezo/?$ /remont-forsynok-cr.html [R=301,L]
 RewriteRule ^rus/remont-nasos-cekcii-smart-injector-delphi-daf-105/?$ /pld.html [R=301,L]
 RewriteRule ^rus/kontaktu/?$ /contact.html [R=301,L]
 RewriteRule ^rus/remont-pld-sekcii/?$ /pld.html [R=301,L]
-RewriteRule ^rus/o-kompanii/?$ /index.html#about [R=301,L]
+RewriteRule ^rus/o-kompanii/?$ /#about [R=301,L]
 RewriteRule ^rus/remont-nasos-forsynku-bosch/?$ /nasos-forsunki.html [R=301,L]
 RewriteRule ^rus/remont-tnvd/?$ /tnvd.html [R=301,L]
 RewriteRule ^rus/yslygu/?$ /poslugi.html [R=301,L]
@@ -76,7 +76,7 @@ RewriteRule ^rus/remont-nasos-forsynku-bosch-delphi-a0-a1-a3/?$ /nasos-forsunki.
 RewriteRule ^rus/remont-nasos-forsynku-delphi-a0-a1-a3/?$ /nasos-forsunki.html [R=301,L]
 RewriteRule ^rus/remont-nasos-forsynku/?$ /nasos-forsunki.html [R=301,L]
 RewriteRule ^rus/remont-nasos-forsynku-delphi-e3/?$ /nasos-forsunki.html [R=301,L]
-RewriteRule ^rus/chip-tuning/?$ /chiptuning.html [R=301,L]
+RewriteRule ^rus/chip-tuning/?$ /chip-tuning.html [R=301,L]
 
 # Редиректы для блога
 RewriteRule ^blog/rozpyliuvachi-forsunok\.html$ /blog1.html [R=301,L]
@@ -84,11 +84,14 @@ RewriteRule ^blog/plunzherna-para-tnvd\.html$ /blog2.html [R=301,L]
 RewriteRule ^blog/kartridzh-turbiny\.html$ /blog3.html [R=301,L]
 
 # Редиректы для основных страниц
-RewriteRule ^pro-kompaniyu/?$ /index.html#about [R=301,L]
+RewriteRule ^pro-kompaniyu/?$ /#about [R=301,L]
 RewriteRule ^kontaktu/?$ /contact.html [R=301,L]
 
 # Редирект для старой версии
 RewriteRule ^DTForcev02/?$ / [R=301,L]
+
+# Блокировка API запросов от индексации
+RewriteRule ^api/.*$ - [F,L]
 
 # Принудительное использование HTTPS
 RewriteCond %{HTTPS} off
@@ -185,7 +188,9 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [NC,F,L]
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
     Header unset ETag
+    Header unset Server
 </IfModule>
 
 # ============================================
@@ -234,8 +239,8 @@ RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [NC,F,L]
 # CUSTOM ERROR PAGES
 # ============================================
 
-ErrorDocument 404 /404.html
-ErrorDocument 500 /500.html
+ErrorDocument 404 /
+ErrorDocument 500 /
 
 # ============================================
 # ОТКЛЮЧЕНИЕ ETAGS
