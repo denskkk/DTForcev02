@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO мета-теги -->
+    <title>Блог про ремонт дизельної паливної апаратури — професійні поради DTForce Одеса</title>
+    <meta name="description" content="Експертний блог про ремонт дизельних двигунів: діагностика, ремонт ТНВД, форсунок, турбін. Професійні поради від DTForce Одеса з досвідом 10+ років ⚡ Звертайтесь за безкоштовною консультацією">
+    <meta name="keywords" content="блог дизель, діагностика дизельного авто Одеса, ремонт ТНВД, форсунки Common Rail, турбіна не тягне, чіп-тюнінг дизель, помилки власників дизельних авто, сервіс дизель Одеса, DTForce блог">
+    
+    <!-- Open Graph для соціальних мереж -->
+    <meta property="og:title" content="Блог про ремонт дизельної паливної апаратури — професійні поради DTForce Одеса">
+    <meta property="og:description" content="Експертний блог про ремонт дизельних двигунів: діагностика, ремонт ТНВД, форсунок, турбін. Професійні поради від DTForce Одеса">
+    <meta property="og:url" content="https://dtforce.in.ua/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://dtforce.in.ua/images/logo.png">
+    
+    <!-- Canonical URL для запобігання дублювання контенту -->
+    <link rel="canonical" href="../pages/https://dtforce.in.ua/blog.html">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TL6K8QJ9');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Стилі -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-dtforce { background-color: #2e3845; }
+        /* Додаткові стилі для поліпшення доступності */
+        a:focus, button:focus {
+            outline: 2px solid #ef4444;
+        }
+        
+        /* Urgent blog card styling */
+        .urgent-blog-card {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #dc2626;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .urgent-blog-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #dc2626, #ef4444, #dc2626);
+            animation: pulse 2s infinite;
+        }
+        
+        .urgent-blog-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(220, 38, 38, 0.2);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        /* Featured blog card */
+        .featured-blog-card {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border: 2px solid #3b82f6;
+            position: relative;
+        }
+        
+        .featured-blog-card::before {
+            content: '⭐ РЕКОМЕНДОВАНО';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #3b82f6;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        
+        /* CTA section styling */
+        .cta-section {
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+            animation: cta-glow 3s infinite;
+        }
+        
+        @keyframes cta-glow {
+            0%, 100% { box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3); }
+            50% { box-shadow: 0 10px 25px rgba(220, 38, 38, 0.5); }
+        }
+        
+        .blog-card {
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-date {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+        
+        .blog-title {
+            color: #1f2937;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        
+        .blog-excerpt {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+        
+        .blog-cta {
+            color: #dc2626;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-cta:hover {
+            color: #991b1b;
+            text-decoration: underline;
+        }
+    </style>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQ2PMHYNXT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FQ2PMHYNXT');
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6K8QJ9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- Universal DTForce Header v2.0 с расширенным лого -->
+  <header class="bg-gray-900 border-t-4 border-red-600 shadow-lg sticky top-0 z-50 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+      
+      <!-- Logo - Расширенный размер (120x120) -->
+      <a href="../index.html" class="flex items-center text-xl font-bold text-white group transition-all duration-300 hover:scale-105" title="DTForce - Ваш надійний партнер з ремонту дизельних систем">
+        <img src="../images/logo.png" alt="DTForce логотип" class="h-16 mr-4 transition-all duration-300 group-hover:brightness-110" width="120" height="120">
+        <div class="text-left leading-tight">
+          <!-- Без текста DTForce как запрошено -->
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="../index.html" class="hover:text-red-400 transition-colors duration-300 py-2 px-3 rounded-md hover:bg-gray-800">Головна</a>
+        <a href="../index.html#about" class="hover:text-red-400 transition-colors duration-300 py-2 px-3 rounded-md hover:bg-gray-800">Про нас</a>
+        <a href="../blog/blog.html" class="bg-red-600 text-white px-4 py-2 rounded-lg">Блог</a>
+
+        <!-- Dropdown Services Menu -->
+        <div class="relative group">
+          <button class="hover:text-red-400 transition-colors duration-300 py-2 px-3 rounded-md hover:bg-gray-800 flex items-center space-x-1 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50" aria-expanded="false" aria-haspopup="true">
+            <span>Послуги</span>
+            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <div class="absolute left-0 mt-2 w-80 bg-white text-gray-900 border border-gray-200 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-20">
+            <div class="py-2">
+              <a href="../pages/remont-pld-sektsiy.html" class="flex items-center px-4 py-3 hover:bg-red-50 hover:text-red-600 transition-all duration-200 border-l-4 border-transparent hover:border-red-500">
+                <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3 text-sm font-bold">PLD</span>
+                <span class="font-medium">Ремонт PLD секцій</span>
+              </a>
+              <a href="../pages/remont-forsynok-cr.html" class="flex items-center px-4 py-3 hover:bg-red-50 hover:text-red-600 transition-all duration-200 border-l-4 border-transparent hover:border-red-500">
+                <span class="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3 text-sm font-bold">CR</span>
+                <span class="font-medium">Ремонт форсунок Common Rail</span>
+              </a>
+              <a href="../pages/remont-nasos-forsunok.html" class="flex items-center px-4 py-3 hover:bg-red-50 hover:text-red-600 transition-all duration-200 border-l-4 border-transparent hover:border-red-500">
+                <span class="w-8 h-8 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mr-3 text-sm font-bold">НФ</span>
+                <span class="font-medium">Ремонт насос-форсунок</span>
+              </a>
+              <a href="../pages/remont-turbin.html" class="flex items-center px-4 py-3 hover:bg-red-50 hover:text-red-600 transition-all duration-200 border-l-4 border-transparent hover:border-red-500">
+                <span class="w-8 h-8 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mr-3 text-sm font-bold">T</span>
+                <span class="font-medium">Ремонт турбокомпресорів</span>
+              </a>
+              <a href="../pages/remont-tnvd.html" class="flex items-center px-4 py-3 hover:bg-red-50 hover:text-red-600 transition-all duration-200 border-l-4 border-transparent hover:border-red-500">
+                <span class="w-8 h-8 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mr-3 text-sm font-bold">П</span>
+                <span class="font-medium">Ремонт ПНВТ</span>
+              </a>
+              <a href="../pages/chip-tyuning-dyzeliv.html" class="flex items-center px-4 py-3 hover:bg-red-50 hover:text-red-600 transition-all duration-200 border-l-4 border-transparent hover:border-red-500">
+                <span class="w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center mr-3 text-sm font-bold">ЧТ</span>
+                <span class="font-medium">Чіп-тюнінг (ADBLUE/EGR/DPF OFF)</span>
+              </a>
+              <a href="../pages/poslugi.html" class="flex items-center px-4 py-3 hover:bg-red-50 hover:text-red-600 transition-all duration-200 border-l-4 border-transparent hover:border-red-500">
+                <span class="w-8 h-8 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center mr-3 text-sm font-bold">+</span>
+                <span class="font-medium">Інші послуги</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="../pages/contact.html" class="hover:text-red-400 transition-colors duration-300 py-2 px-3 rounded-md hover:bg-gray-800">Контакти</a>
+        
+        <!-- Call to Action Button -->
+        <a href="tel:+380123456789" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium text-sm">
+          <span class="flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            Зателефонувати
+          </span>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuToggle" class="md:hidden text-white hover:text-red-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 p-2 rounded-md transition-colors duration-300" aria-expanded="false" aria-controls="mobileMenu" aria-label="Відкрити мобільне меню">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-gray-800 border-t border-gray-700">
+      <div class="px-4 py-3 space-y-1">
+        <a href="../index.html" class="block py-3 px-4 text-white hover:bg-gray-700 hover:text-red-400 rounded-md transition-all duration-200">
+          <span class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            Головна
+          </span>
+        </a>
+        
+        <a href="../index.html#about" class="block py-3 px-4 text-white hover:bg-gray-700 hover:text-red-400 rounded-md transition-all duration-200">
+          <span class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Про нас
+          </span>
+        </a>
+        
+        <a href="../blog.html" class="block py-3 px-4 text-red-400 bg-red-600 bg-opacity-20 rounded-md transition-all duration-200">
+          <span class="flex items-center font-medium">
+            <svg class="w-5 h-5 mr-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+            Блог
+          </span>
+        </a>
+
+        <!-- Mobile Services Section -->
+        <div class="py-3 px-4">
+          <span class="text-gray-300 font-semibold text-sm uppercase tracking-wide flex items-center">
+            <svg class="w-5 h-5 mr-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+            Наші послуги
+          </span>
+          <div class="mt-3 ml-8 space-y-2">
+            <a href="../pages/pld.html" class="block py-2 text-gray-300 hover:text-white transition-colors duration-200 text-sm">• Ремонт PLD секцій</a>
+            <a href="../pages/remont-forsynok-cr.html" class="block py-2 text-gray-300 hover:text-white transition-colors duration-200 text-sm">• Ремонт форсунок Common Rail</a>
+            <a href="../pages/nasos-forsunki.html" class="block py-2 text-gray-300 hover:text-white transition-colors duration-200 text-sm">• Ремонт насос-форсунок</a>
+            <a href="../pages/turbo.html" class="block py-2 text-gray-300 hover:text-white transition-colors duration-200 text-sm">• Ремонт турбокомпресорів</a>
+            <a href="../pages/tnvd.html" class="block py-2 text-gray-300 hover:text-white transition-colors duration-200 text-sm">• Ремонт ПНВТ</a>
+            <a href="../pages/chip-tuning.html" class="block py-2 text-gray-300 hover:text-white transition-colors duration-200 text-sm">• Чіп-тюнінг</a>
+            <a href="../pages/poslugi.html" class="block py-2 text-gray-300 hover:text-white transition-colors duration-200 text-sm">• Інші послуги</a>
+          </div>
+        </div>
+        
+        <a href="../pages/contact.html" class="block py-3 px-4 text-white hover:bg-gray-700 hover:text-red-400 rounded-md transition-all duration-200">
+          <span class="flex items-center">
+            <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            Контакти
+          </span>
+        </a>
+        
+        <!-- Mobile CTA -->
+        <div class="px-4 py-4">
+          <a href="tel:+380123456789" class="block w-full bg-gradient-to-r from-red-600 to-red-700 text-white text-center py-3 px-4 rounded-lg hover:from-red-700 hover:to-red-800 transition-all duration-300 font-medium shadow-lg">
+            <span class="flex items-center justify-center">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              Зателефонувати зараз
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+          
+          mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+          mobileMenu.classList.toggle('hidden');
+          
+          // Change icon
+          const icon = mobileMenuToggle.querySelector('svg path');
+          if (mobileMenu.classList.contains('hidden')) {
+            icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+          } else {
+            icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Hero секція для блогу -->
+  <section class="bg-gradient-to-r from-gray-900 to-gray-700 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+        📚 Професійний блог про <span class="text-red-400">дизельне обладнання</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        Експертні поради, професійні секрети та практичні рекомендації від фахівців DTForce з досвідом 10+ років
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+380671916336" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition font-medium flex items-center justify-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            Подзвонити
+          </a>
+        <a href="../pages/contact.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold transition">
+          📝 Записатися на діагностику
+        </a>
+      </div>
+    </div>
+  </section>
+    
+  <!-- Головний контент -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <!-- Критичні статті (топ) -->
+    <section class="mb-12">
+      <div class="flex items-center mb-8">
+        <h2 class="text-3xl font-extrabold text-gray-800 mr-4">🚨 Критично важливо знати</h2>
+        <div class="flex-1 h-1 bg-red-500 rounded"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Блог картка 11 - URGENT -->
+        <article class="urgent-blog-card rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/diesel-engine-problems-ukraine.png" alt="7 причин, чому дизель умирає раніше часу" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">ТЕРМІНОВО</span>
+            <span class="blog-date ml-2">5 грудня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">🚨 7 причин, чому ваш дизель "умирає" раніше часу</h3>
+          <p class="blog-excerpt mb-4">Щодня в DT FORCE ми рятуємо дизелі від передчасної смерті. Дізнайтесь про 7 фатальних помилок, які вбивають двигуни...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-red-600 font-semibold">⚠️ Може врятувати ваш двигун</span>
+            <a href="blog-7-reasons-diesel-dies.html" class="blog-cta">Читати зараз →</a>
+          </div>
+        </article>
+
+        <!-- Блог картка 10 - FEATURED -->
+        <article class="featured-blog-card rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/diesel-mistakes-ukraine.jpg" alt="ТОП-5 помилок власників дизельних авто" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="blog-date">5 серпня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">⚠️ ТОП-5 помилок власників дизельних авто в Україні</h3>
+          <p class="blog-excerpt mb-4">Найпоширеніші помилки експлуатації дизельних авто: ігнорування діагностики, неякісне паливо, неправильне обслуговування...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-blue-600 font-semibold">💡 Поради експертів</span>
+            <a href="blog-diesel-mistakes.html" class="blog-cta">Детальніше →</a>
+          </div>
+        </article>
+
+        <!-- Блог картка 9 -->
+        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/diesel-diagnostics-odesa.jpg" alt="Діагностика дизельного авто Одеса" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="blog-date">20 липня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">🔍 Діагностика дизельного авто Одеса — коли потрібна</h3>
+          <p class="blog-excerpt mb-4">Як зрозуміти, що дизельному двигуну потрібна діагностика: ознаки поломок, професійне обладнання, досвід роботи...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">🛠️ Професійна діагностика</span>
+            <a href="blog-diesel-diagnostics.html" class="blog-cta">Детальніше →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Всі інші статті -->
+    <section>
+      <div class="flex items-center mb-8">
+        <h2 class="text-3xl font-extrabold text-gray-800 mr-4">📖 Всі статті блогу</h2>
+        <div class="flex-1 h-1 bg-gray-300 rounded"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Блог картка 1 -->
+        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/plunger-pair.jpg" alt="Плунжерна пара ПНВТ" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="blog-date">1 травня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">Що таке плунжерна пара?</h3>
+          <p class="blog-excerpt mb-4">Плунжерна пара — ключовий елемент паливного насоса високого тиску (ПНВТ), що відповідає за точне дозування пального...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">⚙️ Технічні аспекти</span>
+            <a href="blog1.html" class="blog-cta">Детальніше →</a>
+          </div>
+        </article>
+
+        <!-- Блог картка 2 -->
+        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/turbo-types.jpg" alt="Типи турбін для дизельних двигунів" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="blog-date">15 квітня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">Типи турбін для дизельних двигунів</h3>
+          <p class="blog-excerpt mb-4">Детальний огляд типів турбокомпресорів, їх переваг та недоліків. Як вибрати найкращу турбіну для...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">🌪️ Турбіни</span>
+            <a href="blog2.html" class="blog-cta">Детальніше →</a>
+          </div>
+        </article>
+
+        <!-- Блог картка 3 -->
+        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/common-rail.jpg" alt="Система Common Rail" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="blog-date">28 березня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">Система Common Rail: принцип роботи</h3>
+          <p class="blog-excerpt mb-4">Розберемо принцип роботи системи Common Rail, її переваги та особливості діагностики і ремонту...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">🔧 Common Rail</span>
+            <a href="blog3.html" class="blog-cta">Детальніше →</a>
+          </div>
+        </article>
+
+        <!-- Блог картка 4 -->
+        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/chiptuning.png" alt="Чип-тюнінг вантажівок" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="blog-date">30 травня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">Чип-тюнінг вантажівок: як збільшити потужність</h3>
+          <p class="blog-excerpt mb-4">Професійний чип-тюнінг дизельних двигунів. Збільшення потужності до 30%, зниження витрати палива...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">💻 Чип-тюнінг</span>
+            <a href="blog-ecu-algorithm.html" class="blog-cta">Детальніше →</a>
+          </div>
+        </article>
+
+        <!-- Блог картка 5 -->
+        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/evu_check.png" alt="Алгоритм прошивки ЕБУ" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="blog-date">30 травня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">Алгоритм безпечної прошивки ЕБУ на тягачах</h3>
+          <p class="blog-excerpt mb-4">Професійний алгоритм чип-тюнінгу тягачів: від діагностики до стендового тестування. Безпечне збільшення потужності...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">🚛 Тягачі</span>
+            <a href="chiptuning.html" class="blog-cta">Детальніше →</a>
+          </div>
+        </article>
+
+        <!-- Блог картка 6 -->
+        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/322.png" alt="Чип-тюнінг завантажених тягачів" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="blog-date">30 травня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">Індивідуальний чип-тюнінг при постійному завантаженні</h3>
+          <p class="blog-excerpt mb-4">Що дає індивідуальний чип-тюнінг тягача при постійному завантаженні. Збільшення тяги, економія палива...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">📊 Індивідуальний</span>
+            <a href="blog6.html" class="blog-cta">Детальніше →</a>
+          </div>
+        </article>
+
+        <!-- Блог картка 7 -->
+        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/adapt_diesel.png" alt="Адаптація прошивки під погане пальне" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="blog-date">10 червня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">Адаптація прошивки під погане пальне в Україні</h3>
+          <p class="blog-excerpt mb-4">Чому фури димлять і жруть пальне на українській солярці. Професійна адаптація прошивки ЕБУ під реальні умови...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">🇺🇦 Українське пальне</span>
+            <a href="blog-fuel-adaptation.html" class="blog-cta">Детальніше →</a>
+          </div>
+        </article>
+
+        <!-- Блог картка 8 -->
+        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition blog-card">
+          <div class="mb-4">
+            <img src="../assets/images/one_million_nebez.png" alt="Чіп-тюнінг дизеля з великим пробігом" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+          </div>
+          <div class="flex items-center mb-2">
+            <span class="blog-date">15 червня 2024</span>
+          </div>
+          <h3 class="blog-title text-xl mb-4">Чип тюнинг дизеля з пробігом 1 млн км — коли варто</h3>
+          <p class="blog-excerpt mb-4">Коли чіп-тюнінг дизельного двигуна з великим пробігом безпечний, а коли може зашкодити. Професійний підхід...</p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">🏃 Великий пробіг</span>
+            <a href="blog-high-mileage-tuning.html" class="blog-cta">Детальніше →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- CTA секція -->
+  <section class="cta-section text-white py-16 my-12 rounded-lg mx-4">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-6">
+        🚨 Не чекайте, поки стане пізно!
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        70% проблем з дизельними двигунами можна було запобігти своєчасною діагностикою. 
+        Зверніться до експертів DTForce прямо зараз і збережіть свій двигун!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+380671916336" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition font-medium flex items-center justify-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            Подзвонити
+          </a>
+        <a href="../pages/contact.html" class="bg-yellow-400 text-red-800 hover:bg-yellow-300 px-8 py-4 rounded-full text-lg font-bold transition flex items-center justify-center shadow-lg">
+          📝 Записатися на діагностику
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Секція підписки на новини -->
+  <section class="bg-gray-100 py-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold mb-4">📧 Підпишіться на експертні поради</h2>
+      <p class="text-gray-600 mb-6">Отримуйте щотижневі поради від експертів DTForce про обслуговування дизельного обладнання</p>
+      <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <input type="email" placeholder="Ваш e-mail" class="flex-1 px-4 py-3 border border-gray-300 rounded focus:ring-red-500 focus:border-red-500" required>
+        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded transition">Підписатися</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#2e3845] text-white pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+  
+      <!-- Блок 1: Лого -->
+      <div>
+        <a href="../pages/../index.html" class="flex items-center text-2xl font-bold mb-4" aria-label="DTForce головна сторінка">
+          <img src="../assets/images/logo.png" alt="Логотип DTForce" class="h-10 mr-2" width="100" height="40">
+        </a>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Діагностика та ремонт ТНВД, форсунок, турбін. Працюємо по всій Україні з 2010 року. Якісний ремонт з гарантією.
+        </p>
+        <div class="mt-4 flex space-x-3">
+          <a href="https://facebook.com/" aria-label="Facebook" class="text-gray-300 hover:text-white">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+          </a>
+          <a href="https://instagram.com/" aria-label="Instagram" class="text-gray-300 hover:text-white">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Блок 2: Навігація -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Меню</h3>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><a href="../pages/../index.html" class="hover:text-red-400">Головна</a></li>
+          <li><a href="index.html#about" class="hover:text-red-400">Про компанію</a></li>
+          <li><a href="../pages/poslugi.html" class="hover:text-red-400">Послуги</a></li>
+          <li><a href="../pages/blog.html" class="hover:text-red-400">Блог</a></li>
+          <li><a href="../pages/contact.html" class="hover:text-red-400">Контакти</a></li>
+        </ul>
+      </div>
+  
+      <!-- Блок 3: Контакти -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Контакти</h3>
+        <address class="not-italic">
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li>📍 м. Одеса, вул. Новікова, 3</li>
+            <li>📞 <a href="tel:+380671916336" class="hover:text-red-400">+380 67 191 63 36</a></li>
+            <li>📧 <a href="mailto:info@dtforce.com.ua" class="hover:text-red-400">info@dtforce.com.ua</a></li>
+            <li>⏰ Пн-Пт: 9:00-18:00, Сб: 9:00-15:00</li>
+          </ul>
+        </address>
+        <br>
+        <a href="tel:+380671916336" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition font-medium flex items-center justify-center">
+          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Подзвонити
+        </a>
+      </div>
+  
+    </div>
+  
+    <!-- Карта -->
+    <div class="mt-12">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.033336187498!2d30.681104276765772!3d46.4678476659165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63210276e0161%3A0x5ab1f94c47708456!2z0YPQuy4g0J3QvtCy0LjQutC-0LLQsCwgMywg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1746554190077!5m2!1sru!2sua"
+        class="w-full h-64 border-0"
+        title="Наше розташування на мапі"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  
+    <!-- Підвал -->
+    <div class="mt-10 text-center text-sm text-gray-400">
+      <p>© 2024 DTForce. Всі права захищені.</p>
+      <p class="mt-2">
+        <a href="../pages/privacy.html" class="hover:text-red-400 mr-4">Політика конфіденційності</a>
+        <a href="../pages/terms.html" class="hover:text-red-400">Умови використання</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript для мобільного меню -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      menuToggle.addEventListener('click', function() {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        mobileMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+  <!-- Структурировані дані для SEO (Schema.org) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Професійний блог про дизельне обладнання - DTForce",
+      "url": "https://dtforce.in.ua/blog.html",
+      "description": "Експертний блог про ремонт дизельних двигунів: діагностика, ремонт ТНВД, форсунок, турбін. Професійні поради від DTForce Одеса з досвідом 10+ років",
+      "publisher": {
+        "@type": "Organization",
+        "name": "DTForce",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://dtforce.in.ua/images/logo.png"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "вул. Новікова, 3",
+          "addressLocality": "Одеса",
+          "addressCountry": "UA"
+        },
+        "telephone": "+380671916336"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "7 причин, чому ваш дизель умирає раніше часу",
+          "description": "Щодня в DT FORCE ми рятуємо дизелі від передчасної смерті. Дізнайтесь про 7 фатальних помилок, які вбивають двигуни",
+          "url": "https://dtforce.in.ua/blog11.html",
+          "datePublished": "2024-12-05",
+          "author": {
+            "@type": "Organization",
+            "name": "DTForce"
+          },
+          "image": "https://dtforce.in.ua/images/diesel-engine-problems-ukraine.jpg"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "ТОП-5 помилок власників дизельних авто в Україні",
+          "description": "Найпоширеніші помилки експлуатації дизельних авто: ігнорування діагностики, неякісне паливо, неправильне обслуговування",
+          "url": "https://dtforce.in.ua/blog10.html",
+          "datePublished": "2024-08-05",
+          "author": {
+            "@type": "Organization",
+            "name": "DTForce"
+          },
+          "image": "https://dtforce.in.ua/images/diesel-mistakes-ukraine.jpg"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Діагностика дизельного авто Одеса — коли потрібна",
+          "description": "Як зрозуміти, що дизельному двигуну потрібна діагностика: ознаки поломок, професійне обладнання, досвід роботи",
+          "url": "https://dtforce.in.ua/blog9.html",
+          "datePublished": "2024-07-20",
+          "author": {
+            "@type": "Organization",
+            "name": "DTForce"
+          },
+          "image": "https://dtforce.in.ua/images/diesel-diagnostics-odesa.jpg"
+        }
+      ]
+    }
+  </script>
+
+  <!-- Binotel Widget -->
+  <script type="text/javascript">
+    (function(d, w, s) {
+      var widgetHash = 'kaetj667yfpludj8qk4b', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
+      gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js';
+      var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
+    })(document, window, 'script');
+  </script>
+  
+  <!-- Binotel CallTracking -->
+  <script type="text/javascript">
+    (function(d, w, s) {
+      var widgetHash = 'i05h636bzd90wtswsdjj', ctw = d.createElement(s); ctw.type = 'text/javascript'; ctw.async = true;
+      ctw.src = '//widgets.binotel.com/calltracking/widgets/'+ widgetHash +'.js';
+      var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(ctw, sn);
+    })(document, window, 'script');
+  </script>
+
+</body>
+</html>

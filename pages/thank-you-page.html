@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дякуємо за замовлення | DTForce</title>
+  <meta name="description" content="Дякуємо за замовлення у сервісному центрі DTForce. Ваш запит прийнято та успішно оброблено.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://dtforce.in.ua/thank-you-page.html">
+  <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bg-dtforce { background-color: #2e3845; }
+    html {scroll-behavior: smooth;}
+    .success-animation { animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .steps-container { counter-reset: step; }
+    .step { position: relative; padding-left: 2.5rem; margin-bottom: 1.5rem; }
+    .step:before {
+      content: counter(step);
+      counter-increment: step;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      background: #e53e3e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  </style>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TL6K8QJ9');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL6K8QJ9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <!-- Хедер -->
+  <header class="bg-dtforce shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <!-- Логотип -->
+      <a href="../index.html" class="flex items-center text-xl font-bold text-white" aria-label="DTForce головна сторінка">
+        <img src="../assets/images/logo.png" alt="DTForce логотип" class="h-12 mr-3" width="210" height="60">
+      </a>
+
+      <!-- Десктопна навігація -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-white">
+        <a href="../index.html" class="hover:text-red-400">Головна</a>
+        <a href="index.html#about" class="hover:text-red-400">Про компанію</a>
+        <a href="../blog/blog.html" class="hover:text-red-400">Блог</a>
+        <a href="poslugi.html" class="hover:text-red-400">Послуги</a>
+        <a href="contact.html" class="hover:text-red-400">Контакти</a>
+        <button class="hover:text-red-400">UA</button>
+      </nav>
+
+      <!-- Мобільний бургер -->
+      <button id="menuToggle" class="md:hidden text-white hover:text-red-400 focus:outline-none" aria-label="Відкрити меню">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Мобільне меню -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 bg-dtforce text-white">
+      <a href="../index.html" class="block py-2 border-b border-gray-600">Головна</a>
+      <a href="index.html#about" class="block py-2 border-b border-gray-600">Про компанію</a>
+      <a href="../blog/blog.html" class="block py-2 border-b border-gray-600">Блог</a>
+      <a href="poslugi.html" class="block py-2 border-b border-gray-600">Послуги</a>
+      <a href="contact.html" class="block py-2 border-b border-gray-600">Контакти</a>
+      <button class="mt-2 hover:text-red-400">UA</button>
+    </div>
+  </header>
+
+  <main class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+        <!-- Анимированная иконка успеха -->
+        <div class="text-green-600 mb-8 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 mx-auto success-animation" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        
+        <!-- Заголовок и основной текст -->
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">Дякуємо за замовлення!</h1>
+          <p class="text-xl text-gray-700">Ваш запит успішно отримано та передано менеджеру для обробки.</p>
+        </div>
+        
+        <!-- Информация о дальнейших шагах -->
+        <div class="bg-gray-50 p-6 rounded-lg mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Що буде далі?</h2>
+          <div class="steps-container">
+            <div class="step">
+              <h3 class="font-medium text-lg">Обробка замовлення</h3>
+              <p class="text-gray-600">Наш менеджер опрацює ваше замовлення протягом робочого дня</p>
+            </div>
+            <div class="step">
+              <h3 class="font-medium text-lg">Зворотній зв'язок</h3>
+              <p class="text-gray-600">Фахівець зв'яжеться з вами за вказаним номером телефону для уточнення деталей</p>
+            </div>
+            <div class="step">
+              <h3 class="font-medium text-lg">Виконання послуги</h3>
+              <p class="text-gray-600">Після уточнення всіх деталей ми приступимо до виконання вашого замовлення</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Контактная информация -->
+      <div class="bg-gray-800 p-6 rounded-lg mb-8 text-white">
+          <h3 class="text-2xl font-semibold mb-4">Наші контакти</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-red-400 mr-2">📞</span>
+              <span><strong>Телефон:</strong> <a href="tel:+380671916336" class="text-red-400 hover:underline">+380671916336</a></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-400 mr-2">📧</span>
+              <span><strong>Email:</strong> <a href="mailto:info@dtforce.ua" class="text-red-400 hover:underline">info@dtforce.ua</a></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-400 mr-2">📍</span>
+              <span><strong>Адреса:</strong> вул. Новікова 3, м. Одеса, 65000</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Кнопки для дальнейших действий -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="../index.html" class="inline-block bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition text-center w-full sm:w-auto">Повернутися на головну</a>
+          <a href="poslugi.html" class="inline-block bg-gray-800 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition text-center w-full sm:w-auto">Переглянути інші послуги</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Футер -->
+  <footer class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">DTForce</h3>
+          <p class="text-gray-300 text-sm">Професійний ремонт дизельного обладнання в Одесі з 2010 року.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Зв'язок</h3>
+          <ul class="text-gray-300 text-sm space-y-2">
+            <li>📞 <a href="tel:+380671916336" class="hover:text-red-400">+380671916336</a></li>
+            <li>📧 <a href="mailto:info@dtforce.ua" class="hover:text-red-400">info@dtforce.ua</a></li>
+            <li>📍 вул. Новікова 3, м. Одеса</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Навігація</h3>
+          <ul class="text-gray-300 text-sm space-y-2">
+            <li><a href="../index.html" class="hover:text-red-400">Головна</a></li>
+            <li><a href="poslugi.html" class="hover:text-red-400">Послуги</a></li>
+            <li><a href="../blog/blog.html" class="hover:text-red-400">Блог</a></li>
+            <li><a href="contact.html" class="hover:text-red-400">Контакти</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+        <p>© 2010-2025 DTForce. Всі права захищені.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Скрипты для работы страницы -->
+  <script>
+    // Мобильное меню
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    
+    // Получение имени пользователя из URL (если оно передается)
+    // Например: thank-you-page.html?name=Василь
+    function getParameterByName(name) {
+      const url = window.location.href;
+      name = name.replace(/[\[\]]/g, '\\$&');
+      const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+      const results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+    
+    // Персонализация приветствия, если имя доступно
+    const userName = getParameterByName('name');
+    const headingElement = document.querySelector('h1');
+    
+    if (userName && headingElement) {
+      headingElement.textContent = `Дякуємо за замовлення, ${userName}!`;
+    }
+    
+    // Редирект на главную через 120 секунд (2 минуты)
+    setTimeout(function() {
+      window.location.href = 'index.html';
+    }, 120000);
+  </script>
+</body>
+</html>
